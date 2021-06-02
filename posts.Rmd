@@ -1,0 +1,7 @@
+---
+title: "Posts"
+site: distill::distill_website
+listing: 
+  posts:
+    - 2021-06-02-high-resolution-covariates-and-top-down-population-disagregation
+---

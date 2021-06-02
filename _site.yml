@@ -3,10 +3,17 @@ title: "Meet Edith"
 description: |
   Meet Edith
 output_dir: "docs"
+base_url: "https://edarin.github.io/thatsme/"
 navbar:
-  right:
-    - text: "Home"
-      href: index.html
-    - text: "About"
+  left:
+    - text: "Research"
       href: about.html
+    - text: "Education"
+      href: about.html
+  right:
+    - text: "Posts"
+      href: posts.html
+  search: false
 output: distill::distill_article
+theme: theme.css
+
