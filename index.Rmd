@@ -1,0 +1,36 @@
+---
+title: "Edith Darin"
+description: |
+  Welcome to the website. I hope you enjoy it!
+site: distill::distill_website
+output:
+  postcards::trestles
+links:
+  - label: LinkedIn
+    url: "https://www.linkedin.com/in/edith-darin-194ba212b/"
+  - label: Twitter
+    url: "https://twitter.com/DarinEdith"
+  - label: GitHub
+    url: "https://github.com/edarin/"
+  - label: Email
+    url: "mailto:edith.darin@protonmail.com"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Learn more about creating websites with Distill at:
+# https://rstudio.github.io/distill/website.html
+
+# Learn more about publishing to GitHub Pages at:
+# https://rstudio.github.io/distill/publish_website.html#github-pages
+
+```
+
+## Bio
+
+I am currently a research assistant at WorldPop, University of Southampton, supporting population modeling and mapping in the GRID3 project.
+
+Previously, I earned a MSc in applied GIS and Remote Sensing at the University of Southampton, where I wrote my thesis on deprived area mapping, a topic at the intersection between Geographic Information Systems, Statistical Modeling, and Social Sciences. I also have a strong background in Statistics (MSc from the ENSAE Paristech) and Social Sciences (Master at ENS Cachan) and their intrications.
+
+I applied my skills in academia (Worldpop, University of Southampton), in humanitarian agency (UN World Food Program) and in governmental structure (Etalab, France) always combining a strive for social justice and transparency with an indecent pleasure in playing with data. 
