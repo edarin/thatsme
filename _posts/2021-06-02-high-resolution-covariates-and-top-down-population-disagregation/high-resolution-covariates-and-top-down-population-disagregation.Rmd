@@ -1,22 +1,32 @@
 ---
-title: "High-resolution Covariates and Top-down Population Disagregation"
+title: "High-resolution Covariates and Top-down Population Models"
 description: |
-  A short description of the post.
+ To obtain high-resolution population estimates, WorldPop developed a top-down method that disagregates population totals into grid cells thanks to ancillary geospatial covariates [@stevens2015]. We will study the use of very high-resolution covariates in the disagregation process and its impact on the gridded estimates. The study will examine building-footprint derived covariates in Sierra Leone.
 author:
   - name: 'Edith Darin'
 date: 06-02-2021
 output:
   distill::distill_article:
     self_contained: false
+bibliography: references.bib
 ---
-
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web.
+# Background
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+To obtain high-resolution population estimates, [WorldPop](https://www.worldpop.org/) developed a top-down method that disagregates population totals into grid cells thanks to ancillary geospatial covariates.
 
+The method consists in fitting a random-forest model [@breiman2001] at the finest administrative level for which population count is available. The estimated model is then used to predict population density for every grid cell thanks to the geospatial covariates. Finally, the gridded population density layer plays the role of weighting layer to spread the population totals.
 
+WorldPop initative for mapping population globally [@worldpopresearchgroup2018] requires a set of covariates related to human distributions that are openly available for the entire world. It is thus based on six data sources where the raster resolution ranges from 900m to 90 m at the Equateur [@lloyd2019]. All the vector-based covariates are processed as distance to nearest feature - this results in a fine spatial distribution but that is not representative of sub-grid cell patterns and have relative accuracy.
+
+Recently, WorldPop released openly gridded building patterns across entire sub-Saharan Africa at 100m resolution [@dooley2020]. These were derived from building footprints extracted from satellite imagery with a spatial accuracy of 6m [@ecopia.ai2019]. In top-down modelling, this data has already been used to produce an alternative global set of gridded population estimates constraining the estimates to settled grid cells, that are cells containing at least a building footprint [@bondarenko2020].
+
+The purpose of this post will be to study the impact of the building-footprint derived covariates on the modelling and subsequently on the gridded estimates in Sierra Leone.
+
+# Data
+
+# Method
