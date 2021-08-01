@@ -1,7 +1,7 @@
 ---
-title: "High-resolution Covariates and Top-down Population Models"
+title: "What is the impact of very-high resolution covariates on top-down population models?"
 description: |
- To obtain high-resolution population estimates, WorldPop developed a top-down method that disagregates population totals into grid cells thanks to ancillary geospatial covariates [@stevens2015]. We will study the use of very high-resolution covariates in the disagregation process and its impact on the gridded estimates. The study will examine building-footprint derived covariates in Sierra Leone.
+  We will study the use of very high-resolution covariates in top-down population model and its impact on population gridded estimates. We will examine building-footprint derived covariates in Sierra Leone population model.
 author:
   - name: 'Edith Darin'
 date: 06-02-2021
@@ -19,14 +19,54 @@ knitr::opts_chunk$set(echo = FALSE)
 
 To obtain high-resolution population estimates, [WorldPop](https://www.worldpop.org/) developed a top-down method that disagregates population totals into grid cells thanks to ancillary geospatial covariates.
 
-The method consists in fitting a random-forest model [@breiman2001] at the finest administrative level for which population count is available. The estimated model is then used to predict population density for every grid cell thanks to the geospatial covariates. Finally, the gridded population density layer plays the role of weighting layer to spread the population totals.
+The method consists in fitting a random-forest model [@breiman2001] at the finest administrative level for which population count is available. The estimated model is then used to predict population density for every grid cell thanks to the geospatial covariates. Finally, the predicted gridded population density layer plays the role of a weighting layer to breakdown the population totals into the grid cells [@stevens2015].
 
-WorldPop initative for mapping population globally [@worldpopresearchgroup2018] requires a set of covariates related to human distributions that are openly available for the entire world. It is thus based on six data sources where the raster resolution ranges from 900m to 90 m at the Equateur [@lloyd2019]. All the vector-based covariates are processed as distance to nearest feature - this results in a fine spatial distribution but that is not representative of sub-grid cell patterns and have relative accuracy.
+![Top-down disagregation model](https://lh4.googleusercontent.com/SLuYBPcAm59OnMwi7grsM2VzXkMx2JGH0616ZjP7JQD5waX1OMIfNTb3QX0KONaQjFBO9ZQPG7k_KU4yA3xoUxL0t4MTNK63z3f351ijJQ1PLtNhOfUywWhWj1JcPwD43EWwjMhfDnY)
 
-Recently, WorldPop released openly gridded building patterns across entire sub-Saharan Africa at 100m resolution [@dooley2020]. These were derived from building footprints extracted from satellite imagery with a spatial accuracy of 6m [@ecopia.ai2019]. In top-down modelling, this data has already been used to produce an alternative global set of gridded population estimates constraining the estimates to settled grid cells, that are cells containing at least a building footprint [@bondarenko2020].
+The **geospatial covariates** commonly used by WorldPop initative for mapping population globally [@worldpopresearchgroup2018] are based[^1]:
+
+[^1]: They can be downloaded at: <https://www.worldpop.org/project/categories?id=14>
+
+1)  on resampled rasters
+
+-   Resampled DMSP-OLS night-time lights 2000-2011
+
+-   Resampled VIIRS night-time lights 2012-2016
+
+-   SRTM-based elevation per country 2000
+
+-   SRTM-based slope per country 2000
+
+The input rasters have a resolution ranging from 900m to 90 m at the Equateur [@lloyd2019].
+
+```{r, fig.cap='Exemple of raster resampling: Slope in Sierra Leone', fig.width=6, fig.align='center'}
+knitr::include_graphics(here::here("_posts", "2021-06-02-high-resolution-covariates-and-top-down-population-disagregation",  "dat", "sle_slope.PNG"))
+```
+
+2)  on Euclidean distance measurement
+
+-   Distance to European Space Agency Land cover categories
+
+-   Distance to International Union for Conservation of Nature strict nature reserve and wilderness area edges
+
+-   Distance to open-water coastline per country
+
+-   Distance to OpenStreetMap (OSM) major roads, major road intersections and major waterways
+
+Rasters resulting from Euclidian distance measurement can have virtually any spatial resolution. They however might not be representative of localized informative variations for population modelling.
+
+```{r, fig.cap='Exemple of Euclidean measurement: Distance to waterways in Sierra Leone', fig.width=6, fig.align='center'}
+knitr::include_graphics(here::here("_posts", "2021-06-02-high-resolution-covariates-and-top-down-population-disagregation",  "dat", "sle_water_dist.PNG"))
+```
+
+heir distribution
 
 The purpose of this post will be to study the impact of the building-footprint derived covariates on the modelling and subsequently on the gridded estimates in Sierra Leone.
 
 # Data
+
+Recently, WorldPop released openly gridded building patterns across entire sub-Saharan Africa at 100m resolution [@dooley2020]. These were derived from building footprints extracted from satellite imagery with a spatial accuracy of 6m [@ecopia.ai2019]. In top-down modelling, this data has already been used to produce an alternative global set of gridded population estimates constraining the estimates to settled grid cells[^2] [@bondarenko2020].
+
+[^2]: Settled cells are cells containing at least one building footprint.
 
 # Method

@@ -1,0 +1,38 @@
+---
+title: "Publications"
+description: |
+---
+
+# In preparation
+
+**Darin E**, Boo G, Jochem C, Kueffer M, Tatem AJ. *An integrative framework to model urban deprivation at high spatial resolution*.
+
+**Darin E**, Kuepie M, Bassinga H, Tatem AJ. *La population vue du ciel: Quand l'imagerie satellite vient au secours du recensement* .
+
+# Refeered publications
+
+Kuffer M, Thomson DR, Kabaria, C, Boo G, **Darin E** , Mahabir R, Grippa T, Vhuysse S, Albuquerque J, Ndugwa R, Makau J, Muluadi J. *The Role of Earth Observation in an Integrated Deprived Area Mapping "System" for Low-to-Middle Income Countries*. 2020. Remote Sensing. 12, 982. [PDF](https://www.mdpi.com/2072-4292/12/6/982)
+
+Boo G, **Darin E** , Thomson DR, and Tatem AJ. *A grid-based sampling design framework for household surveys in the absence of an actionable sampling frame*. 2020. Gates Open Research. 4:13. [PDF](https://gatesopenresearch.org/articles/4-13/v1)
+
+# Datasets
+
+Leasure DR, **Darin E** Tatem AJ. *Bayesian gridded population estimates for Ghana 2018, version 1.2*. 2021. WorldPop, University of Southampton [LINK](https://wopr.worldpop.org/?GHA/Population/v1.2)
+
+WorldPop and Institut National de la Statistique et de la Démographie du Burkina Faso. *Census-based gridded population estimates for Burkina Faso (2019), version 1.0.* 2020. WorldPop, University of Southampton [LINK](https://wopr.worldpop.org/?BFA/Population/v1.0)
+
+Boo G, **Darin E**, Leasure DR, Dooley CA, Chamberlain HR, Lazar AN, Tatem AJ. *Modelled gridded population estimates for the Kinshasa, Kongo-Central, Kwango, Kwilu, and Mai-Ndombe provinces in the Democratic Republic of the Congo 2018, version 2.0.* WorldPop, University of Southampton [LINK](https://wopr.worldpop.org/?COD/Population/v2.0)
+
+# Non-refeered conference proceedings
+
+Boo G, **Darin E**, Leasure DR, and Tatem AJ. *High-resolution population mapping and estimation in the western part of the Democratic Republic of Congo*. Proceedings of the GEOMED 2019 Conference. Glasgow, Scottland. [PDF](https://edarin.github.io/img/boo-poster_web.pdf)
+
+**Darin E**, Boo G, Thomson DR, and Tatem AJ. *A grid-based sampling design for household surveys in the absence of actionable sampling frames*. Proceedings of the GEOMED 2019 Conference. Glasgow, Scottland. [PDF](https://edarin.github.io/img/darin-poster_web.pdf)
+
+# Contributions
+
+Sicsic M. *Financial Incentives to Work in France between 1998 and 2014*. 2018. Economie et Statistique. [PDF](https://www.persee.fr/doc/estat_0336-1454_2018_num_503_1_10852)
+
+Fourcot J and Sicsic M. *Les taux marginaux effectifs de prélèvement pour les personnes en emploi en France en 2014*. 2017. Direction des statistiques démographiques et sociales. [PDF](https://www.insee.fr/fr/statistiques/fichier/2581807/F1701.pdf)
+
+Bastard B, Boigeol A, Bénec'H-Le Roux P, Jamet L and Printz A. *Éthique et TIC : A quoi sert l'Ordre des avocats ?*. 2016. Mission de Recherche Droit et Justice. [PDF](https://halshs.archives-ouvertes.fr/halshs-01592917/document)

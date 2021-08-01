@@ -1,0 +1,31 @@
+---
+title: "woprVision: a shiny app to visualise Bayesian predictions"
+description: |
+  woprVision is a multilingual interacive application to visualise and retrieve Bayesian population estimates
+author:
+  - name: Edith Darin
+    url: {}
+date: 06-10-2021
+output:
+  distill::distill_article:
+    self_contained: false
+preview: "woprvision.PNG"
+---
+
+woprVision is an R shiny application that allows you to browse an interactive map to get population estimates for specific locations and demographic groups.
+
+It has been developed for two reasons:
+
+-   drawing function for easy interaction with gridded population for non GIS people
+
+-   correct uncertainty estimates for spatial aggregates
+
+woprVision is available on the web at <https://apps.worldpop.org/woprVision>.
+
+Its source code is to be found here: <https://github.com/wpgp/wopr>
+
+![](woprvision.PNG)
+
+If run with local files, woprVision requires a SQLlite database with population prediction distribution for every grid cell and a tiled imgae of the gridded population.
+
+On the internet, it runs on a shiny server and pings the WorldPop api.

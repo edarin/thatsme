@@ -5,12 +5,14 @@ description: |
 output_dir: "docs"
 base_url: "https://edarin.github.io/thatsme/"
 navbar:
-  left:
-    - text: "Research"
-      href: about.html
-    - text: "Education"
-      href: about.html
   right:
+    - text: "Publications"
+      href: publications.html
+    - text: "Talks"
+      href: talks.html
+  left:
+    - text: "Portfolio"
+      href: portfolio.html
     - text: "Posts"
       href: posts.html
   search: false

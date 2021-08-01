@@ -1,0 +1,448 @@
+---
+title: "WorldPop Book of Methods"
+author: "WorldPop Research Group, University of Southampton"
+always_allow_html: true
+header-includes:
+   - \usepackage{amsmath}
+output:
+  bookdown::pdf_document2: 
+    extra_dependencies: ["float"]
+    fig_width: 5
+    fig_height: 4
+    fig_caption: true
+geometry: margin=2.1cm
+documentclass: article
+bibliography: [book.bib]
+biblio-style: apalike
+---
+
+
+```{r, echo=F}
+knitr::opts_knit$set(root.dir = "C:/Users/ecd1u18/Documents/BFA-documentation")
+knitr::opts_chunk$set(message = FALSE, echo = FALSE, warning = FALSE, fig.pos = "!h")
+options(knitr.graphics.auto_pdf = TRUE)
+options(knitr.table.format = "latex")
+```
+
+```{r, echo=F}
+library(tidyverse)
+library(kableExtra)
+library(DT)
+library(dplyr)
+
+```
+
+# Burkina Faso (v1)
+
+This document explains the different steps developed to estimate the Burkina Faso population in area unsurveyed during the 2019 census. A second objective was to link population count in surveyed area to geographical locations (ie to a grid overlaid on Burkina Faso country extent).
+
+Unlike other bottom-up models developed at WorldPop (Boo and al., 2020; Leasure and al. 2020) based on microcensus surveys [@wardrop2018spatially], the Burkina Faso model is not based on a representative set of "complete counts of population within small, defined areas".
+
+Instead, we worked closely with the Burkina Faso National Statistical Office (Institut National de la Statistique et de la Démographie) to estimate population for the zones the 2019 census could not reach due to security issues, with the incomplete census database.
+
+If the context of collection of the input population data differs slightly from the other bottom-up population models (e.g. for the Democratic Republic of Congo), the modelling process remains similar: *estimating the statistical relationship between population count and spatial covariates at cluster level and extrapolating it to the entire country using the grid cell as the unit of prediction*.
+
+**Output goals:**
+  
+  1. Estimating population count for 67 admin3 (1277 missing enumeration areas) - to be completed by NSO
+  2. Producing gridded population estimates for the entire country
+  3. Disaggregating population count per age and sex group.
+
+
+
+## Data input
+
+To gain insight on the modelling process, it is important to cover first the input data used to model resident density.
+
+### Census data
+
+The raw census database consists in GPS records of individual and collective households. To link it with their spatial context, we compute ad hoc enumeration area (EA) boundaries as enveloppes around the GPS points belonging to the same EA. A careful selection is then made to remove inacurrate EAs due to error in collecting data, false EA attribution, imprecise GPS location or inaccurate GPS recording (not where the household lives but where the surveyor entered the observation in the survey device).
+
+All processing steps are detailed in two reports available on request.
+
+The final database used for modelling is composed of:
+
+```{r summary-census, echo=F}
+ data.frame(
+  "Individuals"='10 786 819',
+  "Enumeration Areas"= "16 473",
+  "Admin 3"= "338",
+  "Admin 2"= "45",
+  "Admin 1"= "13",
+    check.names = F
+) %>%
+  kable("latex", booktabs=T) %>%
+  kableExtra::kable_styling(full_width = T, latex_options =c("scale_down")) %>% 
+  #kableExtra::row_spec(0, color = "white", background = "rgb(51, 51, 51)") %>% 
+  kableExtra::row_spec(1, bold = T)
+
+```
+
+Figure \@ref(fig:map-gps) displays the GPS coordinates of the selected households with the resident density of their corresponding EA, i.e. `resident_density = population_count/settled_area`
+
+```{r map-gps, echo=F, fig.cap='Map of Resident Density at GPS level', out.width = "80%", fig.align="center"}
+knitr::include_graphics('img/resident_density_mean_GPS.png')
+```
+
+**NB**: High density locations are represented in darker purple, low density in yellow. We notice thus that the resident density is greater in rural Burkina Faso, especially in the *Est* region.
+
+
+### Administrative boundaries
+
+A cornerstone of the population model for the hierarchy but also for aggregating prediction outcome is a consistent administrative boundaries database.
+
+In Burkina Faso, it has been provided by the Institut Géographique du Burkina Faso and consists of:
+
+```{r summary-admin, echo=F}
+ data.frame(
+  "Admin 3 (Commune)"= "351",
+  "Admin 2 (Province)"= "45",
+  "Admin 1 (Région)"= "13", check.names = F
+) %>%
+  kable() %>%
+  kableExtra::kable_styling(full_width = T, latex_options =c("scale_down")) %>% 
+  #kableExtra::row_spec(0, color = "white", background = "grey") %>% 
+  kableExtra::row_spec(1, bold = T)
+
+```
+
+```{r map-admin, echo=F,fig.align="center", fig.cap='Administrative Boundaries in Burkina Faso', out.width = "60%"}
+knitr::include_graphics('img/admin_boundaries.png')
+```
+
+We notice that 13 admin 3 are not represented in our population database. As seen in Figure \@ref(fig:map-gps), they are located in the North and the East of the country.
+
+
+
+### Settlement Classification {#bfa:settlement-classification}
+
+To provide a finer understanding of the settlement type in Burkina Faso, we used the labelling of each EA in the census database as `urban` or `rural` and produced a settlement classification at pixel level. The outcome is a [raster](https://en.wikipedia.org/wiki/GIS_file_formats) that follows closely the INSD definition of urban/rural settlement.
+
+More precisely, we used the [`caret`](http://topepo.github.io/caret/index.html) R package to fit a [Gradient Boosting Machine](https://towardsdatascience.com/understanding-gradient-boosting-machines-9be756fe76ab) with two covariates, distance to high urban settlement and building count in a 500m window. The [area under the curve](https://en.wikipedia.org/wiki/Receiver_operating_characteristic) metric of the final model is `0.98`.
+
+
+```{r map-settlement, echo=F, fig.cap='Outcome of the Settlement Classification Algorithm', fig.align="center", out.width = "80%"}
+knitr::include_graphics('img/settlementClassification.PNG')
+```
+**NB**: Several models were fit with a 10-fold crossvalidation technique for tuning the hyperparameters and compared using the AUC. The GBM with the two mentionned covariates appeared to have the best AUC.
+
+### Geospatial Covariates {#bfa-geocov}
+
+Geospatial covariates are key for modelling population count as factor indicating the spatial pattern of human settlement.
+
+To study Burkina Faso spatial population distribution, we gathered 299 covariates from different sources. On Figure \@ref(fig:map-cov) is displayed some examples (medium-size cities, road network and building footprint) For an in-depth presentation, read the *Covariates Analysis* Report, available on request.
+
+```{r map-cov, echo=F, out.width = "60%",fig.align="center", fig.cap='Example of Covariates (medium-size cities, road network and building footprint)'}
+knitr::include_graphics('img/stacked_cov.PNG')
+```
+
+**Building Footprint**
+A core covariate in our model is the building footprint provided by @ecopia2020digitize. It is a satellite imagery based building extraction at 5m and gives a precise estimate of the built-up area in Burkina Faso. Figure  \@ref(fig:img-bf) offers a close-up in Ouagadougou. From this layer several covariates can be computed based on the attributes of the buildings (area, perimeter, distance to nearest building...). 
+
+
+```{r img-bf, echo=F, fig.cap='Example of the Building Footprint Layer in Ouagadougou', fig.align="center", out.width = "80%"}
+knitr::include_graphics('img/bf_example.PNG')
+```
+
+The building footprint gives us as well the subset of grid cells for which to predict the population count: we predict population only in the grid cell considered as settled, i.e. with at least one building from the building footprint layer.
+
+**NB**: A first step of pre-processing was done on the building footpring layer, excluding all buildings having a surface greater than 800m2 (2 453 buildings, 0.02%) to avoid predicting people in obvious non-residential areas (solar panel firms, mining infrastructures ...). Explanations are provided in an additional report.
+
+
+
+## Population Modelling
+
+The key idea for bottom-up population modelling is to estimate the statistical relationship between demographic data and spatial covariates at EA level.
+
+We based the Burkina Faso model on Worldpop bottom-up core model.
+For a recap, here is the model equation:
+\begin{equation}
+\begin{gathered}
+  N_i \sim Poisson( D_i A_i ) \\
+  D_i \sim LogNormal( \bar{D}_i, \sigma_{l_1,l_2}) \\
+  \bar{D}_i = \alpha_{l_1,l_2} + \sum_{k=1}^{K} \beta_k x_{i,k} \\ 
+  (\#eq:core)
+\end{gathered}
+\end{equation}
+where we recognise:
+
+- a Poisson distribution to model population count
+- a Lognormale distribution to model population density
+- a hierachcial setting for the intercept $\alpha$ and the variance $\sigma$ of the lognormal
+- a set of covariates $x_k$
+
+Two elements need a detailed explanation for a fine understanding of the Burkina Faso model:
+
+1. how to choose the correct hierarchical structure
+2. how to select a powerful set of explanatory covariates.
+
+
+### Choosing the Hierarchical Structure
+
+
+The population model is developed in a hierarchical Bayesian framework to pull out statistical strength from observations belonging to similar geographical context. Those classes should be defined as to group simliar population pattern. Four clustering information are at our disposal: the three different levels of administrative boundaries (admin 1, admin 2, admin 3) and the settlement classification.
+
+We tested five different combinations of clustering:
+
+1. admin 1
+2. settlement classification and admin 1 
+3. settlement classification, admin 1 and admin 2
+4. settlement classification, admin 1, admin 2 and admin 3
+5. settlement classification, admin 1 and admin 3
+
+The selection criteria for the best hierarchy is based on goodness-of-fit of the model but also on running time. See table \@ref(tab:model-results) for the results.
+
+The final hierarchical structure is based on scenario 5 which gives the following equation adaptation:
+
+\begin{equation}
+\begin{gathered}
+  N_i \sim Poisson( D_i A_i )\\
+  D_i \sim LogNormal( \bar{D}_i, \sigma_{sett,admin_1,admin_3})\\
+  \bar{D}_i = \alpha_{sett,admin_1,admin_3} + \sum_{k=1}^{K} \beta_k x_{i,k}\\ 
+    (\#eq:hierarchy)
+    \end{gathered}
+\end{equation}
+
+Figure \@ref(fig:map-hierarchy) shows the corresponding resident density grouping with black borders representing the delimitation of admin 1, grey borders the admin 3 and white borders the settlement classification. Thus the little circles indicate the urban settlement in each admin 3.
+
+```{r map-hierarchy, echo=F, fig.cap='Mean Resident Density per Settlement Type, Admin 1 and Admin 3', fig.align="center", out.width = "80%"}
+knitr::include_graphics('img/resident_density_mean_admin3.png')
+```
+
+### Selecting the Covariates
+
+The  covariates refine the resident density at local scale when the hierarchy plays a role at the grouping level. To select the best set, we study pairwise correlation at EA level, between resident density and all the covariates presented in Section \@ref(bfa-geocov).
+
+The reports are available on request.
+
+**Standardisation**
+The normal procedure for training our models is to standardise the selected variables on the training dataset by substracting its mean and dividing by its standard deviation. The purpose of this step is to speed up the fitting procedure by providing covariates on approximatively the same scale.
+
+However in Burkina Faso setting, there is in some cases an obvious missmatch between the distribution of a given covariate across the grid cells of the entire country - the prediction dataset - and when aggregated for the selected EAs - the training dataset -. This issue has even a greater impact on the covariates derived from the building footprint which have the greater correlation with population density. 
+
+
+```{r plot-comp-noFocal, echo=F, fig.cap='Distribution of a Non-focalized Covariate', out.width= '50%', fig.show='hold'}
+knitr::include_graphics(c('img/scatterplot_cov_noFocalization.png', 'img/comp_cov_noFocalization.png'))
+```
+Figure \@ref(fig:plot-comp-noFocal) shows the discrepancy in distribution for the mean building perimeter in a 1kmx1km window which is one of the greatest predictor at EA level with a Pearson correlation of `-0.67`. However an entire range of grid cells values (below -2) is not represented in the EA dataset. The correlation being negative, this will have a positive impact in prediction mode that is leading to overestimation of the population count in those grid cells.
+
+This phenomenon is occuring for several covariates that have a strong correlation and is due to grid cells in highly remote areas (with a low building count in the surrouding area) not being part of the training dataset. Indeed GPS data collection might be more difficult in those areas scattered across the country because of lack of electric power, household data entered at the village or non-coverage of the cellular GPS network.
+But in Burkina Faso, as seen in Figure \@ref(fig:map-gps), the resident density is greater in rural areas. The consequence is thus a global overestimation of people count as seen in first iterations of the model prediction.
+
+Our solution is to add a step of preprocessing and compute a spatial standardisation of the variable which consists in substracting the focal mean and dividing by the focal standard deviation. Several window size were tested, namely 500m, 1km and 5km. Here we will present the 1km standardised covariates since they have the best Pearson correlation with the resident density. 
+
+We then trained the model on three sets using the Stan statistical programming language:
+
+1. A small set with 4 variables ^[the four covariates are: `worldpop2019_std_log`, `distance_secondaryRoads_std_inv`,  `building_count_5000m_sum_std` and `frictionSurface2015_std_log`.]
+2. A medium-size set with 5 variables ^[the five covariates are: `improvedHousing2015_std_log`, `worldpop2019_std_log`, `distance_secondaryRoads_std_inv`, `building_count_5000m_sum_std` and `frictionSurface2015_std_log`.]
+3. A large set with 8 variables ^[the eight covariates are: `improvedHousing2015_std_log`, `worldpop2019_std_log`, `distance_secondaryRoads_std_inv`,    `buildingDistance_med_5000m_mean_std`, `building_count_5000m_sum_std`, `distance_primaryRoads_std_log`, `distance_settlement_highUrban_std_log`, and `frictionSurface2015_std_log`.]
+
+
+## Results and Validation
+
+### Models comparison
+
+To analyse the goodness-of-fit of the models, we used exactly the same procedure for sake of comparison: model fit on 70% of the dataset (11 574) and model test on 30% of the dataset (4 899), the same for all the models^[10-fold cross-validation although more robust, was too time intensiv to be run for every models (fitting one model takes approximatevely 6 hours)].
+
+
+```{r model-results, echo=F}
+model_result <- read.csv("img/model_description.csv", check.names = F)
+
+knitr::kable(model_result,
+             'latex',
+             align='ccccccccccc',
+             caption = 'Goodness-of-fit Metrics for Models Comparison') %>% 
+  kableExtra::kable_styling(full_width = F, latex_options =c("scale_down"), font_size=12) %>%
+  kableExtra::column_spec(1, width='1.5cm') %>%
+  #kableExtra::column_spec(c(1,5,9), border_right="1px solid lightgray") %>% 
+  kableExtra::add_header_above(c(" "=5, "Unstd."=1,  "Std."=3, " "=2)) %>% 
+  kableExtra::add_header_above(c("Model Version" = 1, "Hierarchy in alpha and sigma" = 4, "Covariates" = 4, "Goodness-of-fit"=2)) %>% 
+  kableExtra::row_spec(8, bold=T) %>% 
+  kableExtra::pack_rows("Base Model", 1, 2) %>%
+  kableExtra::pack_rows("Adding hierarchy", 2, 6) %>%
+  kableExtra::pack_rows("Adding covariates", 7, 10)
+
+```
+
+
+
+
+There are different ways to assess model fit with a Bayesian output. Figure \@ref(fig:goodness-of-fit) shows the comparison between predicted population count and observed count at cluster level on the test dataset.
+
+
+```{r goodness-of-fit, echo=F, fig.cap='Goodness-of-fit of Model 3b on Test Dataset', out.width= '47%', fig.show='hold', fig.align='default'}
+knitr::include_graphics(c('img/prediction_scatterplot.png', 'img/prediction_distribution.png'))
+```
+
+On the left hand side the scatterplot displays the prediction against the one-to-one line, with confidence interval in greys. We see that almost all the observed values are represented inside their confidence interval (grey lines intersecting the red one). More precisely in exactly 94.59%  of the clusters the observed population count is in its corresponding 95% confidence interval. The model behaves correctly. 
+
+The figure on the right hand side plots the observed against the predicted distribution. The visual match is confirmed by a *t-test* evaluationg the null hypothesis of equality in means of the two distributions which gives a p-value of `p-value=1.793e-08`.
+
+#### Inspecting residuals
+
+Mapping residuals of the test dataset can help to check potential spatial pattern of overprediction. Figure \@ref(fig:map-residuals) emphasizes the global overestimation of the model with a bias (mean of residuals) of `bias = 44 people`. The spatial distribution of residuals does not seem to reveal a specific clustering of over/underestimation.
+
+```{r map-residuals, echo=F, fig.cap='Map of Standardised Residuals', fig.align="center", out.width = "70%"}
+knitr::include_graphics('img/residuals_map.png')
+```
+
+
+#### Covariates effect
+
+To have a deeper understanding of covariates effect, we can extract the estimated beta coefficient and analyse their relationship with resident density. Let's recall quickly as seen on Figure \@ref(fig:map-gps) that the resident density is greater in remote area than in urban area.
+
+```{r graph-cov, echo=F, fig.cap='Estimated Covariate Coefficients', fig.align="center", out.width = "50%"}
+knitr::include_graphics('img/betas_corrected.png')
+```
+
+Figure \@ref(fig:graph-cov) indicates the magnitude of covariates effects and the confidence interval associated to it. It follows approximatevely the ranking in Pearson correlation:
+
+- Worldpop 2019 log had a correlation of -0.5 and a coefficient of -0.21. It has a negative sign because the resident density is higher in places where worldpop models less people. It has the highest impact on resident density and represents the baseline of population count from previous projected census. The larger uncertainty around it can come from the lack of precision in census disaggregation done by top-down methods.
+- Proximity to secondary roads (correlation= -0.45, coefficent -0.095) is coming from the road network established by the Institut National de Géographie. It is negatively correlated because the nearer a place is from a road the more likely the place corresponds to a populated area which is caracterised in Burkina Faso by a low population density.
+- The total number of buildings in a 5km window with a 1km focal standardization has a correlation of 0.5 for a coefficient at 0.095. The sign of correlation contrevienes previous explanations of the relationship between covariates and resident density.
+- The friction surface (correlation 0.5, coefficient 0.08) modelled by the Malaria Atlas Project represents how difficult it is to go through a pixel based on the roughness of the road network. Remote areas are thus caracterised by larger friction values.
+
+
+
+
+### Model outputs
+
+#### Estimates at administrative level
+
+We provide here for readibility only estimates at admin 1 level and their comparison with the NSO census projections for 2019.
+
+*still under discussion with NSO*
+
+```{r}
+# admin1 <- read.csv("img/admin1_estimates.csv")
+# admin1 <- admin1 %>% 
+#   mutate_if(is.numeric, list(function(x) return(round(x)))) %>% 
+#   mutate(uncertainty= round((people_upper_withMigrants - people_lower_withMigrants)/people_mean_withMigrants,3)) %>% 
+#   dplyr::select(region, ends_with('withMigrants'), uncertainty, projections_2019) 
+#   
+# colnames(admin1) <- c("Admin 1", "Mean", "Median", "Q_2.5%", "Q_97.5%", "Uncertainty", "Census Projections")
+```
+
+```{r table-admin1-predictions}
+# kable(admin1,             'latex',
+#              caption = "Estimates for the admin 1 level"
+#              ) %>% 
+#   kableExtra::kable_styling(full_width = T, latex_options =c("scale_down"))
+# 
+
+```
+
+
+#### Gridded population estimates
+
+Gridded population estimates can be visualised at: [http://srv02481.soton.ac.uk/woprVision/](http://srv02481.soton.ac.uk/woprVision/) (to be modified when public) and downloaded at [https://wopr.worldpop.org/](https://wopr.worldpop.org/).
+
+#### Understanding model uncertainty
+
+The power of Bayesian modelling is to produce along parameter estimates, the uncertainty associated to it. This is made possible by the prediction of the full population distribution from which we derived the most likely value (the mean) but also the 95% confidence interval (quantile 97,5 - quantile 0,025). To compute an uncertainty metric we divide this interval by the mean estimate to be able to compare the width of the intervals.
+
+```{r map-comp-unc, echo=F, fig.cap='Mapping Estimated Uncertainty v.s. Observed Coefficient of Variation in Resident Density ', out.width= '70%', fig.show='hold', fig.align = 'center'}
+knitr::include_graphics(c('img/uncertainty_mean_admin3.png', 'img/resident_density_cv_admin3.png'))
+```
+
+In Figure \@ref(fig:map-comp-unc), we mapped the resulting uncertainty at model levels (ie admin 3 + settlement classification). This map can be compared to the map of the average heterogenity in resident density at EA level. The hetereogeneity is computed as the resident density coefficient of variation. It is striking that the model uncertainty pattern follows the heterogeneity in input data.
+
+
+
+## Discussion and modelling details
+
+#### Dealing with internal migration
+
+The first goal of this exercise is to estimate the number of people in zones that couldn't be surveyed by the census. Those zones are characterised by higher internal migration pattern due to conflicts and terror attacks.
+
+The question is thus: *how to take into account displacement to adequately estimate the number of people in conflict area?*
+
+Migration status of surveyed households can be traced back with the following census question: in which admin 3 were you living last year? Despite a coarse spatial (admin 3) and temporal (one year) resolution, it offers a glance at the magnitude of the phenomenon.  
+
+*NB*: the definition of migrants here encompasses a wide range of situations that are only linked to a transfer in usual residency in a year time. This question was also administered in surveyed IDP camps considered as collective households.
+
+
+```{r map-migrant, echo=F, fig.cap='Map of Migration Patterns as Recorded in the Census', out.width= '50%', fig.show='hold'}
+knitr::include_graphics(c('img/migrantsFrom.png', 'img/migrantsTo.png'))
+```
+Note that on Figure \@ref(fig:map-migrant), it was not possible to represent proportion for migrant origin as no denominator was available in unsurvyed areas.^[Figures for Bobo-Dioulasso and Ouagadougou, the two main cities, were removed from the colormap because of the artificially higher number of migrants.]
+
+The challenge here is to correctly estimate the number of people in unsurveyed area. Indeed in a complete census migrants are represented in the population, registered at their destination location.
+
+However in our modelling approach, surveyed areas are used to estimate unsurveyed areas, thus using a population count inflated by the number of people coming from the unsurveyed areas. If we were to use this count, we would assume that a similar migration pattern happened toward the unsurveyed areas, which seems dubious. The idea is thus to use a baseline, ie the population in surveyed areas without migrants coming from unsurveyed area (60 727 individuals, that is 0.55% of the cleaned database). This baseline is used to estimate people in unsurveyed area. Then we reinject those migrants at their admin 3 of destination and remove them from their admin 3 of origin.
+
+```{r schema-migrant, echo=F, fig.cap='Schema for taking into account migration in modelling', fig.align="center", out.width = "70%"}
+knitr::include_graphics('img/schema_migration.png')
+```
+
+Note that this rectification is made only with migrants coming from those unsurveyed areas that have been surveyed elsewhere. Surveyed migrants coming from other admin 3 are not removed to obtain the baseline, as their admin 3 of origin was correctly surveyed.
+
+This procedure consists only on an accounting balance and is not aiming to model IDP displacement in Burkina Faso.
+Moreover it can act only on total count at admin 3 that is redistributed homogeneously at grid cells level, as we don't know from the census data what was the exact origin location of the migrants. 
+
+#### Non-residential buildings
+
+Two main issues result from the difficult inclusion of non-residential settlement in the modelling and prediction process.
+
+*1. For the processing of input data*
+
+The ad hoc definition of an EA biases the sample towards residential area. Indeed if EA boundaries were correctly drawn, non-residential areas would have been represented in the sample, thereby lowering the resident density.
+In the current situation, EA are drawn around household GPS points, thereby artificially inflating resident density.
+ Unfortunately this limit is inherent to our data and it does not seem possible to circumvent it.
+
+
+*2. For the prediction*
+
+Currently the location where to predict population consists in settled area as defined by the building footprint layer where we removed buildings greater than 800m2. 
+This is a coarse definition of non-residential area, whose example can be found in yellow in Figure \@ref(fig:img-bigBdg)
+
+```{r img-bigBdg, echo=F, fig.cap='Close-up on large buildings in the very north of Ouagadougou (Google Satellite Imagery)', fig.align="center", out.width = "60%"}
+knitr::include_graphics('img/img_bigBdg.PNG')
+```
+
+To refine population estimates we could revise the concept of residential building, not only to exclude large building but all non-residential buildings to constrain the estimates solely to the residential settled area.
+
+This however requires a methodology than rightly pin-point location where no one is living.
+ 
+A further modelling module could be added to predict building status. An interesting external input data could be [@OpenStreetMap] that has a database of industrial plots and public buildings. Coupled with fine building footprint derived metrics, it could represent an interesting statistical challenge.
+
+
+#### Settlement Classification
+
+The settlement classification obtained using the INSD urban/rural typlogy and predicted at the pixel level (cf. Section \@ref(bfa:settlement-classification)) is used to inform the hierarchy of the model through the intercept and the variance. Indeed we see in Figure \@ref(fig:map-hierarchy) different patterns of resident density in urban areas vs in rural areas.
+
+However, as seen in Table \@ref(tab:model-results), the settlement classification doesn't add much to the goodness-of-fit of the model. This can be explained by the heterogeneity of urban setting with urban settlement in rural areas being very different from urban areas in the two big cities (Ouagadougou and Bobo-Dioulasso).
+
+An improvement of the model could be to define an unsupervised classification of the Burkinabe built-up areas using metrics derived from the building footprint to better describe human settlement.
+
+In this iteration of the model, we decide to use the supervised settlement classification 
+to stick to the INSD data collection and reporting method whereby distinction is done between rural and urban enumeration areas.
+
+
+#### Age and Sex Disaggregation
+To estimate the age and sex disaggregation at pixel level, we use the proportion table derived from the census database at admin 3 level.
+*NB: the pyramids for unsurveyed admin 3 will be most likely extrapolated from neighbouring admin 3. This is still in discussion*
+
+
+#### Recalibration of gridded estimates
+
+The National Statistical Office is aiming at publishing hybrid admin 3 population totals:
+
+- for the entirely surveyed admin 3, they are releasing their own numbers amended by the omission rate derived from the Post-Enumeration Survey,
+- for the incomplete admin 3 they are providing the estimated population.
+
+However for complete admin 3, the gridded estimates don't intrinsincly match the official figures.
+In order to have consistency between the gridded estimates and the released total count at admin 3, we are recalibrating the estimates such that they match the admin 3 totals. More precisely we use the estimates as weights to disaggregate the official totals.
+
+
+\clearpage
+
+**Contributing**
+This chapter was written by Édith Darin. Funding for the work described in this chapter was provided by the Bill and Melinda Gates Foundation and the United Kingdom Department for International Development as part of the GRID3 project (OPP1182408). 
+
+**Suggested Citation**
+Darin E.. 2020. Methods to produce Burkina Faso 2019 gridded population estimates for Burkina Faso, version 1. WorldPop Research Group, University of Southampton.
+
+**References**
+
+
