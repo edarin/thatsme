@@ -9,9 +9,7 @@ output:
 ```{=latex}
 \header{Édith  } { Darin}
 {\qquad \qquad Social sciences, Statistics and Geospatial Data Science}
-      
-      
-\fcolorbox{white}{gray}{\parbox{\dimexpr\textwidth-1\fboxsep-1\fboxrule}{%
+\fcolorbox{white}{gray}{\parbox{\dimexpr\textwidth-1\fboxsep-1\fboxrule}{
 .....
 }}
 
