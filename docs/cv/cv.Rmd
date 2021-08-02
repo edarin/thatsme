@@ -2,7 +2,7 @@
 title: ''
 output: 
   pdf_document:
-     latex_engine: lualatex
+    latex_engine: lualatex
 documentclass: friggeri-cv
 ---
 
