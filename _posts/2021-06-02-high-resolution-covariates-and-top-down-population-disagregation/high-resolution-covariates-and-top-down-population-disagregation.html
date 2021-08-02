@@ -23,6 +23,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -85,9 +86,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>What is the impact of Very-high-resolution covariates on top-down population models?</title>
+  <title>How fine can a top-down population model be? [draft]</title>
 
-  <meta property="description" itemprop="description" content="We will study the use of very high-resolution covariates in top-down population model and its impact on population gridded estimates. We will examine building-footprint derived covariates in Sierra Leone population model."/>
+  <meta property="description" itemprop="description" content="We will study the use of very high-resolution covariates in top-down population model and its impact on population gridded estimates. We will examine building-footprint derived covariates in Sierra Leone population model. Disclaimer: This post is still being drafted."/>
 
 
   <!--  https://schema.org/Article -->
@@ -96,15 +97,15 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <meta name="article:author" content="Edith Darin"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="What is the impact of Very-high-resolution covariates on top-down population models?"/>
+  <meta property="og:title" content="How fine can a top-down population model be? [draft]"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="We will study the use of very high-resolution covariates in top-down population model and its impact on population gridded estimates. We will examine building-footprint derived covariates in Sierra Leone population model."/>
+  <meta property="og:description" content="We will study the use of very high-resolution covariates in top-down population model and its impact on population gridded estimates. We will examine building-footprint derived covariates in Sierra Leone population model. Disclaimer: This post is still being drafted."/>
   <meta property="og:locale" content="en_US"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="What is the impact of Very-high-resolution covariates on top-down population models?"/>
-  <meta property="twitter:description" content="We will study the use of very high-resolution covariates in top-down population model and its impact on population gridded estimates. We will examine building-footprint derived covariates in Sierra Leone population model."/>
+  <meta property="twitter:title" content="How fine can a top-down population model be? [draft]"/>
+  <meta property="twitter:description" content="We will study the use of very high-resolution covariates in top-down population model and its impact on population gridded estimates. We will examine building-footprint derived covariates in Sierra Leone population model. Disclaimer: This post is still being drafted."/>
 
   <!--/radix_placeholder_meta_tags-->
   
@@ -118,12 +119,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","bibliography"]}},"value":[{"type":"character","attributes":{},"value":["What is the impact of Very-high-resolution covariates on top-down population models?"]},{"type":"character","attributes":{},"value":["We will study the use of very high-resolution covariates in top-down population model and its impact on population gridded estimates. We will examine building-footprint derived covariates in Sierra Leone population model.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Edith Darin"]}]}]},{"type":"character","attributes":{},"value":["06-02-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["references.bib"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","bibliography"]}},"value":[{"type":"character","attributes":{},"value":["How fine can a top-down population model be? [draft]"]},{"type":"character","attributes":{},"value":["We will study the use of very high-resolution covariates in top-down population model and its impact on population gridded estimates. We will examine building-footprint derived covariates in Sierra Leone population model. Disclaimer: This post is still being drafted.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Edith Darin"]}]}]},{"type":"character","attributes":{},"value":["06-02-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["references.bib"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["dat/sle_slope.PNG","dat/sle_water_dist.PNG","high-resolution-covariates-and-top-down-population-disagregation_files/anchor-4.2.2/anchor.min.js","high-resolution-covariates-and-top-down-population-disagregation_files/bowser-1.9.3/bowser.min.js","high-resolution-covariates-and-top-down-population-disagregation_files/distill-2.2.21/template.v2.js","high-resolution-covariates-and-top-down-population-disagregation_files/header-attrs-2.7/header-attrs.js","high-resolution-covariates-and-top-down-population-disagregation_files/jquery-1.11.3/jquery.min.js","high-resolution-covariates-and-top-down-population-disagregation_files/popper-2.6.0/popper.min.js","high-resolution-covariates-and-top-down-population-disagregation_files/tippy-6.2.7/tippy-bundle.umd.min.js","high-resolution-covariates-and-top-down-population-disagregation_files/tippy-6.2.7/tippy-light-border.css","high-resolution-covariates-and-top-down-population-disagregation_files/tippy-6.2.7/tippy.css","high-resolution-covariates-and-top-down-population-disagregation_files/tippy-6.2.7/tippy.umd.min.js","high-resolution-covariates-and-top-down-population-disagregation_files/webcomponents-2.0.0/webcomponents.js","references.bib"]}
+  {"type":"character","attributes":{},"value":["dat/sle_slope.PNG","dat/sle_water_dist.PNG","high-resolution-covariates-and-top-down-population-disagregation_files/anchor-4.2.2/anchor.min.js","high-resolution-covariates-and-top-down-population-disagregation_files/bowser-1.9.3/bowser.min.js","high-resolution-covariates-and-top-down-population-disagregation_files/distill-2.2.21/template.v2.js","high-resolution-covariates-and-top-down-population-disagregation_files/header-attrs-2.7/header-attrs.js","high-resolution-covariates-and-top-down-population-disagregation_files/header-attrs-2.9/header-attrs.js","high-resolution-covariates-and-top-down-population-disagregation_files/jquery-1.11.3/jquery.min.js","high-resolution-covariates-and-top-down-population-disagregation_files/popper-2.6.0/popper.min.js","high-resolution-covariates-and-top-down-population-disagregation_files/tippy-6.2.7/tippy-bundle.umd.min.js","high-resolution-covariates-and-top-down-population-disagregation_files/tippy-6.2.7/tippy-light-border.css","high-resolution-covariates-and-top-down-population-disagregation_files/tippy-6.2.7/tippy.css","high-resolution-covariates-and-top-down-population-disagregation_files/tippy-6.2.7/tippy.umd.min.js","high-resolution-covariates-and-top-down-population-disagregation_files/webcomponents-2.0.0/webcomponents.js","references.bib"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1441,7 +1442,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="high-resolution-covariates-and-top-down-population-disagregation_files/header-attrs-2.7/header-attrs.js"></script>
+  <script src="high-resolution-covariates-and-top-down-population-disagregation_files/header-attrs-2.9/header-attrs.js"></script>
   <script src="high-resolution-covariates-and-top-down-population-disagregation_files/jquery-1.11.3/jquery.min.js"></script>
   <script src="high-resolution-covariates-and-top-down-population-disagregation_files/popper-2.6.0/popper.min.js"></script>
   <link href="high-resolution-covariates-and-top-down-population-disagregation_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -1462,7 +1463,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"What is the impact of Very-high-resolution covariates on top-down population models?","description":"We will study the use of very high-resolution covariates in top-down population model and its impact on population gridded estimates. We will examine building-footprint derived covariates in Sierra Leone population model.","authors":[{"author":"Edith Darin","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-06-02T00:00:00.000+01:00","citationText":"Darin, 2021"}
+{"title":"How fine can a top-down population model be? [draft]","description":"We will study the use of very high-resolution covariates in top-down population model and its impact on population gridded estimates. We will examine building-footprint derived covariates in Sierra Leone population model. Disclaimer: This post is still being drafted.","authors":[{"author":"Edith Darin","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-06-02T00:00:00.000+01:00","citationText":"Darin, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1472,10 +1473,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>What is the impact of Very-high-resolution covariates on top-down population models?</h1>
+<h1>How fine can a top-down population model be? [draft]</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>We will study the use of very high-resolution covariates in top-down population model and its impact on population gridded estimates. We will examine building-footprint derived covariates in Sierra Leone population model.</p></p>
+<p><p>We will study the use of very high-resolution covariates in top-down population model and its impact on population gridded estimates. We will examine building-footprint derived covariates in Sierra Leone population model. Disclaimer: This post is still being drafted.</p></p>
 </div>
 
 <div class="d-byline">
@@ -1485,6 +1486,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 
 <div class="d-article">
+<p><strong>Disclaimer:</strong> This post is still being drafted.</p>
 <h1 id="background">Background</h1>
 <p>To obtain high-resolution population estimates, <a href="https://www.worldpop.org/">WorldPop</a> developed a top-down method that disagregates population totals into grid cells thanks to ancillary geospatial covariates.</p>
 <p>The method consists in fitting a random-forest model <span class="citation" data-cites="breiman2001">(<a href="#ref-breiman2001" role="doc-biblioref">Breiman 2001</a>)</span> at the finest administrative level for which population count is available. The estimated model is then used to predict population density for every grid cell thanks to the geospatial covariates. Finally, the predicted gridded population density layer plays the role of a weighting layer to breakdown the population totals into the grid cells <span class="citation" data-cites="stevens2015">(<a href="#ref-stevens2015" role="doc-biblioref">Stevens et al. 2015</a>)</span>.</p>
@@ -1519,7 +1521,7 @@ Figure 1: Exemple of raster resampling: Slope in Sierra Leone
 <li><p>Distance to open-water coastline per country</p></li>
 <li><p>Distance to OpenStreetMap (OSM) major roads, major road intersections and major waterways</p></li>
 </ul>
-<p>Rasters resulting from Euclidian distance measurement can have virtually any spatial resolution. They however are not representative of localized informative variations for population modelling.</p>
+<p>Rasters resulting from Euclidian distance measurement can have virtually any spatial resolution. They however might not be representative of localized informative variations for population modelling.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
 <img src="dat/sle_water_dist.PNG" alt="Exemple of Euclidean measurement: Distance to waterways in Sierra Leone" width="198" />
@@ -1554,7 +1556,7 @@ Lloyd, Christopher T, Heather Chamberlain, David Kerr, Greg Yetman, Linda Pistol
 Stevens, Forrest R., Andrea E. Gaughan, Catherine Linard, and Andrew J. Tatem. 2015. <span>“Disaggregating Census Data for Population Mapping Using Random Forests with Remotely-Sensed and Ancillary Data.”</span> <em>PLOS ONE</em> 10 (2): e0107042. <a href="https://doi.org/10.1371/journal.pone.0107042">https://doi.org/10.1371/journal.pone.0107042</a>.
 </div>
 <div id="ref-worldpopresearchgroup2018" class="csl-entry" role="doc-biblioentry">
-WorldPop Research Group, Department of Geography and Geosciences, University of Louisville, Departement de Geographie, Universite de Namur, and Center for International Earth Science Information Network (CIESIN), Columbia University. 2018. <span>“Global High Resolution Population Denominators Project - Funded by the Bill and Melinda Gates Foundation (OPP1134076).”</span> <a href="https://doi.org/10.5258/SOTON/WP00645">https://doi.org/10.5258/SOTON/WP00645</a>.
+WorldPop Research Group, Department of Geography and Geosciences, University of Louisville, Departement de Geographie, Universite de Namur, and Center for International Earth Science Information Network (CIESIN), Columbia University. 2018. <span>“Global High Resolution Population Denominators Project - Funded by the Bill and Melinda Gates Foundation (Opp1134076).”</span> <a href="https://doi.org/10.5258/SOTON/WP00645">https://doi.org/10.5258/SOTON/WP00645</a>.
 </div>
 </div>
 <section class="footnotes" role="doc-endnotes">

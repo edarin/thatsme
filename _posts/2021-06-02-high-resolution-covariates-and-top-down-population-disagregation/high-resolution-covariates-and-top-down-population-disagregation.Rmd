@@ -1,7 +1,7 @@
 ---
-title: "What is the impact of very-high resolution covariates on top-down population models?"
+title: "How fine can a top-down population model be? [draft]"
 description: |
-  We will study the use of very high-resolution covariates in top-down population model and its impact on population gridded estimates. We will examine building-footprint derived covariates in Sierra Leone population model.
+  We will study the use of very high-resolution covariates in top-down population model and its impact on population gridded estimates. We will examine building-footprint derived covariates in Sierra Leone population model. Disclaimer: This post is still being drafted.
 author:
   - name: 'Edith Darin'
 date: 06-02-2021
@@ -14,6 +14,8 @@ bibliography: references.bib
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
+
+**Disclaimer:** This post is still being drafted.
 
 # Background
 

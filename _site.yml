@@ -10,6 +10,8 @@ navbar:
       href: publications.html
     - text: "Talks"
       href: talks.html
+    - text: 'Resume'
+      href: 'https://raw.githubusercontent.com/edarin/thatsme/main/cv/cv.pdf'
   left:
     - text: "Portfolio"
       href: portfolio.html

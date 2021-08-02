@@ -64,6 +64,7 @@ d-appendix {
   --text-size:        15px;
   --hover-color:      white;
   --bkgd-color:       #592524;
+  --link-color:       rgba(255, 255, 255, 0.8);
 }
 
 .distill-site-footer {
@@ -80,6 +81,9 @@ h1, h2, h3, h4, h5, h6 {
   color: #592524;
 }
 
-a:link {
-  color: #592524;
+a {
+  color: #913d3b;
+}
+a:hover {
+  color: #913d3b;
 }

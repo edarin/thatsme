@@ -23,6 +23,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -85,9 +86,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-<title>Meet Edith: What is the impact of Very-high-resolution covariates on top-down population models?</title>
+<title>Meet Edith: How fine can a top-down population model be? [draft]</title>
 
-<meta property="description" itemprop="description" content="We will study the use of very high-resolution covariates in top-down population model and its impact on population gridded estimates. We will examine building-footprint derived covariates in Sierra Leone population model."/>
+<meta property="description" itemprop="description" content="We will study the use of very high-resolution covariates in top-down population model and its impact on population gridded estimates. We will examine building-footprint derived covariates in Sierra Leone population model. Disclaimer: This post is still being drafted."/>
 
 <link rel="canonical" href="https://edarin.github.io/thatsme/posts/2021-06-02-high-resolution-covariates-and-top-down-population-disagregation/"/>
 
@@ -97,9 +98,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <meta name="article:author" content="Edith Darin"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-<meta property="og:title" content="Meet Edith: What is the impact of Very-high-resolution covariates on top-down population models?"/>
+<meta property="og:title" content="Meet Edith: How fine can a top-down population model be? [draft]"/>
 <meta property="og:type" content="article"/>
-<meta property="og:description" content="We will study the use of very high-resolution covariates in top-down population model and its impact on population gridded estimates. We will examine building-footprint derived covariates in Sierra Leone population model."/>
+<meta property="og:description" content="We will study the use of very high-resolution covariates in top-down population model and its impact on population gridded estimates. We will examine building-footprint derived covariates in Sierra Leone population model. Disclaimer: This post is still being drafted."/>
 <meta property="og:url" content="https://edarin.github.io/thatsme/posts/2021-06-02-high-resolution-covariates-and-top-down-population-disagregation/"/>
 <meta property="og:image" content="https://edarin.github.io/thatsme/posts/2021-06-02-high-resolution-covariates-and-top-down-population-disagregation/dat/sle_slope.PNG"/>
 <meta property="og:image:width" content="403"/>
@@ -109,15 +110,15 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <!--  https://dev.twitter.com/cards/types/summary -->
 <meta property="twitter:card" content="summary_large_image"/>
-<meta property="twitter:title" content="Meet Edith: What is the impact of Very-high-resolution covariates on top-down population models?"/>
-<meta property="twitter:description" content="We will study the use of very high-resolution covariates in top-down population model and its impact on population gridded estimates. We will examine building-footprint derived covariates in Sierra Leone population model."/>
+<meta property="twitter:title" content="Meet Edith: How fine can a top-down population model be? [draft]"/>
+<meta property="twitter:description" content="We will study the use of very high-resolution covariates in top-down population model and its impact on population gridded estimates. We will examine building-footprint derived covariates in Sierra Leone population model. Disclaimer: This post is still being drafted."/>
 <meta property="twitter:url" content="https://edarin.github.io/thatsme/posts/2021-06-02-high-resolution-covariates-and-top-down-population-disagregation/"/>
 <meta property="twitter:image" content="https://edarin.github.io/thatsme/posts/2021-06-02-high-resolution-covariates-and-top-down-population-disagregation/dat/sle_slope.PNG"/>
 <meta property="twitter:image:width" content="403"/>
 <meta property="twitter:image:height" content="400"/>
 
 <!--  https://scholar.google.com/intl/en/scholar/inclusion.html#indexing -->
-<meta name="citation_title" content="Meet Edith: What is the impact of Very-high-resolution covariates on top-down population models?"/>
+<meta name="citation_title" content="Meet Edith: How fine can a top-down population model be? [draft]"/>
 <meta name="citation_fulltext_html_url" content="https://edarin.github.io/thatsme/posts/2021-06-02-high-resolution-covariates-and-top-down-population-disagregation/"/>
 <meta name="citation_online_date" content="2021/06/02"/>
 <meta name="citation_publication_date" content="2021/06/02"/>
@@ -134,12 +135,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","bibliography","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["What is the impact of Very-high-resolution covariates on top-down population models?"]},{"type":"character","attributes":{},"value":["We will study the use of very high-resolution covariates in top-down population model and its impact on population gridded estimates. We will examine building-footprint derived covariates in Sierra Leone population model."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Edith Darin"]}]}]},{"type":"character","attributes":{},"value":["06-02-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["references.bib"]},{"type":"character","attributes":{},"value":["https://edarin.github.io/thatsme/posts/2021-06-02-high-resolution-covariates-and-top-down-population-disagregation/"]},{"type":"character","attributes":{},"value":["https://edarin.github.io/thatsme/posts/2021-06-02-high-resolution-covariates-and-top-down-population-disagregation/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","bibliography","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["How fine can a top-down population model be? [draft]"]},{"type":"character","attributes":{},"value":["We will study the use of very high-resolution covariates in top-down population model and its impact on population gridded estimates. We will examine building-footprint derived covariates in Sierra Leone population model. Disclaimer: This post is still being drafted."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Edith Darin"]}]}]},{"type":"character","attributes":{},"value":["06-02-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["references.bib"]},{"type":"character","attributes":{},"value":["https://edarin.github.io/thatsme/posts/2021-06-02-high-resolution-covariates-and-top-down-population-disagregation/"]},{"type":"character","attributes":{},"value":["https://edarin.github.io/thatsme/posts/2021-06-02-high-resolution-covariates-and-top-down-population-disagregation/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["dat/sle_slope.PNG","dat/sle_water_dist.PNG","high-resolution-covariates-and-top-down-population-disagregation_files/anchor-4.2.2/anchor.min.js","high-resolution-covariates-and-top-down-population-disagregation_files/bowser-1.9.3/bowser.min.js","high-resolution-covariates-and-top-down-population-disagregation_files/distill-2.2.21/template.v2.js","high-resolution-covariates-and-top-down-population-disagregation_files/header-attrs-2.7/header-attrs.js","high-resolution-covariates-and-top-down-population-disagregation_files/jquery-1.11.3/jquery.min.js","high-resolution-covariates-and-top-down-population-disagregation_files/popper-2.6.0/popper.min.js","high-resolution-covariates-and-top-down-population-disagregation_files/tippy-6.2.7/tippy-bundle.umd.min.js","high-resolution-covariates-and-top-down-population-disagregation_files/tippy-6.2.7/tippy-light-border.css","high-resolution-covariates-and-top-down-population-disagregation_files/tippy-6.2.7/tippy.css","high-resolution-covariates-and-top-down-population-disagregation_files/tippy-6.2.7/tippy.umd.min.js","high-resolution-covariates-and-top-down-population-disagregation_files/webcomponents-2.0.0/webcomponents.js","references.bib"]}
+  {"type":"character","attributes":{},"value":["dat/sle_slope.PNG","dat/sle_water_dist.PNG","high-resolution-covariates-and-top-down-population-disagregation_files/anchor-4.2.2/anchor.min.js","high-resolution-covariates-and-top-down-population-disagregation_files/bowser-1.9.3/bowser.min.js","high-resolution-covariates-and-top-down-population-disagregation_files/distill-2.2.21/template.v2.js","high-resolution-covariates-and-top-down-population-disagregation_files/header-attrs-2.7/header-attrs.js","high-resolution-covariates-and-top-down-population-disagregation_files/header-attrs-2.9/header-attrs.js","high-resolution-covariates-and-top-down-population-disagregation_files/jquery-1.11.3/jquery.min.js","high-resolution-covariates-and-top-down-population-disagregation_files/popper-2.6.0/popper.min.js","high-resolution-covariates-and-top-down-population-disagregation_files/tippy-6.2.7/tippy-bundle.umd.min.js","high-resolution-covariates-and-top-down-population-disagregation_files/tippy-6.2.7/tippy-light-border.css","high-resolution-covariates-and-top-down-population-disagregation_files/tippy-6.2.7/tippy.css","high-resolution-covariates-and-top-down-population-disagregation_files/tippy-6.2.7/tippy.umd.min.js","high-resolution-covariates-and-top-down-population-disagregation_files/webcomponents-2.0.0/webcomponents.js","references.bib"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -1947,6 +1948,7 @@ d-appendix {
   --text-size:        15px;
   --hover-color:      white;
   --bkgd-color:       #592524;
+  --link-color:       rgba(255, 255, 255, 0.8);
 }
 
 .distill-site-footer {
@@ -1963,8 +1965,11 @@ h1, h2, h3, h4, h5, h6 {
   color: #592524;
 }
 
-a:link {
-  color: #592524;
+a {
+  color: #913d3b;
+}
+a:hover {
+  color: #913d3b;
 }</style>
 <style type="text/css">
 /* base style */
@@ -2121,7 +2126,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.7/header-attrs.js"></script>
+  <script src="../../site_libs/header-attrs-2.9/header-attrs.js"></script>
   <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -2142,7 +2147,7 @@ d-appendix d-footnote-list a.footnote-backlink {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"What is the impact of Very-high-resolution covariates on top-down population models?","description":"We will study the use of very high-resolution covariates in top-down population model and its impact on population gridded estimates. We will examine building-footprint derived covariates in Sierra Leone population model.","authors":[{"author":"Edith Darin","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-06-02T00:00:00.000+01:00","citationText":"Darin, 2021"}
+{"title":"How fine can a top-down population model be? [draft]","description":"We will study the use of very high-resolution covariates in top-down population model and its impact on population gridded estimates. We will examine building-footprint derived covariates in Sierra Leone population model. Disclaimer: This post is still being drafted.","authors":[{"author":"Edith Darin","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-06-02T00:00:00.000+01:00","citationText":"Darin, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2157,6 +2162,7 @@ d-appendix d-footnote-list a.footnote-backlink {
 <div class="nav-right">
 <a href="../../publications.html">Publications</a>
 <a href="../../talks.html">Talks</a>
+<a href="https://raw.githubusercontent.com/edarin/thatsme/main/cv/cv.pdf">Resume</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
 </nav>
@@ -2166,10 +2172,10 @@ d-appendix d-footnote-list a.footnote-backlink {
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>What is the impact of Very-high-resolution covariates on top-down population models?</h1>
+<h1>How fine can a top-down population model be? [draft]</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>We will study the use of very high-resolution covariates in top-down population model and its impact on population gridded estimates. We will examine building-footprint derived covariates in Sierra Leone population model.</p></p>
+<p><p>We will study the use of very high-resolution covariates in top-down population model and its impact on population gridded estimates. We will examine building-footprint derived covariates in Sierra Leone population model. Disclaimer: This post is still being drafted.</p></p>
 </div>
 
 <div class="d-byline">
@@ -2179,6 +2185,7 @@ d-appendix d-footnote-list a.footnote-backlink {
 </div>
 
 <div class="d-article">
+<p><strong>Disclaimer:</strong> This post is still being drafted.</p>
 <h1 id="background">Background</h1>
 <p>To obtain high-resolution population estimates, <a href="https://www.worldpop.org/">WorldPop</a> developed a top-down method that disagregates population totals into grid cells thanks to ancillary geospatial covariates.</p>
 <p>The method consists in fitting a random-forest model <span class="citation" data-cites="breiman2001">(<a href="#ref-breiman2001" role="doc-biblioref">Breiman 2001</a>)</span> at the finest administrative level for which population count is available. The estimated model is then used to predict population density for every grid cell thanks to the geospatial covariates. Finally, the predicted gridded population density layer plays the role of a weighting layer to breakdown the population totals into the grid cells <span class="citation" data-cites="stevens2015">(<a href="#ref-stevens2015" role="doc-biblioref">Stevens et al. 2015</a>)</span>.</p>
@@ -2213,7 +2220,7 @@ Figure 1: Exemple of raster resampling: Slope in Sierra Leone
 <li><p>Distance to open-water coastline per country</p></li>
 <li><p>Distance to OpenStreetMap (OSM) major roads, major road intersections and major waterways</p></li>
 </ul>
-<p>Rasters resulting from Euclidian distance measurement can have virtually any spatial resolution. They however are not representative of localized informative variations for population modelling.</p>
+<p>Rasters resulting from Euclidian distance measurement can have virtually any spatial resolution. They however might not be representative of localized informative variations for population modelling.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
 <img src="dat/sle_water_dist.PNG" alt="Exemple of Euclidean measurement: Distance to waterways in Sierra Leone" width="198" />
@@ -2248,7 +2255,7 @@ Lloyd, Christopher T, Heather Chamberlain, David Kerr, Greg Yetman, Linda Pistol
 Stevens, Forrest R., Andrea E. Gaughan, Catherine Linard, and Andrew J. Tatem. 2015. <span>“Disaggregating Census Data for Population Mapping Using Random Forests with Remotely-Sensed and Ancillary Data.”</span> <em>PLOS ONE</em> 10 (2): e0107042. <a href="https://doi.org/10.1371/journal.pone.0107042">https://doi.org/10.1371/journal.pone.0107042</a>.
 </div>
 <div id="ref-worldpopresearchgroup2018" class="csl-entry" role="doc-biblioentry">
-WorldPop Research Group, Department of Geography and Geosciences, University of Louisville, Departement de Geographie, Universite de Namur, and Center for International Earth Science Information Network (CIESIN), Columbia University. 2018. <span>“Global High Resolution Population Denominators Project - Funded by the Bill and Melinda Gates Foundation (OPP1134076).”</span> <a href="https://doi.org/10.5258/SOTON/WP00645">https://doi.org/10.5258/SOTON/WP00645</a>.
+WorldPop Research Group, Department of Geography and Geosciences, University of Louisville, Departement de Geographie, Universite de Namur, and Center for International Earth Science Information Network (CIESIN), Columbia University. 2018. <span>“Global High Resolution Population Denominators Project - Funded by the Bill and Melinda Gates Foundation (Opp1134076).”</span> <a href="https://doi.org/10.5258/SOTON/WP00645">https://doi.org/10.5258/SOTON/WP00645</a>.
 </div>
 </div>
 <section class="footnotes" role="doc-endnotes">
@@ -2274,11 +2281,11 @@ WorldPop Research Group, Department of Geography and Geosciences, University of 
   <div id="references-listing"></div>
   <h3 id="citation">Citation</h3>
   <p>For attribution, please cite this work as</p>
-  <pre class="citation-appendix short">Darin (2021, June 2). Meet Edith: What is the impact of Very-high-resolution covariates on top-down population models?. Retrieved from https://edarin.github.io/thatsme/posts/2021-06-02-high-resolution-covariates-and-top-down-population-disagregation/</pre>
+  <pre class="citation-appendix short">Darin (2021, June 2). Meet Edith: How fine can a top-down population model be? [draft]. Retrieved from https://edarin.github.io/thatsme/posts/2021-06-02-high-resolution-covariates-and-top-down-population-disagregation/</pre>
   <p>BibTeX citation</p>
-  <pre class="citation-appendix long">@misc{darin2021what,
+  <pre class="citation-appendix long">@misc{darin2021how,
   author = {Darin, Edith},
-  title = {Meet Edith: What is the impact of Very-high-resolution covariates on top-down population models?},
+  title = {Meet Edith: How fine can a top-down population model be? [draft]},
   url = {https://edarin.github.io/thatsme/posts/2021-06-02-high-resolution-covariates-and-top-down-population-disagregation/},
   year = {2021}
 }</pre>

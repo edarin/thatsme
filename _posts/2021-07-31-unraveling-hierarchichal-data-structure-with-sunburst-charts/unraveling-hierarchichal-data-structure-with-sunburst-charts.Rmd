@@ -1,7 +1,7 @@
 ---
-title: "Sunburst charts and hierarchical data"
+title: "How to get a clear view of hierarchical data? Answer: Sunburst Charts"
 description: |
-  Suburst charts are a great tool to visualise hierarchichal data structure and unravel missing combinations. Useful as an exploratory analysis for Bayesian hierarchical models.
+  Sunburst charts are a great tool to visualise hierarchichal data structure and unravel missing combinations. Useful as an exploratory analysis for Bayesian hierarchical models.
 author:
   - name: Edith Darin
 date: 07-31-2021

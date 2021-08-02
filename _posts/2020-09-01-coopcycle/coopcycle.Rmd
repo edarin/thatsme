@@ -1,7 +1,7 @@
 ---
 title: "CoopCycle: we socialize platform"
 description: |
-  Since 2017 I am a vice-president of the CoopCycle association  that fights for fair working right in the bike delivery sector.
+  Since 2017 I am a vice-president of the CoopCycle association  that fights for fair working rights in the bike delivery sector.
 author:
   - name: Edith Darin
     url: {}

@@ -105,7 +105,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["Posts"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["posts"]}},"value":[{"type":"character","attributes":{},"value":["2021-07-31-unraveling-hierarchichal-data-structure-with-sunburst-charts","2021-06-02-high-resolution-covariates-and-top-down-population-disagregation","2021-07-09-modelling-burkina-faso-population","2021-07-02-top-down-r-tutorial"]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["Posts"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["posts"]}},"value":[{"type":"character","attributes":{},"value":["2021-07-31-unraveling-hierarchichal-data-structure-with-sunburst-charts","2021-06-02-high-resolution-covariates-and-top-down-population-disagregation"]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -1914,6 +1914,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     --text-size:        15px;
     --hover-color:      white;
     --bkgd-color:       #592524;
+    --link-color:       rgba(255, 255, 255, 0.8);
   }
 
   .distill-site-footer {
@@ -1930,8 +1931,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: #592524;
   }
 
-  a:link {
-    color: #592524;
+  a {
+    color: #913d3b;
+  }
+  a:hover {
+    color: #913d3b;
   }</style>
   <style type="text/css">
   /* base style */
@@ -2123,6 +2127,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="nav-right">
 <a href="publications.html">Publications</a>
 <a href="talks.html">Talks</a>
+<a href="https://raw.githubusercontent.com/edarin/thatsme/main/cv/cv.pdf">Resume</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
 </nav>
@@ -2277,9 +2282,9 @@ function init_posts_list() {
 <img src="posts/2021-07-31-unraveling-hierarchichal-data-structure-with-sunburst-charts/./sunburst_2layers.png"/>
 </div>
 <div class="description">
-<h2>Sunburst charts and hierarchical data</h2>
+<h2>How to get a clear view of hierarchical data? Answer: Sunburst Charts</h2>
 <div class="dt-tags"></div>
-<p>Suburst charts are a great tool to visualise hierarchichal data structure and unravel missing combinations. Useful as an exploratory analysis for Bayesian hierarchical models.</p>
+<p>Sunburst charts are a great tool to visualise hierarchichal data structure and unravel missing combinations. Useful as an exploratory analysis for Bayesian hierarchical models.</p>
 </div>
 </a>
 <a href="posts/2021-06-02-high-resolution-covariates-and-top-down-population-disagregation/" class="post-preview">
@@ -2294,45 +2299,9 @@ function init_posts_list() {
 <img src="posts/2021-06-02-high-resolution-covariates-and-top-down-population-disagregation/dat/sle_slope.PNG"/>
 </div>
 <div class="description">
-<h2>What is the impact of Very-high-resolution covariates on top-down population models?</h2>
+<h2>How fine can a top-down population model be? [draft]</h2>
 <div class="dt-tags"></div>
-<p>We will study the use of very high-resolution covariates in top-down population model and its impact on population gridded estimates. We will examine building-footprint derived covariates in Sierra Leone population model.</p>
-</div>
-</a>
-<a href="posts/2021-07-09-modelling-burkina-faso-population/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">Sept. 20, 2020</div>
-<div class="dt-authors">
-<div class="dt-author">Edith Darin</div>
-</div>
-</div>
-<div class="thumbnail">
-<img src="posts/2021-07-09-modelling-burkina-faso-population/dat/schema1_ENG.jpg"/>
-</div>
-<div class="description">
-<h2>Hybrid census in Burkina Faso: Bottom-up population modelling</h2>
-<div class="dt-tags"></div>
-<p>I developped a Bayesian bottom-up population modelling to adress the challenge of the incomplete 2020 census in Burkina Faso. The model was combining GPS household location with remote sensing product in a Bayesian hierarchcical framework. The output is a hybrid gridded population that was endorsed by Burkina Faso Statistics Office.</p>
-</div>
-</a>
-<a href="posts/2021-07-02-top-down-r-tutorial/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">Dec. 8, 2020</div>
-<div class="dt-authors">
-<div class="dt-author">Douglas R Leasure</div>
-<div class="dt-author">Edith Darin</div>
-<div class="dt-author">Andrew J tatem</div>
-</div>
-</div>
-<div class="thumbnail">
-<img src="posts/2021-07-02-top-down-r-tutorial/./dat/schema.jpg"/>
-</div>
-<div class="description">
-<h2>Small area population estimates using random forest top-down disaggregation: An R tutorial</h2>
-<div class="dt-tags"></div>
-<p>An R tutorial on how to develop a top-down population model to disaggregate administrative estimates to a finer spatial resolution.</p>
+<p>We will study the use of very high-resolution covariates in top-down population model and its impact on population gridded estimates. We will examine building-footprint derived covariates in Sierra Leone population model. Disclaimer: This post is still being drafted.</p>
 </div>
 </a>
 </div>

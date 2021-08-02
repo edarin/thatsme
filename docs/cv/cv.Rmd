@@ -1,15 +1,19 @@
 ---
 title: ''
-documentclass: friggeri-cv
 output: 
   pdf_document:
-    latex_engine: lualatex
+     latex_engine: lualatex
+documentclass: friggeri-cv
+nocite: |
+  @kuffer2020role, @boo2020grid
 ---
 
 ```{=latex}
 \header{Édith  } { Darin}
 {\qquad \qquad Social sciences, Statistics and Geospatial Data Science}
-\fcolorbox{white}{gray}{\parbox{\dimexpr\textwidth-1\fboxsep-1\fboxrule}{
+      
+      
+\fcolorbox{white}{gray}{\parbox{\dimexpr\textwidth-1\fboxsep-1\fboxrule}{%
 .....
 }}
 
