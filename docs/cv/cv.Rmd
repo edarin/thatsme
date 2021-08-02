@@ -1,9 +1,9 @@
 ---
 title: ''
+documentclass: friggeri-cv
 output: 
   pdf_document:
     latex_engine: lualatex
-documentclass: friggeri-cv
 ---
 
 ```{=latex}
