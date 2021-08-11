@@ -1,7 +1,7 @@
 ---
 title: "woprVision: a shiny app to visualise Bayesian predictions"
 description: |
-  woprVision is a multilingual interacive application to visualise and retrieve Bayesian population estimates
+  I helped develop woprVision, a multilingual interacive application to visualise and retrieve Bayesian population estimates. We use woprVision at WorldPop as part of our data release process to support (1) mean estimates spatial aggregation for people with limited GIS-skills (2) full distribution aggregation for coomputing correct credible intervals.
 author:
   - name: Edith Darin
     url: {}
@@ -12,20 +12,22 @@ output:
 preview: "woprvision.PNG"
 ---
 
-woprVision is an R shiny application that allows you to browse an interactive map to get population estimates for specific locations and demographic groups.
+woprVision is an R shiny application that allows you to browse an interactive map to get population estimates for specific locations and demographic groups. It is
 
-It has been developed for two reasons:
+It has been developed for three reasons:
 
--   drawing function for easy interaction with gridded population for non GIS people
+-   visualization of newly released population datasets
 
--   correct uncertainty estimates for spatial aggregates
+-   easy interaction with gridded population for people with limited GIS skills through (1) a drawing function, (2) a geojson upload function.
 
-woprVision is available on the web at <https://apps.worldpop.org/woprVision>.
+-   computation of adequate credible intervals for spatial aggregates from the full posterior distribution
 
-Its source code is to be found here: <https://github.com/wpgp/wopr>
+woprVision is available online at <https://apps.worldpop.org/woprVision>.
+
+Its source code is hosted here: <https://github.com/wpgp/wopr>
 
 ![](woprvision.PNG)
 
-If run with local files, woprVision requires a SQLlite database with population prediction distribution for every grid cell and a tiled imgae of the gridded population.
+If run with local files, woprVision requires a SQLlite database with population prediction distribution for every grid cell and a tiled image of the gridded population.
 
-On the internet, it runs on a shiny server and pings the WorldPop api.
+Online, it runs on a shiny server and pings the WorldPop API.
