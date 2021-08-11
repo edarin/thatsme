@@ -1,5 +1,5 @@
 ---
-title: "Talks, Webinar, Workshop"
+title: "Talks, Webinars, Workshops"
 description: |
 ---
 
@@ -9,11 +9,11 @@ description: |
 
 *Estimating population using advanced technologies*. UK Foreign Department Roundtable "Who counts", March 2021
 
-*Openfisca Project*. Open Government Parnership Global Summit 2016, Paris City Hall, December, 2016, [video](https://youtu.be/MlIL-WZ62AU?t=17320)
+*Openfisca Project*. Open Government Parnership Global Summit 2016, Paris City Hall, December, 2016. [Video](https://youtu.be/MlIL-WZ62AU?t=17320)
 
 # Webinars
 
-*Population Modelling.* GRID3 Webinar Series. May 2020. [Material](https://www.youtube.com/watch?v=HMFM8HzLfH8&feature=youtu.be)
+*Population Modelling.* GRID3 Webinar Series. May 2020. [Video](https://www.youtube.com/watch?v=HMFM8HzLfH8&feature=youtu.be)
 
 # Workshops
 
