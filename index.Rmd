@@ -4,7 +4,9 @@ description: |
   Read me
 site: distill::distill_website
 output:
-  postcards::trestles
+  postcards::trestles:
+    includes:
+     in_header: wd/clicky.html
 image: "pic/shiele.jpg"
 links:
   - label: LinkedIn
