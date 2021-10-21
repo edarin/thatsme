@@ -3,6 +3,7 @@ title: "Posts"
 site: distill::distill_website
 listing: 
   posts:
+    - 2021-10-21-which-population-microdata-can-we-openly-access
     - 2021-07-31-unraveling-hierarchichal-data-structure-with-sunburst-charts
     - 2021-06-02-high-resolution-covariates-and-top-down-population-disagregation
 ---

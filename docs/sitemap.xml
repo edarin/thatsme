@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://edarin.github.io/thatsme/posts.html</loc>
-    <lastmod>2021-08-02T18:43:06+01:00</lastmod>
+    <lastmod>2021-10-21T10:49:00+01:00</lastmod>
   </url>
   <url>
     <loc>https://edarin.github.io/thatsme/publications.html</loc>
@@ -23,6 +23,10 @@
   <url>
     <loc>https://edarin.github.io/thatsme/talks.html</loc>
     <lastmod>2021-08-11T12:03:40+01:00</lastmod>
+  </url>
+  <url>
+    <loc>https://edarin.github.io/thatsme/posts/2021-10-21-which-population-microdata-can-we-openly-access/</loc>
+    <lastmod>2021-10-21T10:53:13+01:00</lastmod>
   </url>
   <url>
     <loc>https://edarin.github.io/thatsme/posts/2021-07-31-unraveling-hierarchichal-data-structure-with-sunburst-charts/</loc>

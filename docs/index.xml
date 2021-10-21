@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Meet Edith</title>
+    <link>https://edarin.github.io/thatsme/</link>
+    <atom:link href="https://edarin.github.io/thatsme/index.xml" rel="self" type="application/rss+xml"/>
+    <description>Meet Edith
+</description>
+    <generator>Distill</generator>
+    <lastBuildDate>Wed, 20 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>What population microdata are openly accessible?</title>
+      <dc:creator>Edith Darin</dc:creator>
+      <link>https://edarin.github.io/thatsme/posts/2021-10-21-which-population-microdata-can-we-openly-access</link>
+      <description>Population microdata are key input to estimate and map population. 
+They are however often difficult to access when derived from household survey pre-listings: (1) because of the limited number of
+household survey (2) because of the confidentiality of cluster locations (3) because 
+it is operationnal data that is not cleaned and stored appropriately for reuse.
+We explore in this blog post the availibility of two promising datasets for population modelling:
+IPUMS-International and the Demographic and Health Surveys programm.</description>
+      <guid>https://edarin.github.io/thatsme/posts/2021-10-21-which-population-microdata-can-we-openly-access</guid>
+      <pubDate>Wed, 20 Oct 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://edarin.github.io/thatsme/posts/2021-10-21-which-population-microdata-can-we-openly-access/which-population-microdata-can-we-openly-access_files/figure-html5/unnamed-chunk-1-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
+    <item>
+      <title>How to get a clear view of hierarchical data? Answer: Sunburst Charts</title>
+      <dc:creator>Edith Darin</dc:creator>
+      <link>https://edarin.github.io/thatsme/posts/2021-07-31-unraveling-hierarchichal-data-structure-with-sunburst-charts</link>
+      <description>Sunburst charts are a great tool to visualise hierarchichal data structure and unravel missing combinations. Useful as an exploratory analysis for Bayesian hierarchical models.</description>
+      <guid>https://edarin.github.io/thatsme/posts/2021-07-31-unraveling-hierarchichal-data-structure-with-sunburst-charts</guid>
+      <pubDate>Sat, 31 Jul 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://edarin.github.io/thatsme/posts/2021-07-31-unraveling-hierarchichal-data-structure-with-sunburst-charts/./sunburst_2layers.png" medium="image" type="image/png" width="661" height="409"/>
+    </item>
+    <item>
+      <title>woprVision: a shiny app to visualise Bayesian predictions</title>
+      <dc:creator>Edith Darin</dc:creator>
+      <link>https://edarin.github.io/thatsme/posts/2021-08-01-woprvision</link>
+      <description>I helped develop woprVision, a multilingual interacive application to visualise and retrieve Bayesian population estimates. We use woprVision at WorldPop as part of our data release process to support (1) mean estimates spatial aggregation for people with limited GIS-skills (2) full distribution aggregation for coomputing correct credible intervals.</description>
+      <guid>https://edarin.github.io/thatsme/posts/2021-08-01-woprvision</guid>
+      <pubDate>Thu, 10 Jun 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://edarin.github.io/thatsme/posts/2021-08-01-woprvision/woprvision.PNG" medium="image" type="image/png" width="1375" height="609"/>
+    </item>
+    <item>
+      <title>How fine can a top-down population model be? [draft]</title>
+      <dc:creator>Edith Darin</dc:creator>
+      <link>https://edarin.github.io/thatsme/posts/2021-06-02-high-resolution-covariates-and-top-down-population-disagregation</link>
+      <description>We will study the use of very high-resolution covariates in top-down population model and its impact on population gridded estimates. We will examine building-footprint derived covariates in Sierra Leone population model. Disclaimer: This post is still being drafted.</description>
+      <guid>https://edarin.github.io/thatsme/posts/2021-06-02-high-resolution-covariates-and-top-down-population-disagregation</guid>
+      <pubDate>Wed, 02 Jun 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://edarin.github.io/thatsme/posts/2021-06-02-high-resolution-covariates-and-top-down-population-disagregation/dat/sle_slope.PNG" medium="image" type="image/png" width="403" height="400"/>
+    </item>
+    <item>
+      <title>Small area population estimates using random forest top-down disaggregation: An R tutorial</title>
+      <dc:creator>Douglas R Leasure</dc:creator>
+      <dc:creator>Edith Darin</dc:creator>
+      <dc:creator>Andrew J tatem</dc:creator>
+      <link>https://edarin.github.io/thatsme/posts/2021-07-02-top-down-r-tutorial</link>
+      <description>I have co-authored an R tutorial on how to develop top-down population models, which consists in disaggregating administrative estimates to a finer spatial resolution. We  first shared this tutorial with the Brazilian Stats Office (IGBE).</description>
+      <guid>https://edarin.github.io/thatsme/posts/2021-07-02-top-down-r-tutorial</guid>
+      <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://edarin.github.io/thatsme/posts/2021-07-02-top-down-r-tutorial/./dat/schema.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Hybrid census in Burkina Faso: Bottom-up population modelling</title>
+      <dc:creator>Edith Darin</dc:creator>
+      <link>https://edarin.github.io/thatsme/posts/2021-07-09-modelling-burkina-faso-population</link>
+      <description>I developped a Bayesian bottom-up population modelling to adress the challenge of the incomplete 2020 census in Burkina Faso. The model was combining GPS household location with remote sensing product in a Bayesian hierarchcical framework. The output is a hybrid gridded population that was endorsed by Burkina Faso Statistics Office.</description>
+      <guid>https://edarin.github.io/thatsme/posts/2021-07-09-modelling-burkina-faso-population</guid>
+      <pubDate>Sun, 20 Sep 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://edarin.github.io/thatsme/posts/2021-07-09-modelling-burkina-faso-population/./dat/resident_density_mean_admin3.png" medium="image" type="image/png" width="1200" height="796"/>
+    </item>
+    <item>
+      <title>CoopCycle: we socialize platform</title>
+      <dc:creator>Edith Darin</dc:creator>
+      <link>https://edarin.github.io/thatsme/posts/2020-09-01-coopcycle</link>
+      <description>Since 2017 I am a vice-president of the CoopCycle association  that fights for fair working rights in the bike delivery sector.</description>
+      <guid>https://edarin.github.io/thatsme/posts/2020-09-01-coopcycle</guid>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://edarin.github.io/thatsme/posts/2020-09-01-coopcycle/coopcycle_logo.jpg" medium="image" type="image/jpeg"/>
+    </item>
+  </channel>
+</rss>
