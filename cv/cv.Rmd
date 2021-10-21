@@ -7,6 +7,9 @@ documentclass: friggeri-cv
 nocite: |
   @kuffer2020role, @boo2020grid
 ---
+<script async src="//static.getclicky.com/101338156.js"></script>
+  <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101338156ns.gif" /></p></noscript>
+
 
 ```{=latex}
 \header{Édith  } { Darin}
@@ -16,7 +19,6 @@ nocite: |
 \fcolorbox{white}{gray}{\parbox{\dimexpr\textwidth-1\fboxsep-1\fboxrule}{%
 .....
 }}
-
 \begin{aside}
    \textbf{Gender}
      Female
@@ -64,7 +66,6 @@ nocite: |
     \textbf{Italian} intermediate
     ~
 \end{aside}
-
 \section{Working Experiences}
 \begin{entrylist}
   \entry
@@ -122,7 +123,6 @@ nocite: |
     {\emph{Two-year highly selective classes to prepare for the "Grandes Ecoles".} \\ Majors : literature, philosophy, mathematics, economics and sociology.}
 \end{entrylist}
 \clearpage
-
 \begin{noside}
 \section{Academic Outcomes}
 \textbf{Teaching}
@@ -132,23 +132,17 @@ nocite: |
     \item May 2020: Population Modelling Webinar, GRID3 Webinar Series, \href{https://www.youtube.com/watch?v=HMFM8HzLfH8}{LINK}
     \item Nov 2019: Population Modelling Session at the Data Science Nigeria Bootcamp, \href{https://github.com/GRID3/DSNTraining}{LINK}
 \end{itemize}
-
-
-
 \textbf{Papers}
 \begin{itemize}
 \item Small area population estimates using random forest top-down disaggregation: An R tutorial; Leasure DR, \textbf{Darin E}, Tatem AJ, 2020.  \textit{WorldPop, University of Southampton}. doi:10.5258/SOTON/WP00697, \href{https://htmlpreview.github.io/?https://github.com/wpgp/top-down-tutorial/blob/master/4_tutorial.html#Suggested_Citation}{LINK}.
     \item The role of earth observation in an integrated deprived area mapping "system" for low-to-middle income countries, Kuffer, M.; Thomson, D.R.; Boo, G.; Mahabir, R.; Grippa, T.; Vanhuysse, S.; Engstrom, R.; Ndugwa, R.; Makau, J.; \textbf{Darin, E}.; de Albuquerque, J.P. and Kabaria, C, \textit{Remote Sensing}, 2020, 12, 982, \href{https://www.mdpi.com/2072-4292/12/6/982}{LINK} 
     \item A grid-based sample design framework for household surveys, Boo G; \textit{Darin E}; Thomson DR and Tatem AJ, \textit{Gates Open Research} 2020, 4:13, \href{https://gatesopenresearch.org/articles/4-13/v1}{LINK}
 \end{itemize}
-
 \textbf{Posters}
 \begin{itemize}
-
     \item A grid-based sampling design for household surveys in the absence of actionable sampling frames,  Boo G; \textbf{Darin E}; Thomson DR and Tatem AJ, \textit{GEOMED 2019}, 2019 \href{https://www.researchgate.net/publication/335321024_A_grid-based_sampling_design_for_household_surveys_in_the_absence_of_actionable_sampling_frames?channel=doi&linkId=5d5e5af7458515210257da36&showFulltext=true}{LINK}
     \item High-resolution population mapping and estimation in the western part of the Democratic Republic of Congo, \textbf{Darin E}; Boo G;  Leasure DL and Tatem AJ, \textit{GEOMED 2019}, 2019  \href{https://www.researchgate.net/publication/335320708_High-resolution_population_mapping_and_estimation_in_the_western_part_of_the_Democratic_Republic_of_Congo?channel=doi&linkId=5d5e587f299bf1b97cfd0ba7&showFulltext=true}{LINK}
 \end{itemize}
-
 \textbf{Datasets}
 \begin{itemize}
 \item  Census disaggregated gridded population estimates for Sierra Leone, version 2.0 (2015), WorldPop and Statistics Sierra Leone, 2021, \textit{University of Southampton}, doi:10.5258/SOTON/WP00714, \href{https://wopr.worldpop.org/?SLE/Population}{LINK}
@@ -159,14 +153,12 @@ nocite: |
 \begin{itemize}
     \item wopr: An R package to query the WorldPop Open Population Repository, version 1.0.1, Leasure DR; Bondarenko M; \textbf{Darin E}; Tatem AJ, \textit{WorldPop, University of Southampton}, 2020, \href{https://apps.worldpop.org/woprVision/}{LINK}
 \end{itemize}
-
 \textbf{Contributions}
 \begin{itemize}
     \item Financial Incentives to Work in France between 1998 and 2014, Sicsic M, \textit{Economie et Statistique}, 2020, \href{https://www.persee.fr/doc/estat_0336-1454_2018_num_503_1_10852}{LINK}
     \item Les taux marginaux effectifs de prélèvement pour les personnes en emploi en France en 2014, Fourcot J and Sicsic M, \textit{Direction des statistiques démographiques et sociales}, 2017, \href{https://www.insee.fr/fr/statistiques/fichier/2581807/F1701.pdf}{LINK}
        \item Éthique et TIC : A quoi sert l’Ordre des avocats ?, Bastard B; Boigeol A; Bénec'H-Le Roux P; Jamet L and Printz A, \textit{ Mission de Recherche Droit et Justice}, 2016, \href{https://halshs.archives-ouvertes.fr/halshs-01592917/document}{LINK}
 \end{itemize}
-
 \section{Awards}
  \begin{itemize}
  \item University of Southampton, Faculty of Environmental and Life Sciences Dean's List Award, 2019
@@ -174,7 +166,6 @@ nocite: |
     \item Scholarship Sarah Andrieux for Social and Economics Research (800€), 2017
     \item  Finalist for OpenFisca of the Open Government Partnership Hackathon (Paris Summit 2016)
      \item Four-year scholarship at the École Normale supérieure de Cachan (4x15,600€), 2015
-
  \end{itemize}
 \begin{flushright}
 \emph{Édith Darin, \today}
