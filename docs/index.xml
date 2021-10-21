@@ -7,7 +7,7 @@
     <description>Meet Edith
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 20 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 21 Oct 2021 00:00:00 +0000</lastBuildDate>
     <item>
       <title>What population microdata are openly accessible?</title>
       <dc:creator>Edith Darin</dc:creator>
@@ -19,7 +19,7 @@ it is operationnal data that is not cleaned and stored appropriately for reuse.
 We explore in this blog post the availibility of two promising datasets for population modelling:
 IPUMS-International and the Demographic and Health Surveys programm.</description>
       <guid>https://edarin.github.io/thatsme/posts/2021-10-21-which-population-microdata-can-we-openly-access</guid>
-      <pubDate>Wed, 20 Oct 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate>
       <media:content url="https://edarin.github.io/thatsme/posts/2021-10-21-which-population-microdata-can-we-openly-access/which-population-microdata-can-we-openly-access_files/figure-html5/unnamed-chunk-1-1.png" medium="image" type="image/png" width="1248" height="768"/>
     </item>
     <item>
@@ -75,7 +75,7 @@ IPUMS-International and the Demographic and Health Surveys programm.</descriptio
       <link>https://edarin.github.io/thatsme/posts/2020-09-01-coopcycle</link>
       <description>Since 2017 I am a vice-president of the CoopCycle association  that fights for fair working rights in the bike delivery sector.</description>
       <guid>https://edarin.github.io/thatsme/posts/2020-09-01-coopcycle</guid>
-      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
       <media:content url="https://edarin.github.io/thatsme/posts/2020-09-01-coopcycle/coopcycle_logo.jpg" medium="image" type="image/jpeg"/>
     </item>
   </channel>
