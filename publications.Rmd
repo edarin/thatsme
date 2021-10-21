@@ -2,7 +2,9 @@
 title: "Publications"
 description: |
 ---
-
+<script async src="//static.getclicky.com/101338156.js"></script>
+  <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101338156ns.gif" /></p></noscript>
+  
 # In preparation
 
 **Darin E**, Boo G, Jochem C, Kueffer M, Tatem AJ. *An integrative framework to model urban deprivation at high spatial resolution*.

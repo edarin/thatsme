@@ -4,6 +4,7 @@ description: |
 ---
 <script async src="//static.getclicky.com/101338156.js"></script>
   <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101338156ns.gif" /></p></noscript>
+
 # Talks
 
 *Bespoke Bayesian Population Model*s.Space Time Analysis Bayes (STAB) Seminar, Universtiy of Washington, July 2021
