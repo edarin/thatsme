@@ -1,0 +1,185 @@
+---
+title: ''
+output: 
+  pdf_document:
+     latex_engine: lualatex
+documentclass: friggeri-cv
+nocite: |
+  @kuffer2020role, @boo2020grid
+---
+<script async src="//static.getclicky.com/101338156.js"></script>
+  <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101338156ns.gif" /></p></noscript>
+
+```{=latex}
+\header{Édith  } { Darin}
+{\qquad \qquad Social sciences, Statistics and Geospatial Data Science}
+      
+      
+\fcolorbox{white}{gray}{\parbox{\dimexpr\textwidth-1\fboxsep-1\fboxrule}{%
+.....
+}}
+
+\begin{aside}
+   \textbf{Gender}
+     Female
+   \textbf{Date of birth}
+     Avril 20th, 1993
+   \textbf{Nationality}
+     French
+   \textbf{Current home}
+     Southampton, UK
+    \textbf{Website}
+     \href{https://edarin.github.io/resume/}{Personal} 
+    \href{https://www.southampton.ac.uk/geography/about/staff/ecd1u18.page?#publications}{Institutional}
+    ~
+  \section{Contact}
+     \textbf{Phone}
+       +336 72 03 02 31
+     \textbf{Skype}
+       edithdarin
+     \textbf{E-mail}
+      \href{mailto:edith.darin@protonmail.com}{edith.darin@\\protonmail.com}
+    ~
+    \section{Tech repo}
+    \textbf{Github}
+    \href{https://github.com/edarin}{edarin}
+    \textbf{OpenStreetMap}
+    \href{https://www.openstreetmap.org/user/edithdarin/history#map=5/22.938/11.470}{edithdarin}
+    ~
+    \section{Programming}
+    \textbf{OS Preferences}:
+    Windows
+    GNU/Linux
+    \textbf{Statistical Programming:}
+    R (+++)
+    Python (+)
+    \textbf{Reporting Purpose:}
+   Microsoft Office (Word, Powerpoint, Excel)
+      Latex
+      R Markdown
+      R Shiny
+    ~
+  \section{Languages}
+    \textbf{French} native
+    \textbf{English} fluent
+    \textbf{German} intermediate
+    \textbf{Italian} intermediate
+    ~
+\end{aside}
+
+\section{Working Experiences}
+\begin{entrylist}
+  \entry
+    {07/18}
+    {Specialist Research Technician}
+    {WorldPop, University of Southampton}
+    {Population Modelling for LMICs in the lack of complete census. Lead modeller for hybrid census estimation in Burkina Faso. Country Engagement Work with Govt agencies. 
+    Workshop and Training on Population Estimates with Statistics Office for the DRC, Burkina Faso and Mali. \\
+    \textit{Methods developed:} Hierarchical Bayesian modelling incorporating survey data with geospatial covariates. Random Forest Model for producing high-resolution population estimates. Grid-based Spatial Sampling Design for Household Surveys.
+    }
+ \entry{01/17-08/17}{Data Scientist Intern}{UN World Food Program, HQ Rome}{ \emph{mVAM Unit:} dedicated to remote data collection on food security.  \\
+  Research on how to apply Machine Learning for Propensity Score Weighting in Complex Survey Design. Scoping Study on High-Resolution Mapping of Food Security Indicators. Panel Attrition Analysis. Descriptive statistics on CDR data. Support Mission at Mali Country Office (Bamako).}
+  \entry{07/16-12/16}{Data Scientist Intern}{Etalab, French Prime Minister's Task Force for OpenData}{- \emph{OpenFisca Project}: French Tax and Benefit System Micro-Simulation Software. Coding the law and developing teaching material. Generating a representative Synthetic Population.
+  %\\ Statistically pertinent simulation of a population.
+  Tools: Python (Jupyter Notebook). \\
+  - \emph{Entrepreneurs d'Intérêt Général Project}  : Launching a governmental program for recruiting high-skilled developers on specific short-term projects.}
+  \entry
+    {02/15-03/15}
+    {Economist Intern}
+    {INSEE (French National Institute for Statistics)}
+    {Micro-simulation model INES. Study on the Marginal Effective Tax Rate.}
+  \entry
+    {01/14-05/14}
+    {Research Assistant}
+    {École Normale Supérieure of Cachan}
+    {Sociological research project about the lawyer profession. \\
+    Method used: Sociological interview}
+\end{entrylist}
+\section{Education}
+\begin{entrylist}
+\entry
+    {2018-2019}
+    {MSc in Applied GIS and Remote Sensing}
+    {University of Southampton, UK}
+    {Dissertation Topic:\textit{ Slumness Mapping: an insight comparing survey data and geospatial covariates. A Use Case in Kinshasa, DRC.} With Distinction.}
+    \entry
+    {2015-2018}
+    {MSc in Statistics and Economics}
+    {\\Paris Graduate School of Economics, Statistics and Finance (ENSAE)}
+    {Majors: Statistics, Machine Learning, Econometrics, Computational Social Sciences, Public Policy Evaluation. With Distinction.}
+    \entry
+    {2014-2015}
+    {"Theory and Empirical Methods in Economics" Graduate Program}
+    {\\École Normale Supérieure de Cachan and Paris School of Economics}
+    {Erasmus: Humboldt (Berlin), Galatasaray (Istanbul). First class honours.}
+    \entry
+    {2013 - 2014}
+    {Double Bachelor's Degree in Economics and Sociology}
+    {\\ENS Cachan, Université Paris-I-Panthéon-Sorbonne}
+    {First class honours.}
+    \entry
+    {2011 - 2013}
+    {Hypokhâgne and Khâgne B/L}
+    {Lycée Henri-IV, Paris, France}
+    {\emph{Two-year highly selective classes to prepare for the "Grandes Ecoles".} \\ Majors : literature, philosophy, mathematics, economics and sociology.}
+\end{entrylist}
+\clearpage
+
+\begin{noside}
+\section{Academic Outcomes}
+\textbf{Teaching}
+\begin{itemize}
+\item Dec 2020: Gridded Population Workshop for Joseph Ki-Zerbo and Norbert Zongo University, Burkina Faso
+    \item July-Aug 2020: R Foundations Course for different Nigerian national agencies
+    \item May 2020: Population Modelling Webinar, GRID3 Webinar Series, \href{https://www.youtube.com/watch?v=HMFM8HzLfH8}{LINK}
+    \item Nov 2019: Population Modelling Session at the Data Science Nigeria Bootcamp, \href{https://github.com/GRID3/DSNTraining}{LINK}
+\end{itemize}
+
+
+
+\textbf{Papers}
+\begin{itemize}
+\item Small area population estimates using random forest top-down disaggregation: An R tutorial; Leasure DR, \textbf{Darin E}, Tatem AJ, 2020.  \textit{WorldPop, University of Southampton}. doi:10.5258/SOTON/WP00697, \href{https://htmlpreview.github.io/?https://github.com/wpgp/top-down-tutorial/blob/master/4_tutorial.html#Suggested_Citation}{LINK}.
+    \item The role of earth observation in an integrated deprived area mapping "system" for low-to-middle income countries, Kuffer, M.; Thomson, D.R.; Boo, G.; Mahabir, R.; Grippa, T.; Vanhuysse, S.; Engstrom, R.; Ndugwa, R.; Makau, J.; \textbf{Darin, E}.; de Albuquerque, J.P. and Kabaria, C, \textit{Remote Sensing}, 2020, 12, 982, \href{https://www.mdpi.com/2072-4292/12/6/982}{LINK} 
+    \item A grid-based sample design framework for household surveys, Boo G; \textit{Darin E}; Thomson DR and Tatem AJ, \textit{Gates Open Research} 2020, 4:13, \href{https://gatesopenresearch.org/articles/4-13/v1}{LINK}
+\end{itemize}
+
+\textbf{Posters}
+\begin{itemize}
+
+    \item A grid-based sampling design for household surveys in the absence of actionable sampling frames,  Boo G; \textbf{Darin E}; Thomson DR and Tatem AJ, \textit{GEOMED 2019}, 2019 \href{https://www.researchgate.net/publication/335321024_A_grid-based_sampling_design_for_household_surveys_in_the_absence_of_actionable_sampling_frames?channel=doi&linkId=5d5e5af7458515210257da36&showFulltext=true}{LINK}
+    \item High-resolution population mapping and estimation in the western part of the Democratic Republic of Congo, \textbf{Darin E}; Boo G;  Leasure DL and Tatem AJ, \textit{GEOMED 2019}, 2019  \href{https://www.researchgate.net/publication/335320708_High-resolution_population_mapping_and_estimation_in_the_western_part_of_the_Democratic_Republic_of_Congo?channel=doi&linkId=5d5e587f299bf1b97cfd0ba7&showFulltext=true}{LINK}
+\end{itemize}
+
+\textbf{Datasets}
+\begin{itemize}
+\item  Census disaggregated gridded population estimates for Sierra Leone, version 2.0 (2015), WorldPop and Statistics Sierra Leone, 2021, \textit{University of Southampton}, doi:10.5258/SOTON/WP00714, \href{https://wopr.worldpop.org/?SLE/Population}{LINK}
+    \item Census-based gridded population estimates for Burkina Faso (2019), version 1.0, WorldPop and Institut National de la Statistique et de la Démographie du Burkina Faso, \textit{WorldPop, University of Southampton}, 2021, \href{https://wopr.worldpop.org/?BFA/Population/v1.0}{LINK}
+    \item Modelled gridded population estimates for the Kinshasa, Kongo-Central, Kwango, Kwilu, and Mai-Ndombe provinces in the Democratic Republic of the Congo 2018, version 2.0, Boo G; \textbf{Darin E}; Leasure DR; Dooley CA; Chamberlain HR; Lazar AN; Tatem AJ, \textit{WorldPop, University of Southampton}, 2020, \href{https://wopr.worldpop.org/?COD/Population/v2.0}{LINK}
+\end{itemize}
+\textbf{R Package}
+\begin{itemize}
+    \item wopr: An R package to query the WorldPop Open Population Repository, version 1.0.1, Leasure DR; Bondarenko M; \textbf{Darin E}; Tatem AJ, \textit{WorldPop, University of Southampton}, 2020, \href{https://apps.worldpop.org/woprVision/}{LINK}
+\end{itemize}
+
+\textbf{Contributions}
+\begin{itemize}
+    \item Financial Incentives to Work in France between 1998 and 2014, Sicsic M, \textit{Economie et Statistique}, 2020, \href{https://www.persee.fr/doc/estat_0336-1454_2018_num_503_1_10852}{LINK}
+    \item Les taux marginaux effectifs de prélèvement pour les personnes en emploi en France en 2014, Fourcot J and Sicsic M, \textit{Direction des statistiques démographiques et sociales}, 2017, \href{https://www.insee.fr/fr/statistiques/fichier/2581807/F1701.pdf}{LINK}
+       \item Éthique et TIC : A quoi sert l’Ordre des avocats ?, Bastard B; Boigeol A; Bénec'H-Le Roux P; Jamet L and Printz A, \textit{ Mission de Recherche Droit et Justice}, 2016, \href{https://halshs.archives-ouvertes.fr/halshs-01592917/document}{LINK}
+\end{itemize}
+
+\section{Awards}
+ \begin{itemize}
+ \item University of Southampton, Faculty of Environmental and Life Sciences Dean's List Award, 2019
+ \item Vice-Chancellor Award for Research Impact, University of Southampton, 2018
+    \item Scholarship Sarah Andrieux for Social and Economics Research (800€), 2017
+    \item  Finalist for OpenFisca of the Open Government Partnership Hackathon (Paris Summit 2016)
+     \item Four-year scholarship at the École Normale supérieure de Cachan (4x15,600€), 2015
+
+ \end{itemize}
+\begin{flushright}
+\emph{Édith Darin, \today}
+\end{flushright}
+\end{noside}
+```
