@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Population modelling for complementing censuses</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Edith Darin, University of Southampton" />
+    <script src="ipc2021_presentation_files/header-attrs/header-attrs.js"></script>
+    <link href="ipc2021_presentation_files/remark-css/default.css" rel="stylesheet" />
+    <link href="ipc2021_presentation_files/remark-css/metropolis.css" rel="stylesheet" />
+    <link href="ipc2021_presentation_files/remark-css/metropolis-fonts.css" rel="stylesheet" />
+    <script src="ipc2021_presentation_files/fabric/fabric.min.js"></script>
+    <link href="ipc2021_presentation_files/xaringanExtra-scribble/scribble.css" rel="stylesheet" />
+    <script src="ipc2021_presentation_files/xaringanExtra-scribble/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#408000"],"pen_size":3,"eraser_size":30,"palette":[]}) })</script>
+    <script src="ipc2021_presentation_files/kePrint/kePrint.js"></script>
+    <link href="ipc2021_presentation_files/lightable/lightable.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/presentation_custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Population modelling for complementing censuses
+## International Population Conference 2021
+### Edith Darin, University of Southampton
+
+---
+
+
+
+
+
+# Introduction
+&lt;br&gt;
+&lt;br&gt;
+
+![](ipc2021_presentation_files/pic/worldpop.PNG)
+---
+class: inverse, middle
+
+# Two issues
+
+---
+# Outdated census
+
+&lt;br&gt;
+
+.pull-left[
+![](ipc2021_presentation_files/drc_empty.PNG)
+]
+
+.pull-right[
+
+**The DRC**
+
+- West to East = Paris to Kiev
+{{content}}
+
+]
+
+
+--
+
+- North to South = Copenhagen to Sicily
+{{content}}
+
+--
+
+- Last census 1984 (when it was still Zaire)
+
+
+---
+# Outdated census
+
+
+## Available population microdata
+
+--
+
+### A microcensus
+
+.pull-left[
+- xx well-defined clusters
+- Representative coverage
+- Full enumeration
+]
+
+.pull-right[
+![](ipc2021_presentation_files/pic/drc_pop.PNG)
+]
+---
+
+# Incomplete census
+
+
+&lt;br&gt;
+
+.pull-left[
+![](ipc2021_presentation_files/bfa_empty.PNG)
+]
+
+
+.pull-right[
+
+- Census in 2019
+{{content}}
+
+]
+
+--
+
+- Security issue in the North and East
+{{content}}
+
+--
+
+- 20% country missing
+---
+# Incomplete census
+
+## Available population microdata
+
+--
+
+### Enumeration areas
+
+.pull-left[
+- 15 000 clusters
+- Full coverage of surveyed regions
+- Full enumeration
+]
+
+.pull-right[
+![](ipc2021_presentation_files/pic/bfa_pop.PNG)
+]
+---
+class: inverse, middle
+
+# A common challenge
+
+### Estimating population from sparse microdata
+
+---
+class: clear, middle
+background-image: url(ipc2021_presentation_files/pic/background_griddedpop.png) 
+
+## .bg-white[A technical solution: ] 
+## .bg-white[  Gridded population!]
+
+---
+# Brief history of gridded population
+## A concept from digital photography and GIS
+
+Spatial representation of a continuous variable
+
+--
+## Between confidentiality and precision
+
+- 1960's in Danemark, Sweden for communicating household locations from their postal address
+
+--
+- Global initiative: NASA Goddard Institute for Space Studies, 1984
+
+
+&lt;img src="ipc2021_presentation_files/pic/E0600001-Map_of_global_population_densities.jpg" width="50%" style="display: block; margin: auto;" /&gt;
+---
+class: clear, middle
+
+## It offers a common support for the missing areas
+
+&lt;br&gt;
+
+&lt;img src="ipc2021_presentation_files/pic/drc_grid.PNG" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+class: clear, middle
+background-image: url(ipc2021_presentation_files/pic/background_griddedpop.png) 
+
+## .bg-white[A modelling solution: ] 
+## .bg-white[  Bayesian hierarchical structure]
+---
+
+# A model from ecology
+
+When counting people can learn from counting animals
+
+&lt;br&gt;
+
+--
+&lt;img src="ipc2021_presentation_files/pic/model.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+# Flexible components
+
+
+&lt;table class="table" style="font-size: 13px; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; DRC &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; BFA &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr grouplength="3"&gt;&lt;td colspan="2" style="border-bottom: 1px solid;"&gt;&lt;strong&gt;Hierarchcy&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; Settlement type &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Settlement type &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; Province &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Region &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; Sub-province &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Commune &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr grouplength="4"&gt;&lt;td colspan="2" style="border-bottom: 1px solid;"&gt;&lt;strong&gt;Covariates&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; Average building proximity &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Distance to temporary rivers &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; Average building focal count (2km) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Average building focal count (2km) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; Average building area &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Friction surface &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2019 UN projections disagregated &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr grouplength="3"&gt;&lt;td colspan="2" style="border-bottom: 1px solid;"&gt;&lt;strong&gt;Submodels&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; Random effect of covariates &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; Weighted likelihood &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; Dirichlet-multinomial for age-sex count &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+# Validation
+
+## Crossvalidation for a study sites sample
+
+--
+&lt;br&gt;
+&lt;table class="table" style="font-size: 15px; margin-left: auto; margin-right: auto;"&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Bias &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Imprecision &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Inaccuracy &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; R^2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 95% CI &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; DRC &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 13 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 173 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 106 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.79 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 91% &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; BFA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 45 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 262 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 169 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.63 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 95% &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+--
+
+## Visualisation
+
+&lt;img src="ipc2021_presentation_files/pic/drc_output.PNG" width="40%" /&gt;&lt;img src="ipc2021_presentation_files/pic/bfa_output.PNG" width="40%" /&gt;
+
+---
+# Accessing Bayesian estimates
+Output: gridded Bayesian predictions, that is &gt;9000 population estimates per grid cell
+
+--
+
+## A bespoke Shiny application
+
+&lt;img src="ipc2021_presentation_files/pic/woprVision.PNG" width="100%" /&gt;
+---
+# Summary
+
+&lt;img src="ipc2021_presentation_files/pic/full_schema.png" width="100%" /&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
