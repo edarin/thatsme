@@ -7,9 +7,20 @@
     <description>Meet Edith
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 20 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 09 Nov 2021 00:00:00 +0000</lastBuildDate>
     <item>
-      <title>What population microdata are openly accessible?</title>
+      <title>Efficient computation across multiple rasters</title>
+      <dc:creator>Edith Darin</dc:creator>
+      <link>https://edarin.github.io/thatsme/posts/2021-11-09-efficient-computation-across-multiple-rasters</link>
+      <description>One day you want to compute one quantile across 95 rasters, and suddenly your script takes 7 hours to run, luckily at night. 
+And then you're facing the truth: you will have to dig into the stars R-package. But to this date, few implementations lie around.
+So we share here one demonstration of the efficiency of stars with a special big up for the st_apply function.</description>
+      <guid>https://edarin.github.io/thatsme/posts/2021-11-09-efficient-computation-across-multiple-rasters</guid>
+      <pubDate>Tue, 09 Nov 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://edarin.github.io/thatsme/posts/2021-11-09-efficient-computation-across-multiple-rasters/./tantalus_cube.png" medium="image" type="image/png" width="474" height="627"/>
+    </item>
+    <item>
+      <title>Which population microdata are openly accessible?</title>
       <dc:creator>Edith Darin</dc:creator>
       <link>https://edarin.github.io/thatsme/posts/2021-10-21-which-population-microdata-can-we-openly-access</link>
       <description>Population microdata are key input to estimate and map population. 
@@ -19,8 +30,8 @@ it is operationnal data that is not cleaned and stored appropriately for reuse.
 We explore in this blog post the availibility of two promising datasets for population modelling:
 IPUMS-International and the Demographic and Health Surveys programm.</description>
       <guid>https://edarin.github.io/thatsme/posts/2021-10-21-which-population-microdata-can-we-openly-access</guid>
-      <pubDate>Wed, 20 Oct 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://edarin.github.io/thatsme/posts/2021-10-21-which-population-microdata-can-we-openly-access/which-population-microdata-can-we-openly-access_files/figure-html5/unnamed-chunk-1-1.png" medium="image" type="image/png" width="1248" height="768"/>
+      <pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://edarin.github.io/thatsme/posts/2021-10-21-which-population-microdata-can-we-openly-access/./dates_plot.png" medium="image" type="image/png" width="770" height="475"/>
     </item>
     <item>
       <title>How to get a clear view of hierarchical data? Answer: Sunburst Charts</title>
