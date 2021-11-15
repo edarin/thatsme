@@ -8,5 +8,5 @@ listing:
     - 2021-07-31-unraveling-hierarchichal-data-structure-with-sunburst-charts
     - 2021-06-02-high-resolution-covariates-and-top-down-population-disagregation
 ---
-<script async src="//static.getclicky.com/101338156.js"></script>
-  <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101338156ns.gif" /></p></noscript>
+<script async src="//static.getclicky.com/101341658.js"></script>
+  <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101341658ns.gif" /></p></noscript>
