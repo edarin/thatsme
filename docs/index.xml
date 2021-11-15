@@ -17,7 +17,7 @@ population models. All the materials, including Stan code, written tutos and pre
 available online on a dedicated website. It was first delivered to the Brazilian Stats Office (IBGE).</description>
       <guid>https://edarin.github.io/thatsme/posts/2021-11-15-statistical-population-modelling-for-census-support</guid>
       <pubDate>Mon, 15 Nov 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://edarin.github.io/thatsme/posts/2021-11-15-statistical-population-modelling-for-census-support/./cover2.png" medium="image" type="image/png" width="1693" height="685"/>
+      <media:content url="https://edarin.github.io/thatsme/posts/2021-11-15-statistical-population-modelling-for-census-support/cover2.PNG" medium="image" type="image/png" width="1693" height="685"/>
     </item>
     <item>
       <title>Efficient computation across multiple rasters</title>
