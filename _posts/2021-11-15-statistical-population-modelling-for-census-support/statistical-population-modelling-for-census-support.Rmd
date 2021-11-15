@@ -1,0 +1,69 @@
+---
+title: "Statistical population modelling for census support"
+description: |
+    I led a one-week workshop based on a series of hands-on tutorial to grasp the bases of the Bayesian approach for 
+    population models. All the materials, including Stan code, written tutos and presentation are
+    available online on a dedicated website. It was first delivered to the Brazilian Stats Office (IBGE).
+author:
+  - name: Edith Darin
+    url: {}
+date: 11-15-2021
+output:
+  distill::distill_article:
+    self_contained: false
+preview: './cover2.png'
+---
+
+Statistical population modelling is a powerful tool for producing gridded population estimates 
+to support census activities. 
+WorldPop at the University of Southampton is a global leader in developing these methods and 
+has partnered with the United Nations Population Fund (UNFPA) to 
+provide support to national statistics offices in training and production of 
+high-resolution gridded population estimates from existing data sources 
+(e.g. household surveys, building footprints, administrative records, census projections).
+
+[This website](https://wpgp.github.io/bottom-up-tutorial/) provides a series of tutorials in **Bayesian statistics for population modelling** and hands-on experience to start developing the necessary skills. It includes example code and other resources designed to expedite the learning curve as much as possible.
+It includes example code and other resources designed to expedite the learning curve as much as possible.
+
+The key concepts that are covered in the tutorial series include:
+
+
+1.  Introduction to software for Bayesian statistical modelling:  R and Stan,
+
+2.  Simple linear regression in a Bayesian context,
+
+3.  Random effects to account for settlement type (e.g. urban/rural) and other types of stratification in survey data,
+
+4.  Quantifying and mapping uncertainties in population estimates and
+
+5.  Diagnostics to evaluate model performance (e.g. cross-validation).
+
+
+The material has been used during a remote workshop with the Brazilian Stats Office, Instituto Brasileiro de Geografia e Estatística (IBGE), in October 2021.
+
+## Material
+
+-   [Introduction](tutorials/day1_presentation.html)
+-   [Tutorial 1](tutorials/tutorial1/tutorial1_linearRegression.html): How to think like a Bayesian and build a first population model? [Quiz](tutorials/quiz/mcq_tuto1.html)
+-   [Tutorial 2](tutorials/tutorial2/tutorial2_hierarchicalModel.html): How to model large-scale spatial variations? [Quiz](tutorials/quiz/mcq_tuto2.html)
+-   [Tutorial 3](tutorials/tutorial3/tutorial3_covariates.html): How to model small-scale spatial variations? [Quiz](tutorials/quiz/mcq_tuto3.html)
+-   [Tutorial 4](tutorials/tutorial4/tutorial4_diagnosticsPrediction.html): Advanced model diagnostics and prediction
+-   [Conclusion](tutorials/day5_presentation.html)
+
+## Raw code
+
+The raw code of the website and tutorials, including the R code can be found [here](https://github.com/wpgp/bottom-up-tutorial).
+
+# Acknowledgements
+
+This tutorial was written by Edith Darin from WorldPop, University of Southampton and Douglas Leasure from Leverhulme Centre for Demographic Science, University of Oxford, with supervision from Andrew Tatem, WorldPop, University of Southampton. Funding for the work was provided by the United Nations Population Fund (UNFPA).
+
+# License
+
+You are free to redistribute this document under the terms of a Creative Commons Attribution-NoDerivatives 4.0 International ([CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/)) license.
+
+# Suggested citation
+
+Darin E, Leasure DR, Tatem AJ. 2021. Statistical population modelling for census support. WorldPop, University of Southampton, <https://wpgp.github.io/bottom-up-tutorial/>, <doi:10.5281/zenodo.5572490>
+
+

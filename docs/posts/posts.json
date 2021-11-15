@@ -1,5 +1,24 @@
 [
   {
+    "path": "posts/2021-11-15-statistical-population-modelling-for-census-support/",
+    "title": "Statistical population modelling for census support",
+    "description": "I led a one-week workshop based on a series of hands-on tutorial to grasp the bases of the Bayesian approach for \npopulation models. All the materials, including Stan code, written tutos and presentation are\navailable online on a dedicated website. It was first delivered to the Brazilian Stats Office (IBGE).",
+    "author": [
+      {
+        "name": "Edith Darin",
+        "url": {}
+      }
+    ],
+    "date": "2021-11-15",
+    "categories": [],
+    "contents": "\r\nStatistical population modelling is a powerful tool for producing gridded population estimates to support census activities. WorldPop at the University of Southampton is a global leader in developing these methods and has partnered with the United Nations Population Fund (UNFPA) to provide support to national statistics offices in training and production of high-resolution gridded population estimates from existing data sources (e.g. household surveys, building footprints, administrative records, census projections).\r\nThis website provides a series of tutorials in Bayesian statistics for population modelling and hands-on experience to start developing the necessary skills. It includes example code and other resources designed to expedite the learning curve as much as possible. It includes example code and other resources designed to expedite the learning curve as much as possible.\r\nThe key concepts that are covered in the tutorial series include:\r\nIntroduction to software for Bayesian statistical modelling: R and Stan,\r\nSimple linear regression in a Bayesian context,\r\nRandom effects to account for settlement type (e.g. urban/rural) and other types of stratification in survey data,\r\nQuantifying and mapping uncertainties in population estimates and\r\nDiagnostics to evaluate model performance (e.g. cross-validation).\r\nThe material has been used during a remote workshop with the Brazilian Stats Office, Instituto Brasileiro de Geografia e Estatística (IBGE), in October 2021.\r\nMaterial\r\nIntroduction\r\nTutorial 1: How to think like a Bayesian and build a first population model? Quiz\r\nTutorial 2: How to model large-scale spatial variations? Quiz\r\nTutorial 3: How to model small-scale spatial variations? Quiz\r\nTutorial 4: Advanced model diagnostics and prediction\r\nConclusion\r\nRaw code\r\nThe raw code of the website and tutorials, including the R code can be found here.\r\nAcknowledgements\r\nThis tutorial was written by Edith Darin from WorldPop, University of Southampton and Douglas Leasure from Leverhulme Centre for Demographic Science, University of Oxford, with supervision from Andrew Tatem, WorldPop, University of Southampton. Funding for the work was provided by the United Nations Population Fund (UNFPA).\r\nLicense\r\nYou are free to redistribute this document under the terms of a Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0) license.\r\nSuggested citation\r\nDarin E, Leasure DR, Tatem AJ. 2021. Statistical population modelling for census support. WorldPop, University of Southampton, https://wpgp.github.io/bottom-up-tutorial/, doi:10.5281/zenodo.5572490\r\n\r\n\r\n\r\n",
+    "preview": "posts/2021-11-15-statistical-population-modelling-for-census-support/./cover2.png",
+    "last_modified": "2021-11-15T16:49:54+00:00",
+    "input_file": {},
+    "preview_width": 1693,
+    "preview_height": 685
+  },
+  {
     "path": "posts/2021-11-09-efficient-computation-across-multiple-rasters/",
     "title": "Efficient computation across multiple rasters",
     "description": "One day you want to compute one quantile across 95 rasters, and suddenly your script takes 7 hours to run, luckily at night. \nAnd then you're facing the truth: you will have to dig into the stars R-package. But to this date, few implementations lie around.\nSo we share here one demonstration of the efficiency of stars with a special big up for the st_apply function.",

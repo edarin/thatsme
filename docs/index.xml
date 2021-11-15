@@ -7,7 +7,18 @@
     <description>Meet Edith
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 09 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 15 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Statistical population modelling for census support</title>
+      <dc:creator>Edith Darin</dc:creator>
+      <link>https://edarin.github.io/thatsme/posts/2021-11-15-statistical-population-modelling-for-census-support</link>
+      <description>I led a one-week workshop based on a series of hands-on tutorial to grasp the bases of the Bayesian approach for 
+population models. All the materials, including Stan code, written tutos and presentation are
+available online on a dedicated website. It was first delivered to the Brazilian Stats Office (IBGE).</description>
+      <guid>https://edarin.github.io/thatsme/posts/2021-11-15-statistical-population-modelling-for-census-support</guid>
+      <pubDate>Mon, 15 Nov 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://edarin.github.io/thatsme/posts/2021-11-15-statistical-population-modelling-for-census-support/./cover2.png" medium="image" type="image/png" width="1693" height="685"/>
+    </item>
     <item>
       <title>Efficient computation across multiple rasters</title>
       <dc:creator>Edith Darin</dc:creator>
