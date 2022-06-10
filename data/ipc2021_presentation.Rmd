@@ -17,12 +17,7 @@ library(tidyverse)
 library(kableExtra)
 ```
 
-# Introduction
-<br>
-<br>
 
-![](ipc2021_presentation_files/pic/worldpop.PNG)
----
 class: inverse, middle
 
 # Two issues
@@ -67,7 +62,7 @@ class: inverse, middle
 ### A microcensus
 
 .pull-left[
-- xx well-defined clusters
+- 926 well-defined clusters
 - Representative coverage
 - Full enumeration
 ]
@@ -88,6 +83,7 @@ class: inverse, middle
 
 
 .pull-right[
+**Burkina Faso**
 
 - Census in 2019
 {{content}}
@@ -131,27 +127,10 @@ class: inverse, middle
 class: clear, middle
 background-image: url(ipc2021_presentation_files/pic/background_griddedpop.png) 
 
-## .bg-white[A technical solution: ] 
-## .bg-white[  Gridded population!]
-
----
-# Brief history of gridded population
-## A concept from digital photography and GIS
-
-Spatial representation of a continuous variable
-
---
-## Between confidentiality and precision
-
-- 1960's in Danemark, Sweden for communicating household locations from their postal address
-
---
-- Global initiative: NASA Goddard Institute for Space Studies, 1984
+## .bg-white[Technical solutions: ] 
+## .bg-white[  Gridded population & building footprints]
 
 
-```{r  out.width = "50%", echo=FALSE, fig.align="center"}
-knitr::include_graphics("ipc2021_presentation_files/pic/E0600001-Map_of_global_population_densities.jpg") 
-```
 ---
 class: clear, middle
 
@@ -162,7 +141,12 @@ class: clear, middle
 ```{r  out.width = "50%", echo=FALSE, fig.align="center"}
 knitr::include_graphics("ipc2021_presentation_files/pic/drc_grid.PNG") 
 ```
+---
+# Building footprint
 
+```{r  out.width = "100%", echo=FALSE, fig.align="center"}
+knitr::include_graphics("ipc2021_presentation_files/pic/footprint.png") 
+```
 ---
 class: clear, middle
 background-image: url(ipc2021_presentation_files/pic/background_griddedpop.png) 
@@ -180,6 +164,16 @@ When counting people can learn from counting animals
 --
 ```{r  out.width = "50%", echo=FALSE, fig.align="center"}
 knitr::include_graphics("ipc2021_presentation_files/pic/model.png") 
+```
+---
+# A model from ecology
+
+When counting people can learn from counting animals
+
+<br>
+
+```{r  out.width = "50%", echo=FALSE, fig.align="center"}
+knitr::include_graphics("ipc2021_presentation_files/pic/model2.png") 
 ```
 
 ---
@@ -205,7 +199,7 @@ component <- dplyr::tibble(
 
 component %>% 
   kbl() %>% 
-  pack_rows(index = c("Hierarchcy" = 3, "Covariates" = 4, "Submodels" = 3)) %>% 
+  pack_rows(index = c("Hierarchy" = 3, "Covariates" = 4, "Submodels" = 3)) %>% 
   kable_styling(font_size = 13)
 ```
 
@@ -247,6 +241,9 @@ Output: gridded Bayesian predictions, that is >9000 population estimates per gri
 ```{r, echo=FALSE, out.width = "100%"}
 knitr::include_graphics("ipc2021_presentation_files/pic/woprVision.PNG") 
 ```
+
+https://apps.worldpop.org/woprVision/
+
 ---
 # Summary
 
