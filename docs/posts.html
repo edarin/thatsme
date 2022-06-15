@@ -105,7 +105,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["Posts"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["posts"]}},"value":[{"type":"character","attributes":{},"value":["2021-10-21-which-population-microdata-can-we-openly-access","2021-07-31-unraveling-hierarchichal-data-structure-with-sunburst-charts","2021-06-02-high-resolution-covariates-and-top-down-population-disagregation"]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["Posts"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["posts"]}},"value":[{"type":"character","attributes":{},"value":["2021-11-09-efficient-computation-across-multiple-rasters","2021-10-21-which-population-microdata-can-we-openly-access","2021-07-31-unraveling-hierarchichal-data-structure-with-sunburst-charts","2021-06-02-high-resolution-covariates-and-top-down-population-disagregation"]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2270,6 +2270,25 @@ function init_posts_list() {
 <div class="posts-container posts-apply-limit l-page">
 <div class="posts-list">
 <h1 class="posts-list-caption" data-caption="Posts">Posts</h1>
+<a href="posts/2021-11-09-efficient-computation-across-multiple-rasters/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":[]}</script>
+<div class="metadata">
+<div class="publishedDate">Nov. 9, 2021</div>
+<div class="dt-authors">
+<div class="dt-author">Edith Darin</div>
+</div>
+</div>
+<div class="thumbnail">
+<img src="posts/2021-11-09-efficient-computation-across-multiple-rasters/./tantalus_cube.png"/>
+</div>
+<div class="description">
+<h2>Efficient computation across multiple rasters</h2>
+<div class="dt-tags"></div>
+<p>One day you want to compute one quantile across 95 rasters, and suddenly your script takes 7 hours to run, luckily at night. 
+And then you're facing the truth: you will have to dig into the stars R-package. But to this date, few implementations lie around.
+So we share here one demonstration of the efficiency of stars with a special big up for the st_apply function.</p>
+</div>
+</a>
 <a href="posts/2021-10-21-which-population-microdata-can-we-openly-access/" class="post-preview">
 <script class="post-metadata" type="text/json">{"categories":[]}</script>
 <div class="metadata">
@@ -2279,10 +2298,10 @@ function init_posts_list() {
 </div>
 </div>
 <div class="thumbnail">
-<img src="posts/2021-10-21-which-population-microdata-can-we-openly-access/which-population-microdata-can-we-openly-access_files/figure-html5/unnamed-chunk-1-1.png"/>
+<img src="posts/2021-10-21-which-population-microdata-can-we-openly-access/./dates_plot.png"/>
 </div>
 <div class="description">
-<h2>What population microdata are openly accessible?</h2>
+<h2>Which population microdata are openly accessible?</h2>
 <div class="dt-tags"></div>
 <p>Population microdata are key input to estimate and map population. 
 They are however often difficult to access when derived from household survey pre-listings: (1) because of the limited number of
@@ -2342,10 +2361,10 @@ IPUMS-International and the Demographic and Health Surveys programm.</p>
 
 
 <div class="d-article">
-<script async src="//static.getclicky.com/101338156.js"></script>
+<script async src="//static.getclicky.com/101341658.js"></script>
 <noscript>
 <p>
-<img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101338156ns.gif" />
+<img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101341658ns.gif" />
 </p>
 </noscript>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
