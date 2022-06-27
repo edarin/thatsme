@@ -3,12 +3,13 @@ title: "Portfolio"
 site: distill::distill_website
 listing: 
   posts:
+    - 2022-06-24-sicss-covenantusing-gridded-population-to-gain-spatial-insights-in-r
     - 2021-11-15-statistical-population-modelling-for-census-support
     - 2021-08-01-woprvision
     - 2021-07-09-modelling-burkina-faso-population
     - 2021-07-02-top-down-r-tutorial
-    - 2020-09-01-coopcycle 
+    - 2020-09-01-coopcycle
 ---
 
 <script async src="//static.getclicky.com/101341658.js"></script>
-  <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101341658ns.gif" /></p></noscript>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101341658ns.gif" /></p></noscript>

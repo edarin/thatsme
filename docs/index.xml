@@ -7,7 +7,16 @@
     <description>Meet Edith
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Mon, 15 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>SICSS-Covenant:Using gridded population to gain spatial insights in R</title>
+      <dc:creator>Edith Darin</dc:creator>
+      <link>https://edarin.github.io/thatsme/posts/2022-06-24-sicss-covenantusing-gridded-population-to-gain-spatial-insights-in-r</link>
+      <description>I have been invited to present at the Summer Institute for Computational Social Sciences in University of Covenant. My talks starts is about gridded population as a tool to link  demographics and geography. It starts with a global overview of the definition, production and use of this innovative data and pursues with a hands-on in R to gain spatial insights on demography in Nigeria.</description>
+      <guid>https://edarin.github.io/thatsme/posts/2022-06-24-sicss-covenantusing-gridded-population-to-gain-spatial-insights-in-r</guid>
+      <pubDate>Thu, 23 Jun 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://edarin.github.io/thatsme/posts/2022-06-24-sicss-covenantusing-gridded-population-to-gain-spatial-insights-in-r/./pic/final_map.png" medium="image" type="image/png" width="857" height="555"/>
+    </item>
     <item>
       <title>Statistical population modelling for census support</title>
       <dc:creator>Edith Darin</dc:creator>
