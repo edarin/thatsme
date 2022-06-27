@@ -6,7 +6,7 @@
 \NeedsTeXFormat{LaTeX2e}
 
 \DeclareOption{print}{\def\@cv@print{}}
-\DeclareOption*{%
+\DeclareOption*{
   \PassOptionsToClass{\CurrentOption}{article}%
 }
 \ProcessOptions\relax
@@ -93,20 +93,20 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 
 \RequirePackage{tikz}
 
-\newcommand{\rolefont}{%
+\newcommand{\rolefont}{
   \fontsize{14pt}{24pt}\selectfont%
   \thinfont%
   \color{white}%
 }
 
-\newcommand{\header}[3]{%
+\newcommand{\header}[3]{
   \begin{tikzpicture}[remember picture,overlay]
     \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth, minimum height=3cm] (box) at (current page.north){};
-    \node [anchor=center] (name) at (box) {%
+    \node [anchor=center] (name) at (box) {
       \fontsize{30pt}{62pt}\color{header}%
       {\thinfont #1}{\bodyfont  #2}
     };
-    \node [anchor=north] at (name.south) {%
+    \node [anchor=north] at (name.south) {
       \fontsize{13pt}{24pt}\color{orange}%
       \bodyfont #3%
       };
@@ -122,9 +122,9 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 \RequirePackage{parskip}
 
 %\newcounter{colorCounter}
-%\def\@sectioncolor#1#2#3{%
-%  {%
-%    \color{%
+%\def\@sectioncolor#1#2#3{
+%  {
+%    \color{
 %      \ifcase\value{colorCounter}%
 %        blue\or%
 %        red\or%
@@ -138,9 +138,9 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 %}
 
 \newcounter{colorCounter}
-\def\@sectioncolor#1#2#3{%
-  {%
-    \color{%
+\def\@sectioncolor#1#2#3{
+  {
+    \color{
       \ifcase\value{colorCounter}%
         orange\or%
         orange\or%
@@ -155,7 +155,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 
 \renewcommand{\section}[1]{
   \par\vspace{\parskip}
-  {%
+  {
     \LARGE\headingfont\color{headercolor}%
     #1%
   }
@@ -176,14 +176,14 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 %%%%%%%%%%%%%%%%%%%%
 
 \setlength{\tabcolsep}{0pt}
-\newenvironment{entrylist}{%
+\newenvironment{entrylist}{
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
-}{%
+}{
   \end{tabular*}
 }
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
-\newcommand{\entry}[4]{%
-  #1&\parbox[t]{11.5cm}{%
+\newcommand{\entry}[4]{
+  #1&\parbox[t]{11.5cm}{
     \textbf{#2}%
     \hfill%
     {\footnotesize\addfontfeature{Color=orange} #3}\\%
@@ -198,7 +198,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 \RequirePackage[absolute,overlay]{textpos}
 \setlength{\TPHorizModule}{1cm}
 \setlength{\TPVertModule}{1cm}
-\newenvironment{aside}{%
+\newenvironment{aside}{
   \let\oldsection\section
   \renewcommand{\section}[1]{
     \par\vspace{\baselineskip}{\Large\headingfont\color{orange} ##1}
@@ -206,16 +206,16 @@ BoldItalicFont=texgyreheros-bolditalic.otf
   \begin{textblock}{3.6}(2.0, 0.55)
   \begin{flushright}
   \obeycr
-}{%https://www.overleaf.com/project/56a0df9c1d3d3f7262d49c57
+}{https://www.overleaf.com/project/56a0df9c1d3d3f7262d49c57
   \restorecr
   \end{flushright}
   \end{textblock}
   \let\section\oldsection
 }
 
-\newenvironment{noside}{%
+\newenvironment{noside}{
   \begin{textblock}{18}(1.50, 1.5)
- }{%
+ }{
   \end{textblock}
 }
 
