@@ -13,7 +13,7 @@ nocite: |
 {\qquad \qquad  \qquad  \qquad Demography, Bayesian statistics and Geospatial data science}
       
       
-\fcolorbox{white}{gray}{\parbox{\dimexpr\textwidth-1\fboxsep-1\fboxrule}{%
+\fcolorbox{white}{gray}{\parbox{\dimexpr\textwidth-1\fboxsep-1\fboxrule}{% %}
 .....
 }}
 \begin{aside}

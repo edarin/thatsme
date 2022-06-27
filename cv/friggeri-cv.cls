@@ -7,7 +7,7 @@
 
 \DeclareOption{print}{\def\@cv@print{}}
 \DeclareOption*{
-  \PassOptionsToClass{\CurrentOption}{article}%
+  \PassOptionsToClass{\CurrentOption}{article}
 }
 \ProcessOptions\relax
 \LoadClass{article}
@@ -96,18 +96,18 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 \newcommand{\rolefont}{
   \fontsize{14pt}{24pt}\selectfont%
   \thinfont%
-  \color{white}%
+  \color{white}
 }
 
 \newcommand{\header}[3]{
   \begin{tikzpicture}[remember picture,overlay]
     \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth, minimum height=3cm] (box) at (current page.north){};
     \node [anchor=center] (name) at (box) {
-      \fontsize{30pt}{62pt}\color{header}%
+      \fontsize{30pt}{62pt}\color{header}
       {\thinfont #1}{\bodyfont  #2}
     };
     \node [anchor=north] at (name.south) {
-      \fontsize{13pt}{24pt}\color{orange}%
+      \fontsize{13pt}{24pt}\color{orange}
       \bodyfont #3%
       };
   \end{tikzpicture}
@@ -125,7 +125,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 %\def\@sectioncolor#1#2#3{
 %  {
 %    \color{
-%      \ifcase\value{colorCounter}%
+%      \ifcase\value{colorCounter}
 %        blue\or%
 %        red\or%
 %        orange\or%
@@ -133,15 +133,15 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 %        purple\else%
 %        headercolor\fi%
 %    } #1#2#3%
-%  }%
-%  \stepcounter{colorCounter}%
+%  }
+%  \stepcounter{colorCounter}
 %}
 
 \newcounter{colorCounter}
 \def\@sectioncolor#1#2#3{
   {
     \color{
-      \ifcase\value{colorCounter}%
+      \ifcase\value{colorCounter}
         orange\or%
         orange\or%
         orange\or%
@@ -149,23 +149,23 @@ BoldItalicFont=texgyreheros-bolditalic.otf
         orange\else%
         orange\fi%
     } #1#2#3%
-  }%
-  \stepcounter{colorCounter}%
+  }
+  \stepcounter{colorCounter}
 }
 
 \renewcommand{\section}[1]{
   \par\vspace{\parskip}
   {
-    \LARGE\headingfont\color{headercolor}%
+    \LARGE\headingfont\color{headercolor}
     #1%
   }
   \par\vspace{\parskip}
 }
 
 \renewcommand{\subsection}[2]{
-  \par\vspace{.5\parskip}%
+  \par\vspace{.5\parskip}
   \Large\headingfont\color{headercolor} #2%
-  \par\vspace{.25\parskip}%
+  \par\vspace{.25\parskip}
 }
 
 \pagestyle{empty}
@@ -184,10 +184,10 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
 \newcommand{\entry}[4]{
   #1&\parbox[t]{11.5cm}{
-    \textbf{#2}%
+    \textbf{#2}
     \hfill%
     {\footnotesize\addfontfeature{Color=orange} #3}\\%
-    #4\vspace{\parsep}%
+    #4\vspace{\parsep}
   }\\}
 
 
@@ -206,7 +206,8 @@ BoldItalicFont=texgyreheros-bolditalic.otf
   \begin{textblock}{3.6}(2.0, 0.55)
   \begin{flushright}
   \obeycr
-}{https://www.overleaf.com/project/56a0df9c1d3d3f7262d49c57
+}{
+%https://www.overleaf.com/project/56a0df9c1d3d3f7262d49c57
   \restorecr
   \end{flushright}
   \end{textblock}
