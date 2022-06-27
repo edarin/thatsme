@@ -3,9 +3,9 @@ title: ''
 output: 
   pdf_document:
      latex_engine: lualatex
-documentclass: friggeri-cv
 nocite: |
   @kuffer2020role, @boo2020grid
+documentclass: friggeri-cv
 ---
 
 ```{=latex}

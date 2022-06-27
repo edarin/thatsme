@@ -207,7 +207,6 @@ BoldItalicFont=texgyreheros-bolditalic.otf
   \begin{flushright}
   \obeycr
 }{
-%https://www.overleaf.com/project/56a0df9c1d3d3f7262d49c57
   \restorecr
   \end{flushright}
   \end{textblock}
