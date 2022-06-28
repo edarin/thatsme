@@ -3,6 +3,7 @@ title: "Posts"
 site: distill::distill_website
 listing: 
   posts:
+    - 2022-06-24-sicss-covenantusing-gridded-population-to-gain-spatial-insights-in-r
     - 2021-11-09-efficient-computation-across-multiple-rasters
     - 2021-10-21-which-population-microdata-can-we-openly-access
     - 2021-07-31-unraveling-hierarchichal-data-structure-with-sunburst-charts

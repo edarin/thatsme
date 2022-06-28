@@ -3,7 +3,6 @@ title: "Portfolio"
 site: distill::distill_website
 listing: 
   posts:
-    - 2022-06-24-sicss-covenantusing-gridded-population-to-gain-spatial-insights-in-r
     - 2021-11-15-statistical-population-modelling-for-census-support
     - 2021-08-01-woprvision
     - 2021-07-09-modelling-burkina-faso-population
