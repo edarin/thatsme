@@ -3,10 +3,7 @@ title: "Edith Darin"
 description: |
   Read me
 site: distill::distill_website
-output:
-  postcards::trestles:
-    includes:
-     in_header: wd/clicky.html
+output: postcards::trestles
 image: "pic/shiele.jpg"
 links:
   - label: LinkedIn
@@ -21,7 +18,8 @@ listing: posts
 theme: theme.css
 ---
 
-I have been working for the past three years as first a research assistant, then a specialist research technician and now a research fellow at [WorldPop](https://www.worldpop.org/), University of Southampton. I build **Bayesian population models and maps** for sub-Saharan African countries combining household survey and satellite-imagery derived products.
+I have been working since July 2018 as a research fellow at [WorldPop](https://www.worldpop.org/), University of Southampton. I build **Bayesian population models and maps** for sub-Saharan African countries combining household survey and satellite-imagery derived products.
+I have started in October 2022 a PhD at Leverhulme Center for Demographic Science, Departement
 
 I earned a MSc in applied **GIS and remote sensing** at the University of Southampton, where I wrote a thesis on deprived area mapping mobilising knowledge on quantitative geography, statistical modelling, and social sciences. Prior to that, I was trained in **statistics** (MSc from the ENSAE Paristech) and its **social sciences** application (Master at École Normale Supérieure de Cachan).
 
