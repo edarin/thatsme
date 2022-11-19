@@ -1,0 +1,22 @@
+.title-slide {
+  background-image: url(wp_logo_gray_low.png);
+  background-position: 8% 90%;
+  background-size: 160px;
+  text-align:left;
+  vertical-align: top;
+  text-shadow: none;
+}
+
+
+.center2 {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  right: -10%;
+  transform: translate(-40%, -40%);
+}
+
+
+.bg-white {
+  background-color: #ffffff;
+}

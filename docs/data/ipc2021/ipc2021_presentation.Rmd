@@ -1,0 +1,252 @@
+---
+title: "Population modelling for complementing censuses"
+subtitle: "International Population Conference 2021"
+author: "Edith Darin, University of Southampton"
+output:
+  xaringan::moon_reader:
+    css: [css/presentation_custom.css, default, metropolis, metropolis-fonts]
+---
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+xaringanExtra::use_scribble(
+  pen_color = "#408000"
+)
+library(tidyverse)
+library(kableExtra)
+```
+
+
+class: inverse, middle
+
+# Two issues
+
+---
+# Outdated census
+
+<br>
+
+.pull-left[
+![](ipc2021_presentation_files/drc_empty.PNG)
+]
+
+.pull-right[
+
+**The DRC**
+
+- West to East = Paris to Kiev
+{{content}}
+
+]
+
+
+--
+
+- North to South = Copenhagen to Sicily
+{{content}}
+
+--
+
+- Last census 1984 (when it was still Zaire)
+
+
+---
+# Outdated census
+
+
+## Available population microdata
+
+--
+
+### A microcensus
+
+.pull-left[
+- 926 well-defined clusters
+- Representative coverage
+- Full enumeration
+]
+
+.pull-right[
+![](ipc2021_presentation_files/pic/drc_pop.PNG)
+]
+---
+
+# Incomplete census
+
+
+<br>
+
+.pull-left[
+![](ipc2021_presentation_files/bfa_empty.PNG)
+]
+
+
+.pull-right[
+**Burkina Faso**
+
+- Census in 2019
+{{content}}
+
+]
+
+--
+
+- Security issue in the North and East
+{{content}}
+
+--
+
+- 20% country missing
+---
+# Incomplete census
+
+## Available population microdata
+
+--
+
+### Enumeration areas
+
+.pull-left[
+- 15 000 clusters
+- Full coverage of surveyed regions
+- Full enumeration
+]
+
+.pull-right[
+![](ipc2021_presentation_files/pic/bfa_pop.PNG)
+]
+---
+class: inverse, middle
+
+# A common challenge
+
+### Estimating population from sparse microdata
+
+---
+class: clear, middle
+background-image: url(ipc2021_presentation_files/pic/background_griddedpop.png) 
+
+## .bg-white[Technical solutions: ] 
+## .bg-white[  Gridded population & building footprints]
+
+
+---
+class: clear, middle
+
+## It offers a common support for the missing areas
+
+<br>
+
+```{r  out.width = "50%", echo=FALSE, fig.align="center"}
+knitr::include_graphics("ipc2021_presentation_files/pic/drc_grid.PNG") 
+```
+---
+# Building footprint
+
+```{r  out.width = "100%", echo=FALSE, fig.align="center"}
+knitr::include_graphics("ipc2021_presentation_files/pic/footprint.png") 
+```
+---
+class: clear, middle
+background-image: url(ipc2021_presentation_files/pic/background_griddedpop.png) 
+
+## .bg-white[A modelling solution: ] 
+## .bg-white[  Bayesian hierarchical structure]
+---
+
+# A model from ecology
+
+When counting people can learn from counting animals
+
+<br>
+
+--
+```{r  out.width = "50%", echo=FALSE, fig.align="center"}
+knitr::include_graphics("ipc2021_presentation_files/pic/model.png") 
+```
+---
+# A model from ecology
+
+When counting people can learn from counting animals
+
+<br>
+
+```{r  out.width = "50%", echo=FALSE, fig.align="center"}
+knitr::include_graphics("ipc2021_presentation_files/pic/model2.png") 
+```
+
+---
+# Flexible components
+
+
+```{r, echo=F}
+component <- dplyr::tibble(
+  #" " = c(rep('Hierarchy',3), rep('Covariates', 4), rep('Submodels',3)),
+  "DRC" = c("Settlement type", "Province", "Sub-province",
+            "Average building proximity",
+            "Average building focal count (2km)",
+            "Average building area", "",
+            "Random effect of covariates",
+            "Weighted likelihood",
+            "Dirichlet-multinomial for age-sex count"),
+  "BFA" = c("Settlement type", "Region", "Commune",
+            "Distance to temporary rivers","Average building focal count (2km)", "Friction surface", "2019 UN projections disagregated","", "", ""
+
+            )
+)
+
+
+component %>% 
+  kbl() %>% 
+  pack_rows(index = c("Hierarchy" = 3, "Covariates" = 4, "Submodels" = 3)) %>% 
+  kable_styling(font_size = 13)
+```
+
+---
+# Validation
+
+## Crossvalidation for a study sites sample
+
+--
+<br>
+```{r, echo=F}
+pred <- tibble( 
+  " " =c( "Bias",	"Imprecision",	"Inaccuracy", "R^2",	"95% CI"),
+  "DRC"= c( "13",	"173", "106",	"0.79",	"91%"),
+  "BFA" = c( "45",	"262", "169",	"0.63",	"95%")) %>% t()
+
+pred %>% 
+  kbl() %>% 
+  kable_styling(font_size = 15)
+```
+
+--
+
+## Visualisation
+
+```{r, echo=FALSE, fig.show="hold", out.width = "40%" }
+knitr::include_graphics("ipc2021_presentation_files/pic/drc_output.PNG") 
+knitr::include_graphics("ipc2021_presentation_files/pic/bfa_output.PNG") 
+```
+
+---
+# Accessing Bayesian estimates
+Output: gridded Bayesian predictions, that is >9000 population estimates per grid cell
+
+--
+
+## A bespoke Shiny application
+
+```{r, echo=FALSE, out.width = "100%"}
+knitr::include_graphics("ipc2021_presentation_files/pic/woprVision.PNG") 
+```
+
+https://apps.worldpop.org/woprVision/
+
+---
+# Summary
+
+```{r, echo=FALSE, out.width = "100%"}
+knitr::include_graphics("ipc2021_presentation_files/pic/full_schema.png") 
+```
