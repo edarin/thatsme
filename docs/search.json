@@ -6,7 +6,7 @@
       "description": "Some additional details about the website",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2022-11-19T18:06:55+00:00"
+      "last_modified": "2022-11-19T18:15:50+00:00"
     },
     {
       "path": "index.html",
@@ -41,8 +41,8 @@
       "path": "talks.html",
       "title": "Talks, Webinars, Workshops",
       "author": [],
-      "contents": "\r\n\r\n\r\n\r\n\r\nTalks\r\nBespoke Bayesian Population Models.Space Time Analysis Bayes (STAB) Seminar, Universtiy of Washington, July 2021\r\nEstimating population using advanced technologies. UK Foreign Department Roundtable “Who counts”, March 2021\r\nOpenfisca Project. Open Government Parnership Global Summit 2016, Paris City Hall, December, 2016. Video\r\nWebinars\r\nPopulation Modelling. GRID3 Webinar Series. May 2020. Video\r\nWorkshops\r\nWorkshop on Hybrid Census . National Census Bureau, Ouagadougou, Burkina Faso. March 2021. Material\r\nWorkshop on Gridded Population. Université Norbert Zongo, Université Joseph Ki-Zerbo, Burkina Faso. December 2020, Material\r\nWorkshop on Modelled Population Estimates. National Census Bureau, Kinshasa, Democratic Republic of Congo. May 2019.\r\n\r\n\r\n\r\n",
-      "last_modified": "2022-11-19T17:00:23+00:00"
+      "contents": "\r\nTalks\r\nBespoke Bayesian Population Models.Space Time Analysis Bayes\r\n(STAB) Seminar, Universtiy of Washington, July 2021\r\nEstimating population using advanced technologies. UK\r\nForeign Department Roundtable “Who counts”, March 2021\r\nOpenfisca Project. Open Government Parnership Global Summit\r\n2016, Paris City Hall, December, 2016. Video\r\nWorkshops\r\nWorkshop on statistical modelling for census support .\r\nNational Statistics Office (IBGE), Rio de Janeiro, Brazil. May 2022.\r\nSponsored by the United Funds for Population (UNFPA).\r\nWorkshop on Hybrid Census . National Census Bureau,\r\nOuagadougou, Burkina Faso. March 2021. Material\r\nWorkshop on Gridded Population. Université Norbert Zongo,\r\nUniversité Joseph Ki-Zerbo, Burkina Faso. December 2020, Material\r\nWorkshop on Modelled Population Estimates. National Census\r\nBureau, Kinshasa, Democratic Republic of Congo. May 2019.\r\nWebinars\r\nPopulation Modelling. GRID3 Webinar Series. May 2020. Video\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-11-19T18:15:49+00:00"
     }
   ],
   "collections": ["posts/posts.json"]

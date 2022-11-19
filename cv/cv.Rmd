@@ -77,6 +77,11 @@ documentclass: friggeri-cv
 \section{Education}
 \begin{entrylist}
 \entry
+    {2022-2025}
+    {DPhil in Demography}
+    {University of Oxford, UK}
+    {Topic:\textit{ Who knows population the best: the government, social media or satellite imagery? Estimating population with high spatial resolution to complement censuses in data-scarce contexts}. Affiliated with the Max Planck Institute for Demography.}
+    \entry
     {2018-2019}
     {MSc in Applied GIS and Remote Sensing}
     {University of Southampton, UK}
@@ -85,16 +90,11 @@ documentclass: friggeri-cv
     {2015-2018}
     {MSc in Statistics and Economics}
     {\\Paris Graduate School of Economics, Statistics and Finance (ENSAE), France}
-    {Majors: Statistics, Machine Learning, Econometrics, Computational Social Sciences, Public Policy Evaluation. With Distinction.}
-    \entry
-    {2014-2015}
-    {"Theory and Empirical Methods in Economics" Graduate Program}
-    {\\École Normale Supérieure (ENS) de Cachan and Paris School of Economics, France}
-    {Erasmus: Humboldt (Berlin), Galatasaray (Istanbul). First class honours.}
+    {Statistics, Machine Learning, Computational Social Sciences.}
     \entry
     {2013-2014}
     {Double Bachelor's Degree in Economics and Sociology}
-    {\\ENS Cachan, Université Paris-I-Panthéon-Sorbonne, France}
+    {\\École Normale Supérieure de Cachan, Université Paris-I-Panthéon-Sorbonne, France}
     {First class honours.}
 \end{entrylist}
 
@@ -148,8 +148,11 @@ documentclass: friggeri-cv
 \begin{itemize}
     \item Financial incentives to work in France between 1998 and 2014, Sicsic M, \textit{Economie et Statistique}, 2020. \href{https://www.persee.fr/doc/estat_0336-1454_2018_num_503_1_10852}{\faIcon{external-link-alt}}
 \end{itemize}
+
+
 \section{Awards}
  \begin{itemize}
+      \item Three-year Leverhulme Centre for Demographic Research scholarship, 2022
   \item Faculty Dean's Prize for Research, University of Southampton, 2021
  \item Vice-Chancellor Award for Research Impact, University of Southampton, 2018
     \item Scholarship Sarah Andrieux for Social and Economics Research (800€), 2017

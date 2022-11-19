@@ -12,14 +12,18 @@ description: |
 
 *Openfisca Project*. Open Government Parnership Global Summit 2016, Paris City Hall, December, 2016. [Video](https://youtu.be/MlIL-WZ62AU?t=17320)
 
-# Webinars
 
-*Population Modelling.* GRID3 Webinar Series. May 2020. [Video](https://www.youtube.com/watch?v=HMFM8HzLfH8&feature=youtu.be)
 
 # Workshops
+
+*Workshop on statistical modelling for census support* . National Statistics Office (IBGE), Rio de Janeiro, Brazil. May 2022. Sponsored by the United Funds for Population (UNFPA).
 
 *Workshop on Hybrid Census* . National Census Bureau, Ouagadougou, Burkina Faso. March 2021. [Material](https://docs.google.com/presentation/d/13tc0DdDVf7lU4q8fDeVJRlVVXxhLjvIcaKtIxH4B1bE/edit?usp=sharing)
 
 *Workshop on Gridded Population*. Université Norbert Zongo, Université Joseph Ki-Zerbo, Burkina Faso. December 2020, [Material](https://docs.google.com/presentation/d/1roxjaDpsF6s7-08XVTr3enAKSD9CFu0JgtEerv4H3dw/edit?usp=sharing)
 
 *Workshop on Modelled Population Estimates*. National Census Bureau, Kinshasa, Democratic Republic of Congo. May 2019.
+
+# Webinars
+
+*Population Modelling.* GRID3 Webinar Series. May 2020. [Video](https://www.youtube.com/watch?v=HMFM8HzLfH8&feature=youtu.be)
