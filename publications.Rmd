@@ -93,6 +93,10 @@ WorldPop and Institut National de la Statistique et de la Démographie du Burkin
 
 Boo G, **Darin E**, Leasure DR, Dooley CA, Chamberlain HR, Lazar AN, Tatem AJ. *Modelled gridded population estimates for the Kinshasa, Kongo-Central, Kwango, Kwilu, and Mai-Ndombe provinces in the Democratic Republic of the Congo 2018, version 2.0.* WorldPop, University of Southampton [LINK](https://wopr.worldpop.org/?COD/Population/v2.0)
 
+# Review
+
+- Geoenvironmental Disasters, Springer, [LINK](https://geoenvironmental-disasters.springeropen.com/)
+
 
 # Contributions
 
