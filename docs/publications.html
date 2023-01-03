@@ -50,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -73,9 +74,9 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
 code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
@@ -525,6 +526,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article table.gt_table td,
   d-article table.gt_table th {
     border-bottom: none;
+    font-size: 100%;
   }
 
   .html-widget {
@@ -766,10 +768,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     position: relative;
     margin-bottom: 2.5em;
     margin-top: 1.5em;
-  }
-
-  .figure img {
-    width: 100%;
   }
 
   .figure .caption {
@@ -1601,9 +1599,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
         var refs = $(this).attr('data-cites').split(" ");
         var refHtml = refs.map(function(ref) {
-          return "<p>" + $('#ref-' + ref).html() + "</p>";
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
         }).join("\n");
         window.tippy(this, {
           allowHTML: true,
@@ -1615,6 +1625,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           placement: 'bottom-start'
         });
       });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
 
       // clear polling timer
       clearInterval(tid);
@@ -1714,6 +1749,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
       var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
       if ($(this).attr('data-layout') !== "l-body") {
         figures.css('width', '100%');
       } else {
@@ -1736,7 +1773,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
       $('.distill-site-header a[href]').each(function(i,val) {
-        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
       });
     }
 
@@ -2096,7 +2133,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.19/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2150,109 +2187,71 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-article">
 <h1 id="refeered-publications">Refeered publications</h1>
-<p>Boo G, <strong>Darin E</strong>, Leasure DR, Dooley CA, Chamberlain
-HR, Lázár AN, Tschirhart K, Sinai C, Hoff NA, Fuller T, Musene K.
-<em>High-resolution population estimation using household survey data
-and building footprints</em>. 2022. Nature communications. 2022 Mar
-14;13(1):1-0.</p>
+<p><strong>Darin E</strong>, Kuépié M, Bassinga H, Boo G, Tatem AJ. <em>The Population Seen from Space: When Satellite Images Come to the Rescue of the Census</em>. Translated by Reeve P. 2022. Population. 2022/3 (Vol. 77). <a href="https://www.cairn-int.info/article.php?ID_ARTICLE=E_POPU_2203_0467">PDF</a></p>
+<aside>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="pic/article_population_fr.svg" /><!-- --></p>
+</div>
+</aside>
+<p><strong>Darin E</strong>, Kuépié M, Bassinga H, Boo G, Tatem AJ. <em>La population vue du ciel : quand l’imagerie satellite vient au secours du recensement</em>. 2022. Population. 2022/3 (Vol. 77). <a href="https://doi.org/10.3917/popu.2203.0467">PDF</a></p>
+<aside>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="pic/article_population_en.jpg" width="354" /></p>
+</div>
+</aside>
+<p>Boo G, <strong>Darin E</strong>, Leasure DR, Dooley CA, Chamberlain HR, Lázár AN, Tschirhart K, Sinai C, Hoff NA, Fuller T, Musene K. <em>High-resolution population estimation using household survey data and building footprints</em>. 2022. Nature communications. 2022 Mar 14;13(1):1-0. <a href="https://doi.org/10.1038/s41467-022-29094-x">PDF</a></p>
 <aside>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="pic/article_nature.PNG" width="521" /></p>
 </div>
 </aside>
-<p>Kuffer M, Thomson DR, Kabaria, C, Boo G, <strong>Darin E</strong> ,
-Mahabir R, Grippa T, Vhuysse S, Albuquerque J, Ndugwa R, Makau J,
-Muluadi J. <em>The Role of Earth Observation in an Integrated Deprived
-Area Mapping “System” for Low-to-Middle Income Countries</em>. 2020.
-Remote Sensing. 12, 982. <a
-href="https://www.mdpi.com/2072-4292/12/6/982">PDF</a></p>
+<p>Kuffer M, Thomson DR, Kabaria, C, Boo G, <strong>Darin E</strong> , Mahabir R, Grippa T, Vhuysse S, Albuquerque J, Ndugwa R, Makau J, Muluadi J. <em>The Role of Earth Observation in an Integrated Deprived Area Mapping “System” for Low-to-Middle Income Countries</em>. 2020. Remote Sensing. 12, 982. <a href="https://www.mdpi.com/2072-4292/12/6/982">PDF</a></p>
 <aside>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="pic/article_remotesensing_pic.png" width="1456" /></p>
 </div>
 </aside>
-<p>Boo G, <strong>Darin E</strong> , Thomson DR, and Tatem AJ. <em>A
-grid-based sampling design framework for household surveys in the
-absence of an actionable sampling frame</em>. 2020. Gates Open Research.
-4:13. <a
-href="https://gatesopenresearch.org/articles/4-13/v1">PDF</a></p>
+<p>Boo G, <strong>Darin E</strong> , Thomson DR, and Tatem AJ. <em>A grid-based sampling design framework for household surveys in the absence of an actionable sampling frame</em>. 2020. Gates Open Research. 4:13. <a href="https://gatesopenresearch.org/articles/4-13/v1">PDF</a></p>
 <aside>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="pic/article_gates.gif" /><!-- --></p>
 </div>
 </aside>
 <h1 id="conference-contribution">Conference contribution</h1>
-<p><strong>Darin E</strong>, Boo G, Thomson DR, and Tatem AJ. <em>A
-bottom-up population modelling approach to complement the population and
-housing census</em>. Proceedings of the International Population
-Conference 2021. Hyderabad, India <a
-href="https://ipc2021.popconf.org/uploads/210325">Abstract</a>, <a
-href="http://htmlpreview.github.io/?https://github.com/edarin/thatsme/tree/main/data/ipc2021/ipc2021_presentation.html">Presentation</a></p>
+<p><strong>Darin E</strong>, Boo G, Thomson DR, and Tatem AJ. <em>A bottom-up population modelling approach to complement the population and housing census</em>. Proceedings of the International Population Conference 2021. Hyderabad, India <a href="https://ipc2021.popconf.org/uploads/210325">Abstract</a>, <a href="http://htmlpreview.github.io/?https://github.com/edarin/thatsme/tree/main/data/ipc2021/ipc2021_presentation.html">Presentation</a></p>
 <aside>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="pic/conf_ipc.PNG" width="254" /></p>
 </div>
 </aside>
 <h1 id="conference-poster">Conference poster</h1>
-<p><strong>Darin E</strong>, <em>How Bayesian modelling could use the
-Big Tech competition in producing built-up maps</em>, Proceedings of the
-Bayesian Conference for Social Science 2022, Paris. <a
-href="https://github.com/edarin/thatsme/tree/main/data/bayes_shs_poster_DARIN.pdf">PDF</a></p>
+<p><strong>Darin E</strong>, <em>How Bayesian modelling could use the Big Tech competition in producing built-up maps</em>, Proceedings of the Bayesian Conference for Social Science 2022, Paris. <a href="https://github.com/edarin/thatsme/tree/main/data/bayes_shs_poster_DARIN.pdf">PDF</a></p>
 <aside>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="pic/poster_bayes.PNG" width="480" /></p>
 </div>
 </aside>
-<p>Boo G, <strong>Darin E</strong>, Leasure DR, and Tatem AJ.
-<em>High-resolution population mapping and estimation in the western
-part of the Democratic Republic of Congo</em>. Proceedings of the GEOMED
-2019 Conference. Glasgow, Scotland. <a
-href="https://github.com/edarin/thatsme/tree/main/data/boo-poster_web.pdf">PDF</a></p>
+<p>Boo G, <strong>Darin E</strong>, Leasure DR, and Tatem AJ. <em>High-resolution population mapping and estimation in the western part of the Democratic Republic of Congo</em>. Proceedings of the GEOMED 2019 Conference. Glasgow, Scotland. <a href="https://github.com/edarin/thatsme/tree/main/data/boo-poster_web.pdf">PDF</a></p>
 <aside>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="pic/poster_geomed_boo.PNG" width="414" /></p>
 </div>
 </aside>
-<p><strong>Darin E</strong>, Boo G, Thomson DR, and Tatem AJ. <em>A
-grid-based sampling design for household surveys in the absence of
-actionable sampling frames</em>. Proceedings of the GEOMED 2019
-Conference. Glasgow, Scotland. <a
-href="https://github.com/edarin/thatsme/tree/main/data/darin-poster_web.pdf">PDF</a></p>
+<p><strong>Darin E</strong>, Boo G, Thomson DR, and Tatem AJ. <em>A grid-based sampling design for household surveys in the absence of actionable sampling frames</em>. Proceedings of the GEOMED 2019 Conference. Glasgow, Scotland. <a href="https://github.com/edarin/thatsme/tree/main/data/darin-poster_web.pdf">PDF</a></p>
 <aside>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="pic/poster_geomed_darin.PNG" width="286" /></p>
 </div>
 </aside>
 <h1 id="datasets">Datasets</h1>
-<p>Leasure DR, <strong>Darin E</strong> Tatem AJ. <em>Bayesian gridded
-population estimates for Ghana 2018, version 1.2</em>. 2021. WorldPop,
-University of Southampton <a
-href="https://wopr.worldpop.org/?GHA/Population/v1.2">LINK</a></p>
-<p>WorldPop and Institut National de la Statistique et de la Démographie
-du Burkina Faso. <em>Census-based gridded population estimates for
-Burkina Faso (2019), version 1.0.</em> 2020. WorldPop, University of
-Southampton <a
-href="https://wopr.worldpop.org/?BFA/Population/v1.0">LINK</a></p>
-<p>Boo G, <strong>Darin E</strong>, Leasure DR, Dooley CA, Chamberlain
-HR, Lazar AN, Tatem AJ. <em>Modelled gridded population estimates for
-the Kinshasa, Kongo-Central, Kwango, Kwilu, and Mai-Ndombe provinces in
-the Democratic Republic of the Congo 2018, version 2.0.</em> WorldPop,
-University of Southampton <a
-href="https://wopr.worldpop.org/?COD/Population/v2.0">LINK</a></p>
+<p>Leasure DR, <strong>Darin E</strong> Tatem AJ. <em>Bayesian gridded population estimates for Ghana 2018, version 1.2</em>. 2021. WorldPop, University of Southampton <a href="https://wopr.worldpop.org/?GHA/Population/v1.2">LINK</a></p>
+<p>WorldPop and Institut National de la Statistique et de la Démographie du Burkina Faso. <em>Census-based gridded population estimates for Burkina Faso (2019), version 1.0.</em> 2020. WorldPop, University of Southampton <a href="https://wopr.worldpop.org/?BFA/Population/v1.0">LINK</a></p>
+<p>Boo G, <strong>Darin E</strong>, Leasure DR, Dooley CA, Chamberlain HR, Lazar AN, Tatem AJ. <em>Modelled gridded population estimates for the Kinshasa, Kongo-Central, Kwango, Kwilu, and Mai-Ndombe provinces in the Democratic Republic of the Congo 2018, version 2.0.</em> WorldPop, University of Southampton <a href="https://wopr.worldpop.org/?COD/Population/v2.0">LINK</a></p>
 <h1 id="contributions">Contributions</h1>
-<p>Sicsic M. <em>Financial Incentives to Work in France between 1998 and
-2014</em>. 2018. Economie et Statistique. <a
-href="https://www.persee.fr/doc/estat_0336-1454_2018_num_503_1_10852">PDF</a></p>
-<p>Fourcot J and Sicsic M. <em>Les taux marginaux effectifs de
-prélèvement pour les personnes en emploi en France en 2014</em>. 2017.
-Direction des statistiques démographiques et sociales. <a
-href="https://www.insee.fr/fr/statistiques/fichier/2581807/F1701.pdf">PDF</a></p>
-<p>Bastard B, Boigeol A, Bénec’H-Le Roux P, Jamet L and Printz A.
-<em>Éthique et TIC : A quoi sert l’Ordre des avocats ?</em>. 2016.
-Mission de Recherche Droit et Justice. <a
-href="https://halshs.archives-ouvertes.fr/halshs-01592917/document">PDF</a></p>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p>Sicsic M. <em>Financial Incentives to Work in France between 1998 and 2014</em>. 2018. Economie et Statistique. <a href="https://www.persee.fr/doc/estat_0336-1454_2018_num_503_1_10852">PDF</a></p>
+<p>Fourcot J and Sicsic M. <em>Les taux marginaux effectifs de prélèvement pour les personnes en emploi en France en 2014</em>. 2017. Direction des statistiques démographiques et sociales. <a href="https://www.insee.fr/fr/statistiques/fichier/2581807/F1701.pdf">PDF</a></p>
+<p>Bastard B, Boigeol A, Bénec’H-Le Roux P, Jamet L and Printz A. <em>Éthique et TIC : A quoi sert l’Ordre des avocats ?</em>. 2016. Mission de Recherche Droit et Justice. <a href="https://halshs.archives-ouvertes.fr/halshs-01592917/document">PDF</a></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
