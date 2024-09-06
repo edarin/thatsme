@@ -20,7 +20,7 @@ French
 \textbf{Current home}
 Oxford, UK
 \textbf{Website}
-Personal \href{https://edarin.github.io/thatsme/}{\faIcon{external-link-alt}}
+Personal \href{https://edarin.github.io/thatsme/}{\scriptsize\faIcon{external-link-alt}}
 ~
 \section{Contact}
 \textbf{Skype}
@@ -57,55 +57,56 @@ R Shiny
 \section{Education}
 \begin{entrylist}
 \entry
-{2022-2025}
+{2025 - \\ 2022}
 {DPhil in Demography}
 {University of Oxford, UK}
-{Topic:\textit{ Who knows population the best: the government, social media or satellite imagery? Estimating population with high spatial resolution to complement censuses in data-scarce contexts}. Affiliated with the Max Planck Institute for Demographic Research. St Catherine's college.}
+{Topic:\textit{Estimating subnational population sizes in data-scarce contexts}. Affiliated with the Max Planck Institute for Demographic Research.}
 \entry
-{2018-2019}
+{2019 - \\ 2018}
 {MSc in Applied GIS and Remote Sensing}
 {University of Southampton, UK}
-{Dissertation Topic:\textit{ Slumness Mapping: an insight comparing survey data and geospatial covariates. A Use Case in Kinshasa, DRC.} Featured in peer-reviewed article.  Faculty Dean's MSc List Award.}
+{Dissertation featured in a peer-reviewed article.}
 \entry
-{2015-2018}
+{2018 - \\ 2015}
 {MSc in Statistics and Economics}
-{\\Paris Graduate School of Economics, Statistics and Finance (ENSAE), France}
-{Statistics, Machine Learning, Computational Social Sciences.}
+{\\Paris Graduate School of Economics, Statistics and Finance (ENSAE), France}{Semesters abroad at Humbold University and Galatasaray University.}
 \entry
-{2013-2014}
+{2014 - \\ 2013}
 {Double Bachelor's Degree in Economics and Sociology}
 {\\École Normale Supérieure de Cachan, Université Paris-I-Panthéon-Sorbonne, France}
-{First class honours.}
+{}
 \end{entrylist}
 \section{Working experiences}
 \begin{entrylist}
 \entry
-{07/18}
+{2026 - \\ 2024}
+{Population Data Scientist}
+{LCDS, University of Oxford, UK}
+{Nowcast population forced displacement in war-struck Ukraine by age and sex each day.
+\textit{Methods developed:} Curate an automatised data pipeline queried from social media sources. Innovate on geospatial covariates production.
+}
+\entry
+{2024 - \\ 2018}
 {Research Fellow}
 {WorldPop, University of Southampton, UK}
 {\textit{Until 08/21 Specialist Research Technician}\\
 Building statistical models to provide up-to-date, spatially complete population count in data-scarce contexts. Predict and map population with high spatial resolution at the grid cell.   Lead modeller for filling population gaps in censuses impacted by insecurity (Burkina Faso and Mali). Lead trainer on gridded population estimation to national statistics offices. \\
 \textit{Methods developed:} Hierarchical Bayesian modelling combining survey data with geospatial covariates. Random-forest models for producing high-resolution population estimates. Grid-based spatial sampling design for household surveys.
 }
-\entry{01/17-08/17}{Data Scientist Intern}{mVAM, UN World Food Program, Italy}{ 
-Assessing food security from remote data collection. Machine-learning based propensity score weighting in complex survey design. Scoping study on high-resolution mapping of food security indicators. Panel attrition analysis. Descriptive statistics on mobile phone data. Support mission for Mali Country Office (Bamako).}
-\entry{07/16-12/16}{Data Scientist Intern}{Etalab, Governmental Task Force for OpenData, France}{\emph{OpenFisca}: French tax and benefit system micro-simulation platform. Finalist of the Open Government Partnership Hackathon (Paris Summit 2016). }
-\entry
-{02/15-03/15}
-{Economist Intern}
-{National Institute for Statistics, France}
-{Micro-simulation model for studying the marginal effective tax rate.}
+\entry{2017}{ Data Scientist Intern}{mVAM, UN World Food Program, Italy}{ 
+Assessing food security from remote sensing and mobile data collection. Machine-learning based propensity score weighting in complex survey design. Support mission for Mali Country Office (Bamako).}
+\entry{2016}{ Data Scientist Intern}{Etalab, Governmental Task Force for OpenData, France}{\emph{OpenFisca}: French tax and benefit system micro-simulation platform. Finalist of the Open Government Partnership Hackathon. }
 \end{entrylist}
 
 \section{Grants}
 \begin{entrylist}
 \entry
-{12/2021}
+{Dec 2021}
 {Mapping refugees with high spatial resolution}
 {UNHCR: \$80 000}
 {Co-PI for developing methods to map refugees for survey purposes}
 \entry
-{05/2022}
+{May 2022}
 {Statistical population modelling for census support}
 {UNFPA: \$30 000}
 {Co-PI for creating a bespoke model for Brazil National Statistics Office (IBGE).}
@@ -117,38 +118,34 @@ Assessing food security from remote data collection. Machine-learning based prop
 \section{Academic outcomes}
 \textbf{Peer-reviewed papers}
 \begin{itemize}
-\item The Population Seen from Space: When Satellite Images Come to the Rescue of the Census, \textbf{Darin, E.}; Kuépié M.; Bassinga H, Boo G., Tatem A.J.; \textit{Population}, 2022, 77:3, \href{https://doi.org/10.3917/popu.2203.0467}{\faIcon{external-link-alt}}
-\item High-resolution population estimation using household survey data and building footprints, Boo, G; \textbf{Darin, E.}; Leasure, D.R.; Dooley, C.A.; Chamberlain, H.R., et al, \textit{Nature Communications}, 2022, 13:1,    \href{https://www.nature.com/articles/s41467-022-29094-x}{\faIcon{external-link-alt}}
-\item The role of earth observation in an integrated deprived area mapping "system" for low-to-middle income countries, Kuffer, M.; Thomson, D.R.; Boo, G.; Mahabir, R.; Grippa, T.; Vanhuysse, S.; Engstrom, R.; Ndugwa, R.; Makau, J.; \textbf{Darin, E}.; de Albuquerque, J.P. and Kabaria, C, \textit{Remote Sensing}, 2020, 12, 982.    \href{https://www.mdpi.com/2072-4292/12/6/982}{\faIcon{external-link-alt}} 
-\item A grid-based sample design framework for household surveys, Boo G; \textbf{Darin E}; Thomson DR and Tatem AJ, \textit{Gates Open Research} 2020, 4:13, \href{https://gatesopenresearch.org/articles/4-13/v1}{\faIcon{external-link-alt}}
+\item Building footprint data for countries in Africa: To what extent are existing data products comparable?, Chamberlain H. R.; \textbf{Darin, E.}; Adewole A. W.; Lazar A., Tatem A.J.; \textit{Computers, Environment and Urban Systems}, 2024, 102104, \href{https://doi.org/10.1016/j.compenvurbsys.2024.102104}{\scriptsize\faIcon{external-link-alt}}
+\item The Population Seen from Space: When Satellite Images Come to the Rescue of the Census, \textbf{Darin, E.}; Kuépié M.; Bassinga H, Boo G., Tatem A.J.; \textit{Population}, 2022, 77:3, \href{https://doi.org/10.3917/popu.2203.0467}{\scriptsize\faIcon{external-link-alt}}
+\item High-resolution population estimation using household survey data and building footprints, Boo, G; \textbf{Darin, E.}; Leasure, D.R.; Dooley, C.A.; Chamberlain, H.R., et al, \textit{Nature Communications}, 2022, 13:1,    \href{https://www.nature.com/articles/s41467-022-29094-x}{\scriptsize\faIcon{external-link-alt}}
+\item The role of earth observation in an integrated deprived area mapping "system" for low-to-middle income countries, Kuffer, M.; Thomson, D.R.; Boo, G.; Mahabir, R.; Grippa, T.; Vanhuysse, S.; Engstrom, R.; Ndugwa, R.; Makau, J.; \textbf{Darin, E}.; de Albuquerque, J.P. and Kabaria, C, \textit{Remote Sensing}, 2020, 12, 982.    \href{https://www.mdpi.com/2072-4292/12/6/982}{\scriptsize\faIcon{external-link-alt}} 
+\item A grid-based sample design framework for household surveys, Boo G; \textbf{Darin E}; Thomson DR and Tatem AJ, \textit{Gates Open Research} 2020, 4:13, \href{https://gatesopenresearch.org/articles/4-13/v1}{\scriptsize\faIcon{external-link-alt}}
 
 \end{itemize}
 \textbf{Conferences}
 \begin{itemize}
 \item Oral presentation: Estimating population in data-scarce contexts: to which extent can we leverage satellite imagery, \textbf{Darin E}, \textit{British Society of Population Studies}, 2023.
 \item Oral presentation: Counting people from space: an inquiry from a data practitioner perspective, \textbf{Darin E}, \textit{Data Justice Conference}, 2023.
-\item Oral presentation: A bottom-up population modelling approach to complement the population and housing census, \textbf{Darin E}; Boo G; Tatem AJ, \textit{International Population Conference}, 2021. \href{https://www.researchgate.net/publication/357017300_A_bottom-up_population_modelling_approach_to_complement_the_population_and_housing_census}{\faIcon{external-link-alt}}
-\item Poster: How Bayesian modelling could use the Big Tech competition in producing built-up maps, \textbf{Darin E}, \textit{Bayesian methods for the social sciences}, 2022.  \href{http://dx.doi.org/10.13140/RG.2.2.15592.55040}{\faIcon{external-link-alt}}
-\item Poster: High-resolution population mapping and estimation in the western part of the Democratic Republic of Congo, \textbf{Darin E}; Boo G;  Leasure DL and Tatem AJ, \textit{GEOMED 2019}, 2019.  \href{https://www.researchgate.net/publication/335320708_High-resolution_population_mapping_and_estimation_in_the_western_part_of_the_Democratic_Republic_of_Congo?channel=doi&linkId=5d5e587f299bf1b97cfd0ba7&showFulltext=true}{\faIcon{external-link-alt}}
+\item Oral presentation: A bottom-up population modelling approach to complement the population and housing census, \textbf{Darin E}; Boo G; Tatem AJ, \textit{International Population Conference}, 2021. \href{https://www.researchgate.net/publication/357017300_A_bottom-up_population_modelling_approach_to_complement_the_population_and_housing_census}{\scriptsize\faIcon{external-link-alt}}
+\item Poster: How Bayesian modelling could use the Big Tech competition in producing built-up maps, \textbf{Darin E}, \textit{Bayesian methods for the social sciences}, 2022.  \href{http://dx.doi.org/10.13140/RG.2.2.15592.55040}{\scriptsize\faIcon{external-link-alt}}
+\item Poster: High-resolution population mapping and estimation in the western part of the Democratic Republic of Congo, \textbf{Darin E}; Boo G;  Leasure DL and Tatem AJ, \textit{GEOMED 2019}, 2019.  \href{https://www.researchgate.net/publication/335320708_High-resolution_population_mapping_and_estimation_in_the_western_part_of_the_Democratic_Republic_of_Congo?channel=doi&linkId=5d5e587f299bf1b97cfd0ba7&showFulltext=true}{\scriptsize\faIcon{external-link-alt}}
 \end{itemize}
 \textbf{Teaching}
 \begin{itemize}
 \item Gridded population modelling for Summer Institutes in Computational Social Science, Covenant, Nigeria 2022, Joseph Ki-Zerbo and Norbert Zongo University, Burkina Faso 2021, Data Science Nigeria Bootcamp 2019
-\item  Statistical population modelling for census support; \textbf{Darin E}, Leasure DR, Tatem AJ, \textit{WorldPop, University of Southampton}, 2021, \href{https://wpgp.github.io/bottom-up-tutorial/}{\faIcon{external-link-alt}}
-\item Small area population estimates using random forest top-down disaggregation: An R tutorial; Leasure DR, \textbf{Darin E}, Tatem AJ,   \textit{WorldPop, University of Southampton}, 2020. \href{https://htmlpreview.github.io/?https://github.com/wpgp/top-down-tutorial/blob/master/4_tutorial.html#Suggested_Citation}{\faIcon{external-link-alt}}.
+\item  Statistical population modelling for census support; \textbf{Darin E}, Leasure DR, Tatem AJ, \textit{WorldPop, University of Southampton}, 2021, \href{https://wpgp.github.io/bottom-up-tutorial/}{\scriptsize\faIcon{external-link-alt}}
+\item Small area population estimates using random forest top-down disaggregation: An R tutorial; Leasure DR, \textbf{Darin E}, Tatem AJ,   \textit{WorldPop, University of Southampton}, 2020. \href{https://htmlpreview.github.io/?https://github.com/wpgp/top-down-tutorial/blob/master/4_tutorial.html#Suggested_Citation}{\scriptsize\faIcon{external-link-alt}}.
 \item R Foundations Course for different Nigerian national agencies, 2020.
-\item Population Modelling Webinar, \textit{GRID3 Webinar Series}, 2020. \href{https://www.youtube.com/watch?v=HMFM8HzLfH8}{\faIcon{external-link-alt}}
+\item Population Modelling Webinar, \textit{GRID3 Webinar Series}, 2020. \href{https://www.youtube.com/watch?v=HMFM8HzLfH8}{\scriptsize\faIcon{external-link-alt}}
 
 \end{itemize}
-\textbf{Datasets}
-\begin{itemize}
-\item  Census disaggregated gridded population estimates for Sierra Leone, version 2.0 (2015), WorldPop and Statistics Sierra Leone, 2021, \textit{University of Southampton}, doi:10.5258/SOTON/WP00714. \href{https://wopr.worldpop.org/?SLE/Population}{\faIcon{external-link-alt}}
-\item Census-based gridded population estimates for Burkina Faso (2019), version 1.0, WorldPop and Institut National de la Statistique et de la Démographie du Burkina Faso, \textit{WorldPop, University of Southampton}, 2021. \href{https://wopr.worldpop.org/?BFA/Population/v1.0}{\faIcon{external-link-alt}}
-\item Modelled gridded population estimates for the Kinshasa, Kongo-Central, Kwango, Kwilu, and Mai-Ndombe provinces in the Democratic Republic of the Congo 2018, version 2.0, Boo G; \textbf{Darin E}; Leasure DR; Dooley CA; Chamberlain HR; Lazar AN; Tatem AJ, \textit{WorldPop, University of Southampton}, 2020. \href{https://wopr.worldpop.org/?COD/Population/v2.0}{\faIcon{external-link-alt}}
-\end{itemize}
+
 \textbf{R Package}
 \begin{itemize}
-\item wopr: An R package to query the WorldPop Open Population Repository, version 1.0.1, Leasure DR; Bondarenko M; \textbf{Darin E}; Tatem AJ, \textit{WorldPop, University of Southampton}, 2020. Maintainer: \textbf{Darin E}. \href{https://apps.worldpop.org/woprVision/}{\faIcon{external-link-alt}}
+\item wopr: An R package to query the WorldPop Open Population Repository, version 1.0.1, Leasure DR; Bondarenko M; \textbf{Darin E}; Tatem AJ, \textit{WorldPop, University of Southampton}, 2020. Maintainer: \textbf{Darin E}. \href{https://apps.worldpop.org/woprVision/}{\scriptsize\faIcon{external-link-alt}}
 \end{itemize}
 
 
