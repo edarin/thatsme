@@ -24,6 +24,9 @@ editor_options:
   markdown: 
     wrap: 72
 creative_commons: CC BY
+categories:
+  - academia
+  - tutorial
 ---
 
 ```{r, include=F}

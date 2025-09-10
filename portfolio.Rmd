@@ -1,11 +1,18 @@
 ---
-title: "Portfolio"
+title: "Projects"
 site: distill::distill_website
-listing: 
+listing:
   posts:
-    - 2021-11-15-statistical-population-modelling-for-census-support
-    - 2021-08-01-woprvision
-    - 2021-07-09-modelling-burkina-faso-population
-    - 2021-07-02-top-down-r-tutorial
-    - 2020-09-01-coopcycle
+  - "2025-08-15-bayesian-modeling-in-the-drc"
+  - "2025-08-01-can-satellites-replace-censuses-what-we-learned-from-colombia"
+  - "2025-08-12-nowpop-network"
+  - "2025-08-12-ukraine-nowpop-project"
+  - "2023-07-01-collaboration-with-the-colombia-statistics-office"
+  - "2023-02-01-mapping-refugees-in-cameroon-with-high-resolution"
+  - "2023-01-01-radical-routes"
+  - "2021-11-15-statistical-population-modelling-for-census-support"
+  - "2021-08-01-woprvision"
+  - "2021-07-09-modelling-burkina-faso-population"
+  - "2021-07-02-top-down-r-tutorial"
+  - "2020-09-01-coopcycle"
 ---

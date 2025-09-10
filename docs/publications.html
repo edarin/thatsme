@@ -21,7 +21,7 @@
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -32,7 +32,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -455,8 +455,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
 
   <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet"/>
   <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
@@ -567,9 +567,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     display: none !important;
   }
 
+  hr.section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0px;
+  }
+
+
+  d-byline {
+    border-top: none;
+  }
+
   d-article {
     padding-top: 2.5rem;
     padding-bottom: 30px;
+    border-top: none;
   }
 
   d-appendix {
@@ -664,6 +676,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article div.sourceCode pre {
     padding-left: 18px;
     font-size: 14px;
+  }
+
+  /* tweak for Pandoc numbered line within distill */
+  d-article pre.numberSource code > span {
+      left: -2em;
   }
 
   d-article pre {
@@ -1425,6 +1442,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // create d-title
     $('.d-title').changeElementType('d-title');
 
+    // separator
+    var separator = '<hr class="section-separator" style="clear: both"/>';
+    // prepend separator above appendix
+    $('.d-byline').before(separator);
+    $('.d-article').before(separator);
+
     // create d-byline
     var byline = $('<d-byline></d-byline>');
     $('.d-byline').replaceWith(byline);
@@ -1502,8 +1525,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     $('.distill-force-highlighting-css').parent().remove();
 
     // remove empty line numbers inserted by pandoc when using a
-    // custom syntax highlighting theme
-    $('code.sourceCode a:empty').remove();
+    // custom syntax highlighting theme, except when numbering line
+    // in code chunk
+    $('pre:not(.numberLines) code.sourceCode a:empty').remove();
 
     // load distill framework
     load_distill_framework();
@@ -1529,12 +1553,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       // add orcid ids
       $('.authors-affiliations').find('.author').each(function(i, el) {
         var orcid_id = front_matter.authors[i].orcidID;
+        var author_name = front_matter.authors[i].author
         if (orcid_id) {
           var a = $('<a></a>');
           a.attr('href', 'https://orcid.org/' + orcid_id);
           var img = $('<img></img>');
           img.addClass('orcid-id');
-          img.attr('alt', 'ORCID ID');
+          img.attr('alt', author_name ? 'ORCID ID for ' + author_name : 'ORCID ID');
           img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
           a.append(img);
           $(this).append(a);
@@ -2133,7 +2158,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.19/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2162,8 +2187,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
 <a href="index.html" class="title">Meet Edith</a>
-<a href="portfolio.html">Portfolio</a>
-<a href="posts.html">Posts</a>
+<a href="portfolio.html">Projects</a>
 </div>
 <div class="nav-right">
 <a href="publications.html">Publications</a>
@@ -2179,6 +2203,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-title">
 <h1>Publications</h1>
+
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 
@@ -2186,7 +2211,34 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
 <div class="d-article">
-<h1 id="refeered-publications">Refeered publications</h1>
+<h1 id="peer-reviewed-publications">Peer-reviewed publications</h1>
+<h3 id="section">2025</h3>
+<p>Boo G, <strong>Darin E</strong>, Chamberlain HR, Hosner R, Akilimali PK, et al. (2025) Tackling public health data gaps through Bayesian high-resolution population estimation: A case study of Kasaï-Oriental, Democratic Republic of the Congo. PLOS Global Public Health 5(9): e0005072. <a href="https://doi.org/10.1371/journal.pgph.0005072">PDF</a></p>
+<aside>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="pic/article_Boo_plos.PNG" width="856" /></p>
+</div>
+</aside>
+<p><strong>Darin E.</strong>, Kashyap, R. and Leasure, D.R. (2025), How Accurate Are High Resolution Settlement Maps at Predicting Population Counts in Data Scarce Settings?. Population, Space and Place, 31: e70083.<a href="https://doi.org/10.1002/psp.70083">PDF</a></p>
+<aside>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="pic/article_psp.jpg" /><!-- --></p>
+</div>
+</aside>
+<h3 id="section-1">2024</h3>
+<p><strong>Darin E.</strong>, Dicko, A.H., Galal, H. et al. Mapping refugee populations at high resolution by unlocking humanitarian administrative data. Int J Humanitarian Action 9, 14 (2024). <a href="https://doi.org/10.1186/s41018-024-00157-6">PDF</a></p>
+<aside>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="pic/article_refugee.png" width="342" /></p>
+</div>
+</aside>
+<p>Chamberlain H. R., <strong>Darin E.</strong>, Adewole W. A., Jochem C. W., Lazar A. N., Tatem A. J., <em>Building footprint data for countries in Africa: To what extent are existing data products comparable?</em>, Computers, Environment and Urban Systems, Volume 110, 2024, 102104, ISSN 0198-9715, <a href="https://doi.org/10.1016/j.compenvurbsys.2024.102104">PDF</a>.</p>
+<aside>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="pic/article_heather.jpg" /><!-- --></p>
+</div>
+</aside>
+<h3 id="section-2">2022</h3>
 <p><strong>Darin E</strong>, Kuépié M, Bassinga H, Boo G, Tatem AJ. <em>The Population Seen from Space: When Satellite Images Come to the Rescue of the Census</em>. Translated by Reeve P. 2022. Population. 2022/3 (Vol. 77). <a href="https://www.cairn-int.info/article.php?ID_ARTICLE=E_POPU_2203_0467">PDF</a></p>
 <aside>
 <div class="layout-chunk" data-layout="l-body">
@@ -2196,7 +2248,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p><strong>Darin E</strong>, Kuépié M, Bassinga H, Boo G, Tatem AJ. <em>La population vue du ciel : quand l’imagerie satellite vient au secours du recensement</em>. 2022. Population. 2022/3 (Vol. 77). <a href="https://doi.org/10.3917/popu.2203.0467">PDF</a></p>
 <aside>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="pic/article_population_en.jpg" width="354" /></p>
+<p><img src="pic/article_population_en.jpg" /><!-- --></p>
 </div>
 </aside>
 <p>Boo G, <strong>Darin E</strong>, Leasure DR, Dooley CA, Chamberlain HR, Lázár AN, Tschirhart K, Sinai C, Hoff NA, Fuller T, Musene K. <em>High-resolution population estimation using household survey data and building footprints</em>. 2022. Nature communications. 2022 Mar 14;13(1):1-0. <a href="https://doi.org/10.1038/s41467-022-29094-x">PDF</a></p>
@@ -2205,6 +2257,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p><img src="pic/article_nature.PNG" width="521" /></p>
 </div>
 </aside>
+<h3 id="before-2022">Before 2022</h3>
 <p>Kuffer M, Thomson DR, Kabaria, C, Boo G, <strong>Darin E</strong> , Mahabir R, Grippa T, Vhuysse S, Albuquerque J, Ndugwa R, Makau J, Muluadi J. <em>The Role of Earth Observation in an Integrated Deprived Area Mapping “System” for Low-to-Middle Income Countries</em>. 2020. Remote Sensing. 12, 982. <a href="https://www.mdpi.com/2072-4292/12/6/982">PDF</a></p>
 <aside>
 <div class="layout-chunk" data-layout="l-body">
@@ -2217,6 +2270,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p><img src="pic/article_gates.gif" /><!-- --></p>
 </div>
 </aside>
+<h1 id="general-audience">General audience</h1>
+<p>My work has been cited in:
+- “How many are we for real?”. Spektrum. 2025 <a href="www.spektrum.de/news/weltbevoelkerung-wie-viele-sind-wir-wirklich/2262337">Article</a></p>
 <h1 id="conference-contribution">Conference contribution</h1>
 <p><strong>Darin E</strong>, Boo G, Thomson DR, and Tatem AJ. <em>A bottom-up population modelling approach to complement the population and housing census</em>. Proceedings of the International Population Conference 2021. Hyderabad, India <a href="https://ipc2021.popconf.org/uploads/210325">Abstract</a>, <a href="http://htmlpreview.github.io/?https://github.com/edarin/thatsme/tree/main/data/ipc2021/ipc2021_presentation.html">Presentation</a></p>
 <aside>

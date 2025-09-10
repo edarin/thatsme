@@ -13,10 +13,10 @@ navbar:
     - text: 'Resume'
       href: 'https://raw.githubusercontent.com/edarin/thatsme/main/cv/cv.pdf'
   left:
-    - text: "Portfolio"
+    - text: "Projects"
       href: portfolio.html
-    - text: "Posts"
-      href: posts.html
+    # - text: "Posts"
+    #   href: posts.html
   search: false
 output: distill::distill_article
 theme: theme.css

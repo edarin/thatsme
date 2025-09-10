@@ -5,7 +5,44 @@ description: |
 
   
 
-# Refeered publications
+# Peer-reviewed publications
+
+### 2025
+Boo G, **Darin E**, Chamberlain HR, Hosner R, Akilimali PK, et al. (2025) Tackling public health data gaps through Bayesian high-resolution population estimation: A case study of Kasaï-Oriental, Democratic Republic of the Congo. PLOS Global Public Health 5(9): e0005072. [PDF](https://doi.org/10.1371/journal.pgph.0005072)
+
+<aside>
+```{r, echo=F}
+knitr::include_graphics(here::here('./pic/article_Boo_plos.PNG'))
+```
+</aside>
+
+**Darin E.**, Kashyap, R. and Leasure, D.R. (2025), How Accurate Are High Resolution Settlement Maps at Predicting Population Counts in Data Scarce Settings?. Population, Space and Place, 31: e70083.[PDF](https://doi.org/10.1002/psp.70083)
+
+<aside>
+```{r, echo=F}
+knitr::include_graphics(here::here('./pic/article_psp.jpg'))
+```
+</aside>
+
+### 2024
+
+**Darin E.**, Dicko, A.H., Galal, H. et al. Mapping refugee populations at high resolution by unlocking humanitarian administrative data. Int J Humanitarian Action 9, 14 (2024). [PDF](https://doi.org/10.1186/s41018-024-00157-6)
+
+<aside>
+```{r, echo=F}
+knitr::include_graphics(here::here('./pic/article_refugee.png'))
+```
+</aside>
+
+Chamberlain H. R., **Darin E.**, Adewole W. A., Jochem C. W., Lazar A. N., Tatem A. J., *Building footprint data for countries in Africa: To what extent are existing data products comparable?*, Computers, Environment and Urban Systems, Volume 110, 2024, 102104, ISSN 0198-9715, [PDF](https://doi.org/10.1016/j.compenvurbsys.2024.102104).
+
+<aside>
+```{r, echo=F}
+knitr::include_graphics(here::here('./pic/article_heather.jpg'))
+```
+</aside>
+
+### 2022
 
 **Darin E**, Kuépié M, Bassinga H, Boo G, Tatem AJ. *The Population Seen from Space: When Satellite Images Come to the Rescue of the Census*. Translated by Reeve P. 2022. Population. 2022/3 (Vol. 77). [PDF](https://www.cairn-int.info/article.php?ID_ARTICLE=E_POPU_2203_0467)
 
@@ -31,6 +68,7 @@ knitr::include_graphics(here::here('./pic/article_nature.png'))
 ```
 </aside>
 
+### Before 2022
 
 Kuffer M, Thomson DR, Kabaria, C, Boo G, **Darin E** , Mahabir R, Grippa T, Vhuysse S, Albuquerque J, Ndugwa R, Makau J, Muluadi J. *The Role of Earth Observation in an Integrated Deprived Area Mapping "System" for Low-to-Middle Income Countries*. 2020. Remote Sensing. 12, 982. [PDF](https://www.mdpi.com/2072-4292/12/6/982)
 
@@ -48,6 +86,10 @@ Boo G, **Darin E** , Thomson DR, and Tatem AJ. *A grid-based sampling design fra
 knitr::include_graphics(here::here('./pic/article_gates.gif'))
 ```
 </aside>
+
+# General audience
+My work has been cited in:
+- “How many are we for real?”. Spektrum. 2025 [Article](www.spektrum.de/news/weltbevoelkerung-wie-viele-sind-wir-wirklich/2262337)
 
 # Conference contribution
 

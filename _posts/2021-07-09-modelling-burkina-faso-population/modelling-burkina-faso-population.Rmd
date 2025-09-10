@@ -16,6 +16,9 @@ bibliography: book.bib
 editor_options: 
   markdown: 
     wrap: sentence
+categories:
+  - academia
+  - paper
 ---
 
 ```{r, echo=FALSE}

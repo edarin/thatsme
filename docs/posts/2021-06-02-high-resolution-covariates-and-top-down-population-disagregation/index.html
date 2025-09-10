@@ -21,7 +21,7 @@
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -32,7 +32,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -50,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -73,16 +74,39 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
 code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+<style>
+  div.csl-bib-body { }
+  div.csl-entry {
+    clear: both;
+      margin-bottom: 0em;
+    }
+  .hanging div.csl-entry {
+    margin-left:2em;
+    text-indent:-2em;
+  }
+  div.csl-left-margin {
+    min-width:2em;
+    float:left;
+  }
+  div.csl-right-inline {
+    margin-left:2em;
+    padding-left:1em;
+  }
+  div.csl-indent {
+    margin-left: 2em;
+  }
 </style>
 
   <!--radix_placeholder_meta_tags-->
@@ -125,17 +149,17 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <meta name="citation_author" content="Edith Darin"/>
 <!--/radix_placeholder_meta_tags-->
   
-  <meta name="citation_reference" content="citation_title=Random forests;citation_publication_date=2001;citation_volume=45;citation_author=Leo Breiman"/>
-  <meta name="citation_reference" content="citation_title=Disaggregating Census Data for Population Mapping Using Random Forests with Remotely-Sensed and Ancillary Data;citation_publication_date=2015;citation_volume=10;citation_doi=10.1371/journal.pone.0107042;citation_author=Forrest R. Stevens;citation_author=Andrea E. Gaughan;citation_author=Catherine Linard;citation_author=Andrew J. Tatem"/>
-  <meta name="citation_reference" content="citation_title=Global high resolution population denominators project - funded by the bill and melinda gates foundation (OPP1134076);citation_publication_date=2018;citation_doi=10.5258/SOTON/WP00645;citation_author= WorldPop Research Group;citation_author= Department of Geography and Geosciences, University of Louisville;citation_author= Departement de Geographie, Universite de Namur;citation_author= Center for International Earth Science Information Network (CIESIN), Columbia University"/>
-  <meta name="citation_reference" content="citation_title=Global spatio-temporally harmonised datasets for producing high-resolution gridded population distribution datasets;citation_publication_date=2019;citation_volume=3;citation_doi=10.1080/20964471.2019.1625151;citation_author=Christopher T Lloyd;citation_author=Heather Chamberlain;citation_author=David Kerr;citation_author=Greg Yetman;citation_author=Linda Pistolesi;citation_author=Forrest R Stevens;citation_author=Andrea E Gaughan;citation_author=Jeremiah J Nieves;citation_author=Graeme Hornby;citation_author=Kytt MacManus;citation_author= others"/>
-  <meta name="citation_reference" content="citation_title=Gridded maps of building patterns throughout sub-saharan africa, version 1.0.;citation_publication_date=2020;citation_publisher=WorldPop Research Group, University of Southampton;citation_doi=10.5258/SOTON/WP00666;citation_author=Claire A Dooley;citation_author=Andrew J Tatem"/>
-  <meta name="citation_reference" content="citation_title=Digitize africa data;citation_publication_date=2019;citation_author= Ecopia.AI;citation_author= Maxar Technologies"/>
-  <meta name="citation_reference" content="citation_title=Census/projection-disaggregated gridded population datasets for 51 countries across sub-saharan africa in 2020 using building footprints.;citation_publication_date=2020;citation_author=Maksym Bondarenko;citation_author=David Kerr;citation_author=Alessandro Sorichetta;citation_author=Andrew Tatem"/>
+  <meta name="citation_reference" content="citation_title=Random forests;citation_volume=45;citation_author=Leo Breiman"/>
+  <meta name="citation_reference" content="citation_title=Disaggregating Census Data for Population Mapping Using Random Forests with Remotely-Sensed and Ancillary Data;citation_volume=10;citation_doi=10.1371/journal.pone.0107042;citation_author=Forrest R. Stevens;citation_author=Andrea E. Gaughan;citation_author=Catherine Linard;citation_author=Andrew J. Tatem"/>
+  <meta name="citation_reference" content="citation_title=Global high resolution population denominators project - funded by the bill and melinda gates foundation (OPP1134076);citation_doi=10.5258/SOTON/WP00645;citation_author= WorldPop Research Group;citation_author= Department of Geography and Geosciences, University of Louisville;citation_author= Departement de Geographie, Universite de Namur;citation_author= Center for International Earth Science Information Network (CIESIN), Columbia University"/>
+  <meta name="citation_reference" content="citation_title=Global spatio-temporally harmonised datasets for producing high-resolution gridded population distribution datasets;citation_volume=3;citation_doi=10.1080/20964471.2019.1625151;citation_author=Christopher T Lloyd;citation_author=Heather Chamberlain;citation_author=David Kerr;citation_author=Greg Yetman;citation_author=Linda Pistolesi;citation_author=Forrest R Stevens;citation_author=Andrea E Gaughan;citation_author=Jeremiah J Nieves;citation_author=Graeme Hornby;citation_author=Kytt MacManus;citation_author= others"/>
+  <meta name="citation_reference" content="citation_title=Gridded maps of building patterns throughout sub-saharan africa, version 1.0.;citation_publisher=WorldPop Research Group, University of Southampton;citation_doi=10.5258/SOTON/WP00666;citation_author=Claire A Dooley;citation_author=Andrew J Tatem"/>
+  <meta name="citation_reference" content="citation_title=Digitize africa data;citation_author= Ecopia.AI;citation_author= Maxar Technologies"/>
+  <meta name="citation_reference" content="citation_title=Census/projection-disaggregated gridded population datasets for 51 countries across sub-saharan africa in 2020 using building footprints.;citation_author=Maksym Bondarenko;citation_author=David Kerr;citation_author=Alessandro Sorichetta;citation_author=Andrew Tatem"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","bibliography","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["How fine can a top-down population model be? [draft]"]},{"type":"character","attributes":{},"value":["We will study the use of very high-resolution covariates in top-down population model and its impact on population gridded estimates. We will examine building-footprint derived covariates in Sierra Leone population model. Disclaimer: This post is still being drafted."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Edith Darin"]}]}]},{"type":"character","attributes":{},"value":["06-02-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["references.bib"]},{"type":"character","attributes":{},"value":["https://edarin.github.io/thatsme/posts/2021-06-02-high-resolution-covariates-and-top-down-population-disagregation/"]},{"type":"character","attributes":{},"value":["https://edarin.github.io/thatsme/posts/2021-06-02-high-resolution-covariates-and-top-down-population-disagregation/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","bibliography","categories","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["How fine can a top-down population model be? [draft]"]},{"type":"character","attributes":{},"value":["We will study the use of very high-resolution covariates in top-down population model and its impact on population gridded estimates. We will examine building-footprint derived covariates in Sierra Leone population model. Disclaimer: This post is still being drafted."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Edith Darin"]}]}]},{"type":"character","attributes":{},"value":["06-02-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["references.bib"]},{"type":"character","attributes":{},"value":["academia"]},{"type":"character","attributes":{},"value":["https://edarin.github.io/thatsme/posts/2021-06-02-high-resolution-covariates-and-top-down-population-disagregation/"]},{"type":"character","attributes":{},"value":["https://edarin.github.io/thatsme/posts/2021-06-02-high-resolution-covariates-and-top-down-population-disagregation/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -487,8 +511,8 @@ d-title {
 </style>
 
 <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<link href="../../site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
-<link href="../../site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+<link href="../../site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet"/>
+<link href="../../site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet"/>
 <script src="../../site_libs/headroom-0.9.4/headroom.min.js"></script>
 <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
@@ -599,9 +623,21 @@ d-article table.gt_table th {
   display: none !important;
 }
 
+hr.section-separator {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 0px;
+}
+
+
+d-byline {
+  border-top: none;
+}
+
 d-article {
   padding-top: 2.5rem;
   padding-bottom: 30px;
+  border-top: none;
 }
 
 d-appendix {
@@ -696,6 +732,11 @@ d-article div.sourceCode pre {
 d-article div.sourceCode pre {
   padding-left: 18px;
   font-size: 14px;
+}
+
+/* tweak for Pandoc numbered line within distill */
+d-article pre.numberSource code > span {
+    left: -2em;
 }
 
 d-article pre {
@@ -1457,6 +1498,12 @@ function init_distill() {
   // create d-title
   $('.d-title').changeElementType('d-title');
 
+  // separator
+  var separator = '<hr class="section-separator" style="clear: both"/>';
+  // prepend separator above appendix
+  $('.d-byline').before(separator);
+  $('.d-article').before(separator);
+
   // create d-byline
   var byline = $('<d-byline></d-byline>');
   $('.d-byline').replaceWith(byline);
@@ -1534,8 +1581,9 @@ function init_distill() {
   $('.distill-force-highlighting-css').parent().remove();
 
   // remove empty line numbers inserted by pandoc when using a
-  // custom syntax highlighting theme
-  $('code.sourceCode a:empty').remove();
+  // custom syntax highlighting theme, except when numbering line
+  // in code chunk
+  $('pre:not(.numberLines) code.sourceCode a:empty').remove();
 
   // load distill framework
   load_distill_framework();
@@ -1561,12 +1609,13 @@ function init_distill() {
     // add orcid ids
     $('.authors-affiliations').find('.author').each(function(i, el) {
       var orcid_id = front_matter.authors[i].orcidID;
+      var author_name = front_matter.authors[i].author
       if (orcid_id) {
         var a = $('<a></a>');
         a.attr('href', 'https://orcid.org/' + orcid_id);
         var img = $('<img></img>');
         img.addClass('orcid-id');
-        img.attr('alt', 'ORCID ID');
+        img.attr('alt', author_name ? 'ORCID ID for ' + author_name : 'ORCID ID');
         img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
         a.append(img);
         $(this).append(a);
@@ -2165,8 +2214,8 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.9/header-attrs.js"></script>
-  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/header-attrs-2.29/header-attrs.js"></script>
+  <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2195,8 +2244,7 @@ d-appendix d-footnote-list a.footnote-backlink {
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
 <a href="../../index.html" class="title">Meet Edith</a>
-<a href="../../portfolio.html">Portfolio</a>
-<a href="../../posts.html">Posts</a>
+<a href="../../portfolio.html">Projects</a>
 </div>
 <div class="nav-right">
 <a href="../../publications.html">Publications</a>
@@ -2212,7 +2260,11 @@ d-appendix d-footnote-list a.footnote-backlink {
 
 <div class="d-title">
 <h1>How fine can a top-down population model be? [draft]</h1>
+
 <!--radix_placeholder_categories-->
+<div class="dt-tags">
+  <a href="../../index.html#category:academia" class="dt-tag">academia</a>
+</div>
 <!--/radix_placeholder_categories-->
 <p><p>We will study the use of very high-resolution covariates in top-down population model and its impact on population gridded estimates. We will examine building-footprint derived covariates in Sierra Leone population model. Disclaimer: This post is still being drafted.</p></p>
 </div>
@@ -2229,7 +2281,8 @@ d-appendix d-footnote-list a.footnote-backlink {
 <p>To obtain high-resolution population estimates, <a href="https://www.worldpop.org/">WorldPop</a> developed a top-down method that disagregates population totals into grid cells thanks to ancillary geospatial covariates.</p>
 <p>The method consists in fitting a random-forest model <span class="citation" data-cites="breiman2001">(<a href="#ref-breiman2001" role="doc-biblioref">Breiman 2001</a>)</span> at the finest administrative level for which population count is available. The estimated model is then used to predict population density for every grid cell thanks to the geospatial covariates. Finally, the predicted gridded population density layer plays the role of a weighting layer to breakdown the population totals into the grid cells <span class="citation" data-cites="stevens2015">(<a href="#ref-stevens2015" role="doc-biblioref">Stevens et al. 2015</a>)</span>.</p>
 <figure>
-<img src="https://lh4.googleusercontent.com/SLuYBPcAm59OnMwi7grsM2VzXkMx2JGH0616ZjP7JQD5waX1OMIfNTb3QX0KONaQjFBO9ZQPG7k_KU4yA3xoUxL0t4MTNK63z3f351ijJQ1PLtNhOfUywWhWj1JcPwD43EWwjMhfDnY" alt="Top-down disagregation model" /><figcaption aria-hidden="true">Top-down disagregation model</figcaption>
+<img src="https://lh4.googleusercontent.com/SLuYBPcAm59OnMwi7grsM2VzXkMx2JGH0616ZjP7JQD5waX1OMIfNTb3QX0KONaQjFBO9ZQPG7k_KU4yA3xoUxL0t4MTNK63z3f351ijJQ1PLtNhOfUywWhWj1JcPwD43EWwjMhfDnY" alt="Top-down disagregation model" />
+<figcaption aria-hidden="true">Top-down disagregation model</figcaption>
 </figure>
 <p>The <strong>geospatial covariates</strong> commonly used by WorldPop initative for mapping population globally <span class="citation" data-cites="worldpopresearchgroup2018">(<a href="#ref-worldpopresearchgroup2018" role="doc-biblioref">WorldPop Research Group et al. 2018</a>)</span> are based<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>:</p>
 <ol type="1">
@@ -2243,7 +2296,7 @@ d-appendix d-footnote-list a.footnote-backlink {
 </ul>
 <p>The input rasters have a resolution ranging from 900m to 90 m at the Equateur <span class="citation" data-cites="lloyd2019">(<a href="#ref-lloyd2019" role="doc-biblioref">Lloyd et al. 2019</a>)</span>.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-1"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
 <img src="dat/sle_slope.PNG" alt="Exemple of raster resampling: Slope in Sierra Leone" width="202" />
 <p class="caption">
 Figure 1: Exemple of raster resampling: Slope in Sierra Leone
@@ -2261,7 +2314,7 @@ Figure 1: Exemple of raster resampling: Slope in Sierra Leone
 </ul>
 <p>Rasters resulting from Euclidian distance measurement can have virtually any spatial resolution. They however might not be representative of localized informative variations for population modelling.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
 <img src="dat/sle_water_dist.PNG" alt="Exemple of Euclidean measurement: Distance to waterways in Sierra Leone" width="198" />
 <p class="caption">
 Figure 2: Exemple of Euclidean measurement: Distance to waterways in Sierra Leone
@@ -2274,34 +2327,34 @@ Figure 2: Exemple of Euclidean measurement: Distance to waterways in Sierra Leon
 <p>Recently, WorldPop released openly gridded building patterns across entire sub-Saharan Africa at 100m resolution <span class="citation" data-cites="dooley2020">(<a href="#ref-dooley2020" role="doc-biblioref">Dooley and Tatem 2020</a>)</span>. These were derived from building footprints extracted from satellite imagery with a spatial accuracy of 6m <span class="citation" data-cites="ecopia.ai2019">(<a href="#ref-ecopia.ai2019" role="doc-biblioref">Ecopia.AI and Maxar Technologies 2019</a>)</span>. In top-down modelling, this data has already been used to produce an alternative global set of gridded population estimates constraining the estimates to settled grid cells<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> <span class="citation" data-cites="bondarenko2020">(<a href="#ref-bondarenko2020" role="doc-biblioref">Bondarenko et al. 2020</a>)</span>.</p>
 <h1 id="method">Method</h1>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-bondarenko2020" class="csl-entry" role="doc-biblioentry">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-bondarenko2020" class="csl-entry" role="listitem">
 Bondarenko, Maksym, David Kerr, Alessandro Sorichetta, and Andrew Tatem. 2020. <span>“Census/Projection-Disaggregated Gridded Population Datasets for 51 Countries Across Sub-Saharan Africa in 2020 Using Building Footprints.”</span>
 </div>
-<div id="ref-breiman2001" class="csl-entry" role="doc-biblioentry">
+<div id="ref-breiman2001" class="csl-entry" role="listitem">
 Breiman, Leo. 2001. <span>“Random Forests.”</span> <em>Machine Learning</em> 45 (1): 5–32.
 </div>
-<div id="ref-dooley2020" class="csl-entry" role="doc-biblioentry">
+<div id="ref-dooley2020" class="csl-entry" role="listitem">
 Dooley, Claire A, and Andrew J Tatem. 2020. <em>Gridded Maps of Building Patterns Throughout Sub-Saharan Africa, Version 1.0.</em> WorldPop Research Group, University of Southampton. <a href="https://doi.org/10.5258/SOTON/WP00666">https://doi.org/10.5258/SOTON/WP00666</a>.
 </div>
-<div id="ref-ecopia.ai2019" class="csl-entry" role="doc-biblioentry">
+<div id="ref-ecopia.ai2019" class="csl-entry" role="listitem">
 Ecopia.AI, and Maxar Technologies. 2019. <em>Digitize Africa Data</em>.
 </div>
-<div id="ref-lloyd2019" class="csl-entry" role="doc-biblioentry">
+<div id="ref-lloyd2019" class="csl-entry" role="listitem">
 Lloyd, Christopher T, Heather Chamberlain, David Kerr, Greg Yetman, Linda Pistolesi, Forrest R Stevens, Andrea E Gaughan, et al. 2019. <span>“Global Spatio-Temporally Harmonised Datasets for Producing High-Resolution Gridded Population Distribution Datasets.”</span> <em>Big Earth Data</em> 3 (2): 108139. <a href="https://doi.org/10.1080/20964471.2019.1625151">https://doi.org/10.1080/20964471.2019.1625151</a>.
 </div>
-<div id="ref-stevens2015" class="csl-entry" role="doc-biblioentry">
+<div id="ref-stevens2015" class="csl-entry" role="listitem">
 Stevens, Forrest R., Andrea E. Gaughan, Catherine Linard, and Andrew J. Tatem. 2015. <span>“Disaggregating Census Data for Population Mapping Using Random Forests with Remotely-Sensed and Ancillary Data.”</span> <em>PLOS ONE</em> 10 (2): e0107042. <a href="https://doi.org/10.1371/journal.pone.0107042">https://doi.org/10.1371/journal.pone.0107042</a>.
 </div>
-<div id="ref-worldpopresearchgroup2018" class="csl-entry" role="doc-biblioentry">
-WorldPop Research Group, Department of Geography and Geosciences, University of Louisville, Departement de Geographie, Universite de Namur, and Center for International Earth Science Information Network (CIESIN), Columbia University. 2018. <span>“Global High Resolution Population Denominators Project - Funded by the Bill and Melinda Gates Foundation (Opp1134076).”</span> <a href="https://doi.org/10.5258/SOTON/WP00645">https://doi.org/10.5258/SOTON/WP00645</a>.
+<div id="ref-worldpopresearchgroup2018" class="csl-entry" role="listitem">
+WorldPop Research Group, Department of Geography and Geosciences, University of Louisville, Departement de Geographie, Universite de Namur, and Center for International Earth Science Information Network (CIESIN), Columbia University. 2018. <span>“Global High Resolution Population Denominators Project - Funded by the Bill and Melinda Gates Foundation (OPP1134076).”</span> <a href="https://doi.org/10.5258/SOTON/WP00645">https://doi.org/10.5258/SOTON/WP00645</a>.
 </div>
 </div>
-<section class="footnotes" role="doc-endnotes">
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1" role="doc-endnote"><p>They can be downloaded at: <a href="https://www.worldpop.org/project/categories?id=14" class="uri">https://www.worldpop.org/project/categories?id=14</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2" role="doc-endnote"><p>Settled cells are cells containing at least one building footprint.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>They can be downloaded at: <a href="https://www.worldpop.org/project/categories?id=14" class="uri">https://www.worldpop.org/project/categories?id=14</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Settled cells are cells containing at least one building footprint.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 <!--radix_placeholder_article_footer-->

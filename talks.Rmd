@@ -6,7 +6,9 @@ description: |
 
 # Talks
 
-*Bespoke Bayesian Population Model*s.Space Time Analysis Bayes (STAB) Seminar, Universtiy of Washington, July 2021
+**. UN Population Division Brown-bag Lunch Seminar, June 2025
+
+*Bespoke Bayesian Population Models*.Space Time Analysis Bayes (STAB) Seminar, University of Washington, July 2021
 
 *Estimating population using advanced technologies*. UK Foreign Department Roundtable "Who counts", March 2021
 

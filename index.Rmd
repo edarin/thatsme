@@ -18,10 +18,21 @@ listing: posts
 theme: theme.css
 ---
 
-I have been working since July 2018 as a research fellow at [WorldPop](https://www.worldpop.org/), University of Southampton. I build **Bayesian population models and maps** for sub-Saharan African countries combining household survey and satellite-imagery derived products.
+Since 2024 I’ve been working as a Population Data Scientist on the NowPop project in Oxford’s Demographic Science Unit, where I model internal displacement in Ukraine using social‑media and mobile‑phone data.
 
-I have started in October 2022 a PhD at the [Leverhulme Center for Demographic Science](https://www.demographicscience.ox.ac.uk/), in the Departement of Sociology of the University of Oxford. My supervisors are Douglas Leasure and Ridhi Kashyap and the topic evolves around **Estimating population with high spatial resolution to complement censuses in data-scarce contexts**.
+In October 2022 I started a PhD at the Leverhulme Centre for Demographic Science, Department of Population Health, University of Oxford, focusing on **high‑resolution population estimates to support censuses in data‑limited settings**.
 
-I earned a MSc in applied **GIS and remote sensing** at the University of Southampton, where I wrote a thesis on deprived area mapping mobilising knowledge on quantitative geography, statistical modelling, and social sciences. Prior to that, I was trained in **statistics** (MSc from the ENSAE Paristech) and its **social sciences** application (Master at École Normale Supérieure de Cachan).
+I hold an MSc in **applied GIS & remote sensing** from the University of Southampton (thesis: mapping deprivation in Kinshasa) and earlier degrees in **statistics** (ENSAE Paristech) and its **social‑science** applications (École Normale Supérieure de Cachan).
 
-I applied my skills in the **academic** (Worldpop, University of Southampton), in the **humanitarian** (UN World Food Program) and in the **governmental** (Etalab, France) sectors always combining a strive for social justice and transparency with an indecent pleasure in playing with data.
+My experience spans:
+
+* *Academia* – with WorldPop (University of Southampton) and the Leverhulme Centre for Demographic Science (University of Oxford)  
+* *Humanitarian work* – with the UN World Food Programme, World Health Organisation, UN Fund for Population, UN High Commissioner for Refugees.  
+* *Government* – with the Open Data Taskforce (France) and various Stats Offices (Burkina Faso, Mali, Brazil, Colombia).  
+
+Across these roles I aim to combine a commitment to social justice and transparency with a practical interest in modelling complex data streams. In my own time, I’ve also helped develop a bike delivery cooperatives network as well as mutually owned housing‑cooperative business plans, gaining experience in finance and collaboration.
+
+
+```{r, eval=FALSE, include=FALSE}
+rmarkdown::render("index.Rmd")
+```

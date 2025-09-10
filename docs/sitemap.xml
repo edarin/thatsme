@@ -2,66 +2,94 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
     <loc>https://edarin.github.io/thatsme/about.html</loc>
-    <lastmod>2021-11-02T15:19:06+00:00</lastmod>
+    <lastmod>2025-08-12T16:28:52+01:00</lastmod>
   </url>
   <url>
     <loc>https://edarin.github.io/thatsme/</loc>
-    <lastmod>2022-11-19T17:23:14+00:00</lastmod>
+    <lastmod>2025-09-10T17:52:50+01:00</lastmod>
   </url>
   <url>
     <loc>https://edarin.github.io/thatsme/portfolio.html</loc>
-    <lastmod>2022-11-19T17:24:04+00:00</lastmod>
+    <lastmod>2025-09-10T18:16:28+01:00</lastmod>
   </url>
   <url>
     <loc>https://edarin.github.io/thatsme/posts.html</loc>
-    <lastmod>2022-11-19T17:11:17+00:00</lastmod>
+    <lastmod>2024-03-20T11:41:08+00:00</lastmod>
   </url>
   <url>
     <loc>https://edarin.github.io/thatsme/publications.html</loc>
-    <lastmod>2023-01-03T12:52:17+00:00</lastmod>
+    <lastmod>2025-09-10T15:25:41+01:00</lastmod>
   </url>
   <url>
     <loc>https://edarin.github.io/thatsme/talks.html</loc>
-    <lastmod>2022-11-19T18:14:19+00:00</lastmod>
+    <lastmod>2025-08-12T17:12:57+01:00</lastmod>
+  </url>
+  <url>
+    <loc>https://edarin.github.io/thatsme/posts/2025-08-15-bayesian-modeling-in-the-drc/</loc>
+    <lastmod>2025-09-10T18:15:52+01:00</lastmod>
+  </url>
+  <url>
+    <loc>https://edarin.github.io/thatsme/posts/2025-08-01-can-satellites-replace-censuses-what-we-learned-from-colombia/</loc>
+    <lastmod>2025-09-10T17:58:43+01:00</lastmod>
+  </url>
+  <url>
+    <loc>https://edarin.github.io/thatsme/posts/2025-08-12-nowpop-network/</loc>
+    <lastmod>2025-09-10T17:15:28+01:00</lastmod>
+  </url>
+  <url>
+    <loc>https://edarin.github.io/thatsme/posts/2025-08-12-ukraine-nowpop-project/</loc>
+    <lastmod>2025-09-10T17:16:19+01:00</lastmod>
+  </url>
+  <url>
+    <loc>https://edarin.github.io/thatsme/posts/2023-07-01-collaboration-with-the-colombia-statistics-office/</loc>
+    <lastmod>2025-09-10T17:15:04+01:00</lastmod>
+  </url>
+  <url>
+    <loc>https://edarin.github.io/thatsme/posts/2023-02-01-mapping-refugees-in-cameroon-with-high-resolution/</loc>
+    <lastmod>2025-09-10T17:59:49+01:00</lastmod>
+  </url>
+  <url>
+    <loc>https://edarin.github.io/thatsme/posts/2023-01-01-radical-routes/</loc>
+    <lastmod>2025-09-10T18:15:11+01:00</lastmod>
   </url>
   <url>
     <loc>https://edarin.github.io/thatsme/posts/2022-06-24-sicss-covenantusing-gridded-population-to-gain-spatial-insights-in-r/</loc>
-    <lastmod>2022-11-19T17:00:22+00:00</lastmod>
+    <lastmod>2024-03-20T11:41:06+00:00</lastmod>
   </url>
   <url>
     <loc>https://edarin.github.io/thatsme/posts/2021-11-15-statistical-population-modelling-for-census-support/</loc>
-    <lastmod>2022-11-19T17:00:22+00:00</lastmod>
+    <lastmod>2025-09-10T17:04:18+01:00</lastmod>
   </url>
   <url>
     <loc>https://edarin.github.io/thatsme/posts/2021-11-09-efficient-computation-across-multiple-rasters/</loc>
-    <lastmod>2022-11-19T17:00:22+00:00</lastmod>
+    <lastmod>2024-03-20T11:41:06+00:00</lastmod>
   </url>
   <url>
     <loc>https://edarin.github.io/thatsme/posts/2021-10-21-which-population-microdata-can-we-openly-access/</loc>
-    <lastmod>2022-11-19T17:00:22+00:00</lastmod>
+    <lastmod>2024-03-20T11:41:06+00:00</lastmod>
   </url>
   <url>
     <loc>https://edarin.github.io/thatsme/posts/2021-07-31-unraveling-hierarchichal-data-structure-with-sunburst-charts/</loc>
-    <lastmod>2021-11-02T15:19:06+00:00</lastmod>
+    <lastmod>2024-03-20T11:41:06+00:00</lastmod>
   </url>
   <url>
     <loc>https://edarin.github.io/thatsme/posts/2021-08-01-woprvision/</loc>
-    <lastmod>2021-11-02T15:19:06+00:00</lastmod>
+    <lastmod>2025-09-10T17:01:44+01:00</lastmod>
   </url>
   <url>
     <loc>https://edarin.github.io/thatsme/posts/2021-06-02-high-resolution-covariates-and-top-down-population-disagregation/</loc>
-    <lastmod>2021-11-02T15:19:03+00:00</lastmod>
+    <lastmod>2025-09-10T16:58:19+01:00</lastmod>
   </url>
   <url>
     <loc>https://edarin.github.io/thatsme/posts/2021-07-02-top-down-r-tutorial/</loc>
-    <lastmod>2021-11-02T15:19:06+00:00</lastmod>
+    <lastmod>2025-09-10T17:02:49+01:00</lastmod>
   </url>
   <url>
     <loc>https://edarin.github.io/thatsme/posts/2021-07-09-modelling-burkina-faso-population/</loc>
-    <lastmod>2021-11-02T15:19:06+00:00</lastmod>
+    <lastmod>2025-09-10T17:16:58+01:00</lastmod>
   </url>
   <url>
     <loc>https://edarin.github.io/thatsme/posts/2020-09-01-coopcycle/</loc>
-    <lastmod>2021-11-02T15:19:03+00:00</lastmod>
+    <lastmod>2025-09-10T16:57:17+01:00</lastmod>
   </url>
 </urlset>

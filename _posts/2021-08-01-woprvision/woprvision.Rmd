@@ -10,6 +10,9 @@ output:
   distill::distill_article:
     self_contained: false
 preview: "woprvision.PNG"
+categories:
+  - academia
+  - dashboard
 ---
 
 woprVision is an R shiny application that allows you to browse an interactive map to get population estimates for specific locations and demographic groups. It is

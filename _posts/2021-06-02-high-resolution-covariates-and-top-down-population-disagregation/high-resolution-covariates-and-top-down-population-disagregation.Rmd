@@ -9,6 +9,8 @@ output:
   distill::distill_article:
     self_contained: false
 bibliography: references.bib
+categories:
+  - academia
 ---
 
 ```{r setup, include=FALSE}

@@ -21,7 +21,7 @@
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -32,7 +32,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -50,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -73,16 +74,39 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
 code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+<style>
+  div.csl-bib-body { }
+  div.csl-entry {
+    clear: both;
+      margin-bottom: 0em;
+    }
+  .hanging div.csl-entry {
+    margin-left:2em;
+    text-indent:-2em;
+  }
+  div.csl-left-margin {
+    min-width:2em;
+    float:left;
+  }
+  div.csl-right-inline {
+    margin-left:2em;
+    padding-left:1em;
+  }
+  div.csl-indent {
+    margin-left: 2em;
+  }
 </style>
 
   <!--radix_placeholder_meta_tags-->
@@ -109,43 +133,43 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   <!--/radix_placeholder_meta_tags-->
   
-  <meta name="citation_reference" content="citation_title=Stan: A probabilistic programming language;citation_publication_date=2017;citation_publisher=Columbia Univ., New York, NY; Harvard Univ., Cambridge, MA;citation_volume=76;citation_doi=10.18637/jss.v076.i01;citation_author=Bob Carpenter;citation_author=Andrew Gelman;citation_author=Matthew D Hoffman;citation_author=Daniel Lee;citation_author=Ben Goodrich;citation_author=Michael Betancourt;citation_author=Marcus Brubaker;citation_author=Jiqiang Guo;citation_author=Peter Li;citation_author=Allen Riddell"/>
-  <meta name="citation_reference" content="citation_title=Variable selection using random forests;citation_publication_date=2010;citation_publisher=Elsevier;citation_volume=31;citation_author=Robin Genuer;citation_author=Jean-Michel Poggi;citation_author=Christine Tuleau-Malot"/>
-  <meta name="citation_reference" content="citation_title=GRID3 Burkina Faso Settlement Extents Version 01, Alpha;citation_publication_date=2020;citation_doi=10.7916/d8-h47k-8637;citation_author= Novel-T;citation_author=GRID3 Burkina Faso Settlement Extents Version 01, Alpha"/>
-  <meta name="citation_reference" content="citation_title=CinquiÃ¨me Recensement GÃ©nÃ©ral de la Population et de lâ€™Habitation du Burkina Faso - RÃ©sultats prÃ©liminaires;citation_publication_date=2020;citation_publisher=INSD Ouagadougou, Burkina Faso;citation_author=CinquiÃ¨me Recensement GÃ©nÃ©ral de la Population et de lâ€™Habitation du Burkina Faso - RÃ©sultats prÃ©liminaires"/>
-  <meta name="citation_reference" content="citation_title=Copernicus Global Land Service: Land Cover 100m: collection 3: epoch 2019: Globe;citation_publication_date=2020;citation_publisher=Zenodo;citation_doi=10.5281/zenodo.3939050;citation_author=Marcel Buchhorn;citation_author=Bruno Smets;citation_author=Luc Bertels;citation_author=Bert De Roo;citation_author=Myroslava Lesiv;citation_author=Nandin-Erdene Tsendbazar;citation_author=Martin Herold;citation_author=Steffen Fritz"/>
-  <meta name="citation_reference" content="citation_title=Global spatio-temporally harmonised datasets for producing high-resolution gridded population distribution datasets;citation_publication_date=2019;citation_volume=3;citation_doi=10.1080/20964471.2019.1625151;citation_author=Christopher T Lloyd;citation_author=Heather Chamberlain;citation_author=David Kerr;citation_author=Greg Yetman;citation_author=Linda Pistolesi;citation_author=Forrest R Stevens;citation_author=Andrea E Gaughan;citation_author=Jeremiah J Nieves;citation_author=Graeme Hornby;citation_author=Kytt MacManus;citation_author=Global spatio-temporally harmonised datasets for producing high-resolution gridded population distribution datasets"/>
-  <meta name="citation_reference" content="citation_title=National population mapping from sparse survey data: A hierarchical bayesian modeling framework to account for uncertainty;citation_publication_date=2020;citation_publisher=National Acad Sciences;citation_author=Douglas R Leasure;citation_author=Warren C Jochem;citation_author=Eric M Weber;citation_author=Vincent Seaman;citation_author=Andrew J Tatem"/>
-  <meta name="citation_reference" content="citation_title=Disaggregating census data for population mapping using random forests with remotely-sensed and ancillary data;citation_publication_date=2015;citation_publisher=Public Library of Science;citation_volume=10;citation_author=Forrest R Stevens;citation_author=Andrea E Gaughan;citation_author=Catherine Linard;citation_author=Andrew J Tatem"/>
-  <meta name="citation_reference" content="citation_title=Improving random forests;citation_publication_date=2004;citation_publisher=Springer;citation_author=Marko Robnik-Å ikonja"/>
-  <meta name="citation_reference" content="citation_title=Classification and regression by randomForest;citation_publication_date=2002;citation_volume=2;citation_author=Andy Liaw;citation_author=Matthew Wiener"/>
-  <meta name="citation_reference" content="citation_title=wpgpRFPMS: WorldPop random forests population modelling r scripts, version 0.1. 0;citation_publication_date=2018;citation_publisher=University of Southampton;citation_author=Maksym Bondarenko;citation_author=Jeremiah Nieves;citation_author=Alessandro Sorichetta;citation_author=Forrest R Stevens;citation_author=Andrea E Gaughan;citation_author=Andrew Tatem;citation_author=wpgpRFPMS: WorldPop random forests population modelling r scripts, version 0.1. 0"/>
-  <meta name="citation_reference" content="citation_title=RStan: The R interface to Stan;citation_publication_date=2020;citation_author=RStan: The R interface to Stan"/>
-  <meta name="citation_reference" content="citation_title=Disaggregating census data for population mapping using random forests with remotely-sensed and ancillary data;citation_publication_date=2015;citation_publisher=Public Library of Science;citation_volume=10;citation_doi=10.1371/journal.pone.0107042;citation_author=Forrest R Stevens;citation_author=Andrea E Gaughan;citation_author=Catherine Linard;citation_author=Andrew J Tatem"/>
-  <meta name="citation_reference" content="citation_title=Mapping changes in housing in sub-saharan africa from 2000 to 2015;citation_publication_date=2019;citation_publisher=Nature Publishing Group;citation_volume=568;citation_author=Lucy S Tusting;citation_author=Donal Bisanzio;citation_author=Graham Alabaster;citation_author=Ewan Cameron;citation_author=Richard Cibulskis;citation_author=Michael Davies;citation_author=Seth Flaxman;citation_author=Harry S Gibson;citation_author=Jakob Knudsen;citation_author=Charles Mbogo;citation_author=Mapping changes in housing in sub-saharan africa from 2000 to 2015"/>
-  <meta name="citation_reference" content="citation_title=A global map of travel time to cities to assess inequalities in accessibility in 2015;citation_publication_date=2018;citation_publisher=Nature Publishing Group;citation_volume=553;citation_author=D J Weiss;citation_author=A Nelson;citation_author=HS Gibson;citation_author=W Temperley;citation_author=S Peedell;citation_author=A Lieber;citation_author=M Hancher;citation_author=E Poyart;citation_author=S Belchior;citation_author=N Fullman;citation_author=A global map of travel time to cities to assess inequalities in accessibility in 2015"/>
-  <meta name="citation_reference" content="citation_title=Version 4 of the CRU TS monthly high-resolution gridded multivariate climate dataset;citation_publication_date=2020;citation_publisher=Nature Publishing Group;citation_volume=7;citation_author=Ian Harris;citation_author=Timothy J Osborn;citation_author=Phil Jones;citation_author=David Lister"/>
-  <meta name="citation_reference" content="citation_title=Global high resolution population denominators project - funded by the bill and melinda gates foundation (OPP1134076);citation_publication_date=2018;citation_doi=10.5258/SOTON/WP00645;citation_author=Global high resolution population denominators project - funded by the bill and melinda gates foundation (OPP1134076);citation_author=2018;citation_author=10.5258/SOTON/WP00645;citation_author=Global high resolution population denominators project - funded by the bill and melinda gates foundation (OPP1134076)"/>
-  <meta name="citation_reference" content="citation_title=Digitize africa data;citation_publication_date=2019;citation_author= Ecopia.AI;citation_author= Maxar Technologies"/>
-  <meta name="citation_reference" content="citation_title=Base nationale de donnÃ©es topographiques;citation_publication_date=2015;citation_author= Institut GÃ©ographique du Burkina Faso"/>
-  <meta name="citation_reference" content="citation_title=A global map of travel time to cities to assess inequalities in accessibility in 2015;citation_publication_date=2018;citation_volume=553;citation_author=D J Weiss;citation_author=A Nelson;citation_author=HS Gibson;citation_author=W Temperley;citation_author=S Peedell;citation_author=A Lieber;citation_author=M Hancher;citation_author=E Poyart;citation_author=S Belchior;citation_author=N Fullman;citation_author= others"/>
-  <meta name="citation_reference" content="citation_title=randomForest: Breiman and cutlerâ€™s random forests for classification and regression;citation_publication_date=2018;citation_author=Fortran original by Leo Breiman and Adele Cutler;citation_author=R. port by Andy Liaw and Matthew Wiener"/>
-  <meta name="citation_reference" content="citation_title=Sf: Simple features for r;citation_publication_date=2020;citation_author=Edzer Pebesma;citation_author=Roger Bivand;citation_author=Etienne Racine;citation_author=Michael Sumner;citation_author=Ian Cook;citation_author=Tim Keitt;citation_author=Robin Lovelace;citation_author=Hadley Wickham;citation_author=Jeroen Ooms;citation_author=Kirill MÃ¼ller;citation_author=Thomas Lin Pedersen;citation_author=Dan Baston"/>
-  <meta name="citation_reference" content="citation_title=Raster: Geographic data analysis and modeling;citation_publication_date=2020;citation_author=Robert J. Hijmans;citation_author=Jacob Etten;citation_author=Michael Sumner;citation_author=Joe Cheng;citation_author=Dan Baston;citation_author=Andrew Bevan;citation_author=Roger Bivand;citation_author=Lorenzo Busetto;citation_author=Mort Canty;citation_author=David Forrest;citation_author=Aniruddha Ghosh;citation_author=Duncan Golicher;citation_author=Josh Gray;citation_author=Jonathan A. Greenberg;citation_author=Paul Hiemstra;citation_author=Kassel Hingee;citation_author=Institute for Mathematics Applied Geosciences;citation_author=Charles Karney;citation_author=Matteo Mattiuzzi;citation_author=Steven Mosher;citation_author=Jakub Nowosad;citation_author=Edzer Pebesma;citation_author=Oscar Perpinan Lamigueiro;citation_author=Etienne B. Racine;citation_author=Barry Rowlingson;citation_author=Ashton Shortridge;citation_author=Bill Venables;citation_author=Rafael Wueest"/>
-  <meta name="citation_reference" content="citation_title=Dplyr: A grammar of data manipulation;citation_publication_date=2020;citation_author=Hadley Wickham;citation_author=Romain FranÃ§ois;citation_author=Lionel Henry;citation_author=Kirill MÃ¼ller;citation_author= RStudio"/>
-  <meta name="citation_reference" content="citation_title=Data.table: Extension of â€™data.frameâ€™;citation_publication_date=2020;citation_author=Matt Dowle;citation_author=Arun Srinivasan;citation_author=Jan Gorecki;citation_author=Michael Chirico;citation_author=Pasha Stetsenko;citation_author=Tom Short;citation_author=Steve Lianoglou;citation_author=Eduard Antonyan;citation_author=Markus Bonsch;citation_author=Hugh Parsonage;citation_author=Scott Ritchie;citation_author=Kun Ren;citation_author=Xianying Tan;citation_author=Rick Saporta;citation_author=Otto Seiskari;citation_author=Xianghui Dong;citation_author=Michel Lang;citation_author=Watal Iwasaki;citation_author=Seth Wenchel;citation_author=Karl Broman;citation_author=Tobias Schmidt;citation_author=David Arenburg;citation_author=Ethan Smith;citation_author=Francois Cocquemas;citation_author=Matthieu Gomez;citation_author=Philippe Chataignon;citation_author=Nello Blaser;citation_author=Dmitry Selivanov;citation_author=Andrey Riabushenko;citation_author=Cheng Lee;citation_author=Declan Groves;citation_author=Daniel Possenriede;citation_author=Felipe Parages;citation_author=Denes Toth;citation_author=Mus Yaramaz-David;citation_author=Ayappan Perumal;citation_author=James Sams;citation_author=Martin Morgan;citation_author=Michael Quinn;citation_author= @javrucebo;citation_author= @marc-outins;citation_author=Roy Storey;citation_author=Manish Saraswat;citation_author=Morgan Jacob;citation_author=Michael Schubmehl;citation_author=Davis Vaughan;citation_author=Toby Hocking;citation_author=Leonardo Silvestri;citation_author=Tyson Barrett;citation_author=Jim Hester;citation_author=Anthony Damico;citation_author=Sebastian Freundt;citation_author=David Simons;citation_author=Elliott Sales Andrade;citation_author=Cole Miller;citation_author=Jens Peder Meldgaard;citation_author=Vaclav Tlapak;citation_author=Kevin Ushey;citation_author=Dirk Eddelbuettel"/>
-  <meta name="citation_reference" content="citation_title=doParallel: Foreach parallel adaptor for the â€™parallelâ€™ package;citation_publication_date=2020;citation_author=Michelle Wallig;citation_author=Microsoft Corporation;citation_author=Steve Weston;citation_author=Dan Tenenbaum"/>
-  <meta name="citation_reference" content="citation_title=Caret: Classification and regression training;citation_publication_date=2020;citation_author=Max Kuhn;citation_author=Jed Wing;citation_author=Steve Weston;citation_author=Andre Williams;citation_author=Chris Keefer;citation_author=Allan Engelhardt;citation_author=Tony Cooper;citation_author=Zachary Mayer;citation_author=Brenton Kenkel;citation_author= R Core Team;citation_author=Michael Benesty;citation_author=Reynald Lescarbeau;citation_author=Andrew Ziem;citation_author=Luca Scrucca;citation_author=Yuan Tang;citation_author=Can Candan;citation_author=Tyler Hunt"/>
-  <meta name="citation_reference" content="citation_title=Disaggregating Census Data for Population Mapping Using Random Forests with Remotely-Sensed and Ancillary Data;citation_publication_date=2015;citation_volume=10;citation_doi=10.1371/journal.pone.0107042;citation_author=Forrest R. Stevens;citation_author=Andrea E. Gaughan;citation_author=Catherine Linard;citation_author=Andrew J. Tatem"/>
+  <meta name="citation_reference" content="citation_title=Stan: A probabilistic programming language;citation_publisher=Columbia Univ., New York, NY; Harvard Univ., Cambridge, MA;citation_volume=76;citation_doi=10.18637/jss.v076.i01;citation_author=Bob Carpenter;citation_author=Andrew Gelman;citation_author=Matthew D Hoffman;citation_author=Daniel Lee;citation_author=Ben Goodrich;citation_author=Michael Betancourt;citation_author=Marcus Brubaker;citation_author=Jiqiang Guo;citation_author=Peter Li;citation_author=Allen Riddell"/>
+  <meta name="citation_reference" content="citation_title=Variable selection using random forests;citation_publisher=Elsevier;citation_volume=31;citation_author=Robin Genuer;citation_author=Jean-Michel Poggi;citation_author=Christine Tuleau-Malot"/>
+  <meta name="citation_reference" content="citation_title=GRID3 Burkina Faso Settlement Extents Version 01, Alpha;citation_doi=10.7916/d8-h47k-8637;citation_author= Novel-T;citation_author=GRID3 Burkina Faso Settlement Extents Version 01, Alpha"/>
+  <meta name="citation_reference" content="citation_title=Cinquième Recensement Général de la Population et de l’Habitation du Burkina Faso - Résultats préliminaires;citation_publisher=INSD Ouagadougou, Burkina Faso;citation_author=Cinquième Recensement Général de la Population et de l’Habitation du Burkina Faso - Résultats préliminaires"/>
+  <meta name="citation_reference" content="citation_title=Copernicus Global Land Service: Land Cover 100m: collection 3: epoch 2019: Globe;citation_publisher=Zenodo;citation_doi=10.5281/zenodo.3939050;citation_author=Marcel Buchhorn;citation_author=Bruno Smets;citation_author=Luc Bertels;citation_author=Bert De Roo;citation_author=Myroslava Lesiv;citation_author=Nandin-Erdene Tsendbazar;citation_author=Martin Herold;citation_author=Steffen Fritz"/>
+  <meta name="citation_reference" content="citation_title=Global spatio-temporally harmonised datasets for producing high-resolution gridded population distribution datasets;citation_volume=3;citation_doi=10.1080/20964471.2019.1625151;citation_author=Christopher T Lloyd;citation_author=Heather Chamberlain;citation_author=David Kerr;citation_author=Greg Yetman;citation_author=Linda Pistolesi;citation_author=Forrest R Stevens;citation_author=Andrea E Gaughan;citation_author=Jeremiah J Nieves;citation_author=Graeme Hornby;citation_author=Kytt MacManus;citation_author=Global spatio-temporally harmonised datasets for producing high-resolution gridded population distribution datasets"/>
+  <meta name="citation_reference" content="citation_title=National population mapping from sparse survey data: A hierarchical bayesian modeling framework to account for uncertainty;citation_publisher=National Acad Sciences;citation_author=Douglas R Leasure;citation_author=Warren C Jochem;citation_author=Eric M Weber;citation_author=Vincent Seaman;citation_author=Andrew J Tatem"/>
+  <meta name="citation_reference" content="citation_title=Disaggregating census data for population mapping using random forests with remotely-sensed and ancillary data;citation_publisher=Public Library of Science;citation_volume=10;citation_author=Forrest R Stevens;citation_author=Andrea E Gaughan;citation_author=Catherine Linard;citation_author=Andrew J Tatem"/>
+  <meta name="citation_reference" content="citation_title=Improving random forests;citation_publisher=Springer;citation_author=Marko Robnik-Šikonja"/>
+  <meta name="citation_reference" content="citation_title=Classification and regression by randomForest;citation_volume=2;citation_author=Andy Liaw;citation_author=Matthew Wiener"/>
+  <meta name="citation_reference" content="citation_title=wpgpRFPMS: WorldPop random forests population modelling r scripts, version 0.1. 0;citation_publisher=University of Southampton;citation_author=Maksym Bondarenko;citation_author=Jeremiah Nieves;citation_author=Alessandro Sorichetta;citation_author=Forrest R Stevens;citation_author=Andrea E Gaughan;citation_author=Andrew Tatem;citation_author=wpgpRFPMS: WorldPop random forests population modelling r scripts, version 0.1. 0"/>
+  <meta name="citation_reference" content="citation_title=RStan: The R interface to Stan;citation_author=RStan: The R interface to Stan"/>
+  <meta name="citation_reference" content="citation_title=Disaggregating census data for population mapping using random forests with remotely-sensed and ancillary data;citation_publisher=Public Library of Science;citation_volume=10;citation_doi=10.1371/journal.pone.0107042;citation_author=Forrest R Stevens;citation_author=Andrea E Gaughan;citation_author=Catherine Linard;citation_author=Andrew J Tatem"/>
+  <meta name="citation_reference" content="citation_title=Mapping changes in housing in sub-saharan africa from 2000 to 2015;citation_publisher=Nature Publishing Group;citation_volume=568;citation_author=Lucy S Tusting;citation_author=Donal Bisanzio;citation_author=Graham Alabaster;citation_author=Ewan Cameron;citation_author=Richard Cibulskis;citation_author=Michael Davies;citation_author=Seth Flaxman;citation_author=Harry S Gibson;citation_author=Jakob Knudsen;citation_author=Charles Mbogo;citation_author=Mapping changes in housing in sub-saharan africa from 2000 to 2015"/>
+  <meta name="citation_reference" content="citation_title=A global map of travel time to cities to assess inequalities in accessibility in 2015;citation_publisher=Nature Publishing Group;citation_volume=553;citation_author=D J Weiss;citation_author=A Nelson;citation_author=HS Gibson;citation_author=W Temperley;citation_author=S Peedell;citation_author=A Lieber;citation_author=M Hancher;citation_author=E Poyart;citation_author=S Belchior;citation_author=N Fullman;citation_author=A global map of travel time to cities to assess inequalities in accessibility in 2015"/>
+  <meta name="citation_reference" content="citation_title=Version 4 of the CRU TS monthly high-resolution gridded multivariate climate dataset;citation_publisher=Nature Publishing Group;citation_volume=7;citation_author=Ian Harris;citation_author=Timothy J Osborn;citation_author=Phil Jones;citation_author=David Lister"/>
+  <meta name="citation_reference" content="citation_title=Global high resolution population denominators project - funded by the bill and melinda gates foundation (OPP1134076);citation_doi=10.5258/SOTON/WP00645;citation_author=Global high resolution population denominators project - funded by the bill and melinda gates foundation (OPP1134076);citation_author=10.5258/SOTON/WP00645;citation_author=Global high resolution population denominators project - funded by the bill and melinda gates foundation (OPP1134076);citation_author=10.5258/SOTON/WP00645"/>
+  <meta name="citation_reference" content="citation_title=Digitize africa data;citation_author= Ecopia.AI;citation_author= Maxar Technologies"/>
+  <meta name="citation_reference" content="citation_title=Base nationale de données topographiques;citation_author= Institut Géographique du Burkina Faso"/>
+  <meta name="citation_reference" content="citation_title=A global map of travel time to cities to assess inequalities in accessibility in 2015;citation_volume=553;citation_author=D J Weiss;citation_author=A Nelson;citation_author=HS Gibson;citation_author=W Temperley;citation_author=S Peedell;citation_author=A Lieber;citation_author=M Hancher;citation_author=E Poyart;citation_author=S Belchior;citation_author=N Fullman;citation_author= others"/>
+  <meta name="citation_reference" content="citation_title=randomForest: Breiman and cutler’s random forests for classification and regression;citation_author=Fortran original by Leo Breiman and Adele Cutler;citation_author=R. port by Andy Liaw and Matthew Wiener"/>
+  <meta name="citation_reference" content="citation_title=Sf: Simple features for r;citation_author=Edzer Pebesma;citation_author=Roger Bivand;citation_author=Etienne Racine;citation_author=Michael Sumner;citation_author=Ian Cook;citation_author=Tim Keitt;citation_author=Robin Lovelace;citation_author=Hadley Wickham;citation_author=Jeroen Ooms;citation_author=Kirill Müller;citation_author=Thomas Lin Pedersen;citation_author=Dan Baston"/>
+  <meta name="citation_reference" content="citation_title=Raster: Geographic data analysis and modeling;citation_author=Robert J. Hijmans;citation_author=Jacob Etten;citation_author=Michael Sumner;citation_author=Joe Cheng;citation_author=Dan Baston;citation_author=Andrew Bevan;citation_author=Roger Bivand;citation_author=Lorenzo Busetto;citation_author=Mort Canty;citation_author=David Forrest;citation_author=Aniruddha Ghosh;citation_author=Duncan Golicher;citation_author=Josh Gray;citation_author=Jonathan A. Greenberg;citation_author=Paul Hiemstra;citation_author=Kassel Hingee;citation_author=Institute for Mathematics Applied Geosciences;citation_author=Charles Karney;citation_author=Matteo Mattiuzzi;citation_author=Steven Mosher;citation_author=Jakub Nowosad;citation_author=Edzer Pebesma;citation_author=Oscar Perpinan Lamigueiro;citation_author=Etienne B. Racine;citation_author=Barry Rowlingson;citation_author=Ashton Shortridge;citation_author=Bill Venables;citation_author=Rafael Wueest"/>
+  <meta name="citation_reference" content="citation_title=Dplyr: A grammar of data manipulation;citation_author=Hadley Wickham;citation_author=Romain François;citation_author=Lionel Henry;citation_author=Kirill Müller;citation_author= RStudio"/>
+  <meta name="citation_reference" content="citation_title=Data.table: Extension of ’data.frame’;citation_author=Matt Dowle;citation_author=Arun Srinivasan;citation_author=Jan Gorecki;citation_author=Michael Chirico;citation_author=Pasha Stetsenko;citation_author=Tom Short;citation_author=Steve Lianoglou;citation_author=Eduard Antonyan;citation_author=Markus Bonsch;citation_author=Hugh Parsonage;citation_author=Scott Ritchie;citation_author=Kun Ren;citation_author=Xianying Tan;citation_author=Rick Saporta;citation_author=Otto Seiskari;citation_author=Xianghui Dong;citation_author=Michel Lang;citation_author=Watal Iwasaki;citation_author=Seth Wenchel;citation_author=Karl Broman;citation_author=Tobias Schmidt;citation_author=David Arenburg;citation_author=Ethan Smith;citation_author=Francois Cocquemas;citation_author=Matthieu Gomez;citation_author=Philippe Chataignon;citation_author=Nello Blaser;citation_author=Dmitry Selivanov;citation_author=Andrey Riabushenko;citation_author=Cheng Lee;citation_author=Declan Groves;citation_author=Daniel Possenriede;citation_author=Felipe Parages;citation_author=Denes Toth;citation_author=Mus Yaramaz-David;citation_author=Ayappan Perumal;citation_author=James Sams;citation_author=Martin Morgan;citation_author=Michael Quinn;citation_author= @javrucebo;citation_author= @marc-outins;citation_author=Roy Storey;citation_author=Manish Saraswat;citation_author=Morgan Jacob;citation_author=Michael Schubmehl;citation_author=Davis Vaughan;citation_author=Toby Hocking;citation_author=Leonardo Silvestri;citation_author=Tyson Barrett;citation_author=Jim Hester;citation_author=Anthony Damico;citation_author=Sebastian Freundt;citation_author=David Simons;citation_author=Elliott Sales Andrade;citation_author=Cole Miller;citation_author=Jens Peder Meldgaard;citation_author=Vaclav Tlapak;citation_author=Kevin Ushey;citation_author=Dirk Eddelbuettel"/>
+  <meta name="citation_reference" content="citation_title=doParallel: Foreach parallel adaptor for the ’parallel’ package;citation_author=Michelle Wallig;citation_author=Microsoft Corporation;citation_author=Steve Weston;citation_author=Dan Tenenbaum"/>
+  <meta name="citation_reference" content="citation_title=Caret: Classification and regression training;citation_author=Max Kuhn;citation_author=Jed Wing;citation_author=Steve Weston;citation_author=Andre Williams;citation_author=Chris Keefer;citation_author=Allan Engelhardt;citation_author=Tony Cooper;citation_author=Zachary Mayer;citation_author=Brenton Kenkel;citation_author= R Core Team;citation_author=Michael Benesty;citation_author=Reynald Lescarbeau;citation_author=Andrew Ziem;citation_author=Luca Scrucca;citation_author=Yuan Tang;citation_author=Can Candan;citation_author=Tyler Hunt"/>
+  <meta name="citation_reference" content="citation_title=Disaggregating Census Data for Population Mapping Using Random Forests with Remotely-Sensed and Ancillary Data;citation_volume=10;citation_doi=10.1371/journal.pone.0107042;citation_author=Forrest R. Stevens;citation_author=Andrea E. Gaughan;citation_author=Catherine Linard;citation_author=Andrew J. Tatem"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","preview","bibliography","editor_options"]}},"value":[{"type":"character","attributes":{},"value":["Hybrid census in Burkina Faso: Bottom-up population modelling"]},{"type":"character","attributes":{},"value":["I developped a Bayesian bottom-up population modelling to adress the challenge of the incomplete 2020 census in Burkina Faso. The model was combining GPS household location with remote sensing product in a Bayesian hierarchcical framework. The output is a hybrid gridded population that was endorsed by Burkina Faso Statistics Office.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Edith Darin"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["09-2020"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_float"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]}]}]},{"type":"character","attributes":{},"value":["./dat/resident_density_mean_admin3.png"]},{"type":"character","attributes":{},"value":["book.bib"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["markdown"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["wrap"]}},"value":[{"type":"character","attributes":{},"value":["sentence"]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","preview","bibliography","editor_options","categories"]}},"value":[{"type":"character","attributes":{},"value":["Hybrid census in Burkina Faso: Bottom-up population modelling"]},{"type":"character","attributes":{},"value":["I developped a Bayesian bottom-up population modelling to adress the challenge of the incomplete 2020 census in Burkina Faso. The model was combining GPS household location with remote sensing product in a Bayesian hierarchcical framework. The output is a hybrid gridded population that was endorsed by Burkina Faso Statistics Office.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Edith Darin"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["09-2020"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_float"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]}]}]},{"type":"character","attributes":{},"value":["./dat/resident_density_mean_admin3.png"]},{"type":"character","attributes":{},"value":["book.bib"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["markdown"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["wrap"]}},"value":[{"type":"character","attributes":{},"value":["sentence"]}]}]},{"type":"character","attributes":{},"value":["academia","paper"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["book.bib","dat/bf_example.PNG","dat/hist-diff.png","dat/imp_plot.png","dat/map-ea-test.png","dat/map_admin3.jpg","dat/map_EAs.jpg","dat/models.csv","dat/pop_census.png","dat/predictions_scatterplot.jpg","dat/pyramid.png","dat/resident_density_mean_admin3.png","dat/schema1_ENG.jpg","dat/schema2_ENG.jpg","modelling-burkina-faso-population_files/anchor-4.2.2/anchor.min.js","modelling-burkina-faso-population_files/bowser-1.9.3/bowser.min.js","modelling-burkina-faso-population_files/distill-2.2.21/template.v2.js","modelling-burkina-faso-population_files/figure-html5/hist-bf-1.png","modelling-burkina-faso-population_files/header-attrs-2.9/header-attrs.js","modelling-burkina-faso-population_files/jquery-1.11.3/jquery.min.js","modelling-burkina-faso-population_files/kePrint-0.0.1/kePrint.js","modelling-burkina-faso-population_files/lightable-0.0.1/lightable.css","modelling-burkina-faso-population_files/popper-2.6.0/popper.min.js","modelling-burkina-faso-population_files/tippy-6.2.7/tippy-bundle.umd.min.js","modelling-burkina-faso-population_files/tippy-6.2.7/tippy-light-border.css","modelling-burkina-faso-population_files/tippy-6.2.7/tippy.css","modelling-burkina-faso-population_files/tippy-6.2.7/tippy.umd.min.js","modelling-burkina-faso-population_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["book.bib","dat/bf_example.PNG","dat/hist-diff.png","dat/imp_plot.png","dat/map-ea-test.png","dat/map_admin3.jpg","dat/map_EAs.jpg","dat/models.csv","dat/pop_census.png","dat/predictions_scatterplot.jpg","dat/pyramid.png","dat/resident_density_mean_admin3.png","dat/schema1_ENG.jpg","dat/schema2_ENG.jpg","modelling-burkina-faso-population_files/anchor-4.2.2/anchor.min.js","modelling-burkina-faso-population_files/bowser-1.9.3/bowser.min.js","modelling-burkina-faso-population_files/bsTable-3.3.7/bootstrapTable.js","modelling-burkina-faso-population_files/bsTable-3.3.7/bootstrapTable.min.css","modelling-burkina-faso-population_files/distill-2.2.21/template.v2.js","modelling-burkina-faso-population_files/figure-html5/hist-bf-1.png","modelling-burkina-faso-population_files/header-attrs-2.29/header-attrs.js","modelling-burkina-faso-population_files/header-attrs-2.9/header-attrs.js","modelling-burkina-faso-population_files/jquery-1.11.3/jquery.min.js","modelling-burkina-faso-population_files/jquery-3.6.0/jquery-3.6.0.js","modelling-burkina-faso-population_files/jquery-3.6.0/jquery-3.6.0.min.js","modelling-burkina-faso-population_files/jquery-3.6.0/jquery-3.6.0.min.map","modelling-burkina-faso-population_files/kePrint-0.0.1/kePrint.js","modelling-burkina-faso-population_files/lightable-0.0.1/lightable.css","modelling-burkina-faso-population_files/popper-2.6.0/popper.min.js","modelling-burkina-faso-population_files/tippy-6.2.7/tippy-bundle.umd.min.js","modelling-burkina-faso-population_files/tippy-6.2.7/tippy-light-border.css","modelling-burkina-faso-population_files/tippy-6.2.7/tippy.css","modelling-burkina-faso-population_files/tippy-6.2.7/tippy.umd.min.js","modelling-burkina-faso-population_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -216,6 +240,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article table.gt_table td,
   d-article table.gt_table th {
     border-bottom: none;
+    font-size: 100%;
   }
 
   .html-widget {
@@ -256,9 +281,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     display: none !important;
   }
 
+  hr.section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0px;
+  }
+
+
+  d-byline {
+    border-top: none;
+  }
+
   d-article {
     padding-top: 2.5rem;
     padding-bottom: 30px;
+    border-top: none;
   }
 
   d-appendix {
@@ -353,6 +390,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article div.sourceCode pre {
     padding-left: 18px;
     font-size: 14px;
+  }
+
+  /* tweak for Pandoc numbered line within distill */
+  d-article pre.numberSource code > span {
+      left: -2em;
   }
 
   d-article pre {
@@ -457,10 +499,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     position: relative;
     margin-bottom: 2.5em;
     margin-top: 1.5em;
-  }
-
-  .figure img {
-    width: 100%;
   }
 
   .figure .caption {
@@ -1118,6 +1156,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // create d-title
     $('.d-title').changeElementType('d-title');
 
+    // separator
+    var separator = '<hr class="section-separator" style="clear: both"/>';
+    // prepend separator above appendix
+    $('.d-byline').before(separator);
+    $('.d-article').before(separator);
+
     // create d-byline
     var byline = $('<d-byline></d-byline>');
     $('.d-byline').replaceWith(byline);
@@ -1195,8 +1239,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     $('.distill-force-highlighting-css').parent().remove();
 
     // remove empty line numbers inserted by pandoc when using a
-    // custom syntax highlighting theme
-    $('code.sourceCode a:empty').remove();
+    // custom syntax highlighting theme, except when numbering line
+    // in code chunk
+    $('pre:not(.numberLines) code.sourceCode a:empty').remove();
 
     // load distill framework
     load_distill_framework();
@@ -1222,12 +1267,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       // add orcid ids
       $('.authors-affiliations').find('.author').each(function(i, el) {
         var orcid_id = front_matter.authors[i].orcidID;
+        var author_name = front_matter.authors[i].author
         if (orcid_id) {
           var a = $('<a></a>');
           a.attr('href', 'https://orcid.org/' + orcid_id);
           var img = $('<img></img>');
           img.addClass('orcid-id');
-          img.attr('alt', 'ORCID ID');
+          img.attr('alt', author_name ? 'ORCID ID for ' + author_name : 'ORCID ID');
           img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
           a.append(img);
           $(this).append(a);
@@ -1292,7 +1338,22 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
+        }).join("\n");
         window.tippy(this, {
           allowHTML: true,
           content: refHtml,
@@ -1303,6 +1364,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           placement: 'bottom-start'
         });
       });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
 
       // clear polling timer
       clearInterval(tid);
@@ -1402,6 +1488,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
       var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
       if ($(this).attr('data-layout') !== "l-body") {
         figures.css('width', '100%');
       } else {
@@ -1424,7 +1512,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
       $('.distill-site-header a[href]').each(function(i,val) {
-        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
       });
     }
 
@@ -1463,10 +1551,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="modelling-burkina-faso-population_files/header-attrs-2.9/header-attrs.js"></script>
+  <script src="modelling-burkina-faso-population_files/header-attrs-2.29/header-attrs.js"></script>
   <script src="modelling-burkina-faso-population_files/kePrint-0.0.1/kePrint.js"></script>
   <link href="modelling-burkina-faso-population_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
-  <script src="modelling-burkina-faso-population_files/jquery-1.11.3/jquery.min.js"></script>
+  <link href="modelling-burkina-faso-population_files/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+  <script src="modelling-burkina-faso-population_files/bsTable-3.3.7/bootstrapTable.js"></script>
+  <script src="modelling-burkina-faso-population_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="modelling-burkina-faso-population_files/popper-2.6.0/popper.min.js"></script>
   <link href="modelling-burkina-faso-population_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="modelling-burkina-faso-population_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -1497,7 +1587,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-title">
 <h1>Hybrid census in Burkina Faso: Bottom-up population modelling</h1>
+
 <!--radix_placeholder_categories-->
+<div class="dt-tags">
+<div class="dt-tag">academia</div>
+<div class="dt-tag">paper</div>
+</div>
 <!--/radix_placeholder_categories-->
 <p><p>I developped a Bayesian bottom-up population modelling to adress the challenge of the incomplete 2020 census in Burkina Faso. The model was combining GPS household location with remote sensing product in a Bayesian hierarchcical framework. The output is a hybrid gridded population that was endorsed by Burkina Faso Statistics Office.</p></p>
 </div>
@@ -1513,38 +1608,38 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <nav class="l-text toc figcaption" id="TOC">
 <h3>Contents</h3>
 <ul>
-<li><a href="#introduction">Introduction</a></li>
-<li><a href="#estimating-missed-communes">Estimating Missed <em>Communes</em></a>
+<li><a href="#introduction" id="toc-introduction">Introduction</a></li>
+<li><a href="#estimating-missed-communes" id="toc-estimating-missed-communes">Estimating Missed <em>Communes</em></a>
 <ul>
-<li><a href="#model-method">Model Method</a></li>
-<li><a href="#model-implementation">Model Implementation</a>
+<li><a href="#model-method" id="toc-model-method">Model Method</a></li>
+<li><a href="#model-implementation" id="toc-model-implementation">Model Implementation</a>
 <ul>
-<li><a href="#input-data">Input data</a></li>
+<li><a href="#input-data" id="toc-input-data">Input data</a></li>
 </ul></li>
-<li><a href="#model-results">Model results</a>
+<li><a href="#model-results" id="toc-model-results">Model results</a>
 <ul>
-<li><a href="#implementing-the-model">Implementing the model</a></li>
-<li><a href="#assessing-the-model-goodness-of-fit">Assessing the model goodness-of-fit</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#estimating-gridded-population-for-the-entire-country">Estimating Gridded Population for the Entire Country</a>
-<ul>
-<li><a href="#model-method-1">Model Method</a></li>
-<li><a href="#model-implementation-1">Model Implementation</a>
-<ul>
-<li><a href="#input-data-1">Input data</a></li>
-</ul></li>
-<li><a href="#model-results-1">Model Results</a>
-<ul>
-<li><a href="#implementing-the-model-1">Implementing the model</a></li>
-<li><a href="#assessing-the-model-goodness-of-fit-1">Assessing the model goodness-of-fit</a></li>
+<li><a href="#implementing-the-model" id="toc-implementing-the-model">Implementing the model</a></li>
+<li><a href="#assessing-the-model-goodness-of-fit" id="toc-assessing-the-model-goodness-of-fit">Assessing the model goodness-of-fit</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#discussion">Discussion</a></li>
-<li><a href="#contributions">Contributions</a></li>
-<li><a href="#license">License</a></li>
-<li><a href="#suggested-citation">Suggested Citation</a></li>
-<li><a href="#references"><strong>References</strong></a></li>
+<li><a href="#estimating-gridded-population-for-the-entire-country" id="toc-estimating-gridded-population-for-the-entire-country">Estimating Gridded Population for the Entire Country</a>
+<ul>
+<li><a href="#model-method-1" id="toc-model-method-1">Model Method</a></li>
+<li><a href="#model-implementation-1" id="toc-model-implementation-1">Model Implementation</a>
+<ul>
+<li><a href="#input-data-1" id="toc-input-data-1">Input data</a></li>
+</ul></li>
+<li><a href="#model-results-1" id="toc-model-results-1">Model Results</a>
+<ul>
+<li><a href="#implementing-the-model-1" id="toc-implementing-the-model-1">Implementing the model</a></li>
+<li><a href="#assessing-the-model-goodness-of-fit-1" id="toc-assessing-the-model-goodness-of-fit-1">Assessing the model goodness-of-fit</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#discussion" id="toc-discussion">Discussion</a></li>
+<li><a href="#contributions" id="toc-contributions">Contributions</a></li>
+<li><a href="#license" id="toc-license">License</a></li>
+<li><a href="#suggested-citation" id="toc-suggested-citation">Suggested Citation</a></li>
+<li><a href="#references" id="toc-references"><strong>References</strong></a></li>
 </ul>
 </nav>
 </div>
@@ -1563,7 +1658,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h1 id="estimating-missed-communes">Estimating Missed <em>Communes</em></h1>
 <h2 id="model-method">Model Method</h2>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:schema1"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:schema1"></span>
 <img src="dat/schema1_ENG.jpg" alt="Schema for estimating population in missing communes" width="100%" />
 <p class="caption">
 Figure 1: Schema for estimating population in missing communes
@@ -1576,7 +1671,7 @@ Figure 1: Schema for estimating population in missing communes
 \begin{gathered}
   N_i \sim Poisson( D_i A_i ) \\
   D_i \sim LogNormal( \bar{D}_i, \sigma_{l_1,l_2, l_3}) \\
-  \bar{D}_i = \alpha_{l_1,l_2, l_3} + \sum_{k=1}^{K} \beta_k x_{i,k} \\ 
+  \bar{D}_i = \alpha_{l_1,l_2, l_3} + \sum_{k=1}^{K} \beta_k x_{i,k} \\
 \\
 \alpha_{l_1,l_2, l_3} \sim Normal(11,3)\\
 \beta_k \sim Normal(0,1)\\
@@ -1592,7 +1687,7 @@ Figure 1: Schema for estimating population in missing communes
 <h2 id="model-implementation">Model Implementation</h2>
 <h3 id="input-data">Input data</h3>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:map-gps"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:map-gps"></span>
 <img src="dat/map_EAs.jpg" alt="Population density of the selected enumeration areas" width="80%" />
 <p class="caption">
 Figure 2: Population density of the selected enumeration areas
@@ -1606,7 +1701,7 @@ Figure 2: Population density of the selected enumeration areas
 <h4 id="building-footprints">Building footprints</h4>
 <p>A core covariate in our model is the building footprints layer provided by Ecopia.AI and Maxar Technologies <span class="citation" data-cites="ecopia.ai2019">(<a href="#ref-ecopia.ai2019" role="doc-biblioref">2019</a>)</span>. It is a satellite-imagery-based features extraction at 5m and gives a precise estimate of the built-up area in Burkina Faso. Figure <a href="#fig:img-bf1">3</a> illustrates this for an area in Ouagadougou.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:img-bf1"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:img-bf1"></span>
 <img src="dat/bf_example.PNG" alt="Example of the building footprints in Ouagadougou" width="80%" />
 <p class="caption">
 Figure 3: Example of the building footprints in Ouagadougou
@@ -1635,7 +1730,7 @@ Figure 3: Example of the building footprints in Ouagadougou
 <h3 id="assessing-the-model-goodness-of-fit">Assessing the model goodness-of-fit</h3>
 <p>Prediction power of the final model is first assessed using a training dataset (70%) to fit the model and a test dataset (30%) to estimate the goodness-of-fit. The correlation between predictions and observations is 0.8. 95% of the test observations are in their 95% confidence interval. Bias (mean of residuals) is 45 people, imprecision (standard deviation of residuals) is 263 people and inaccuracy (mean of absolute residuals) is 169.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:plot-pred"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:plot-pred"></span>
 <img src="dat/predictions_scatterplot.jpg" alt="Scatterplot of observed vs. predicted population count on test EAs. Red line shows perfect prediction" width="80%" />
 <p class="caption">
 Figure 4: Scatterplot of observed vs. predicted population count on test EAs. Red line shows perfect prediction
@@ -1666,7 +1761,7 @@ Figure 4: Scatterplot of observed vs. predicted population count on test EAs. R
 <div class="layout-chunk" data-layout="l-body">
 <table>
 <caption>
-<span id="tab:unnamed-chunk-2">Table 1: </span>Sensitivity analysis results on predicted totals
+<span id="tab:unnamed-chunk-2">Table 1: </span><span id="tab:unnamed-chunk-2">Table 2: </span>Sensitivity analysis results on predicted totals
 </caption>
 <thead>
 <tr>
@@ -1775,7 +1870,7 @@ Scenario 2
 <h1 id="estimating-gridded-population-for-the-entire-country">Estimating Gridded Population for the Entire Country</h1>
 <h2 id="model-method-1">Model Method</h2>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:schema2"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:schema2"></span>
 <img src="dat/schema2_ENG.jpg" alt="Schema for estimating gridded population for the entire country" width="100%" />
 <p class="caption">
 Figure 5: Schema for estimating gridded population for the entire country
@@ -1789,7 +1884,7 @@ Figure 5: Schema for estimating gridded population for the entire country
 <h4 id="population-1">Population</h4>
 <p>The officially released population counts at <em>commune</em> level, displayed in Figure <a href="#fig:map-pop">6</a> combine the surveyed totals (adjusted with post-enumeration survey non-respondent rates) and the estimated bottom-up totals.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:map-pop"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:map-pop"></span>
 <img src="dat/map_admin3.jpg" alt="Map of commune population totals" width="90%" />
 <p class="caption">
 Figure 6: Map of commune population totals
@@ -1827,7 +1922,7 @@ Figure 6: Map of commune population totals
 <h3 id="assessing-the-model-goodness-of-fit-1">Assessing the model goodness-of-fit</h3>
 <p><strong>Covariates importance</strong> We assess the importance of a predictor by showing the relative increase in the mean square error when the predictor is removed from the model. The order of magnitude might not be robust to the collinearity observed in the covariates set but the relative ranking is <span class="citation" data-cites="genuer2010variable">(<a href="#ref-genuer2010variable" role="doc-biblioref">Genuer, Poggi, and Tuleau-Malot 2010</a>)</span>.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:imp"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:imp"></span>
 <img src="dat/imp_plot.png" alt="Top 25 Covariates importance in the Random Forest model" width="60%" />
 <p class="caption">
 Figure 7: Top 25 Covariates importance in the Random Forest model
@@ -1846,7 +1941,7 @@ Figure 7: Top 25 Covariates importance in the Random Forest model
 \]</span></p>
 <p>where <span class="math inline">\(\hat{y}\)</span> is the predicted and <span class="math inline">\(y\)</span> the observed EA population count.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:diff"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:diff"></span>
 <img src="dat/map-ea-test.png" alt="Spatial distribution of the relative prediction errors. Dots shows the location of the selected EAs. The colours show the ranges of predictive errors. Settled pixels are shown in yellow." width="80%" />
 <p class="caption">
 Figure 8: Spatial distribution of the relative prediction errors. Dots shows the location of the selected EAs. The colours show the ranges of predictive errors. Settled pixels are shown in yellow.
@@ -1854,7 +1949,7 @@ Figure 8: Spatial distribution of the relative prediction errors. Dots shows the
 </div>
 </div>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:diff2"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:diff2"></span>
 <img src="dat/hist-diff.png" alt="Distribution of the relative prediction errors.Grey bars represent each of the 50 selected EAs.The orange line shows the location of the 0\% error, the black line summarises the overall error distribution." width="600" />
 <p class="caption">
 Figure 9: Distribution of the relative prediction errors.Grey bars represent each of the 50 selected EAs.The orange line shows the location of the 0% error, the black line summarises the overall error distribution.
@@ -1870,7 +1965,7 @@ Figure 9: Distribution of the relative prediction errors.Grey bars represent eac
 <p><strong>Settlement type</strong> The population counts in areas with primarily non-residential buildings may be over-estimated. Caution should be taken when using the population data in industrial (and other primarily non-residential) areas. Furthermore little variation can be modelled for densely populated urban areas. This is due to the scale of the input data used to fit the model, namely at administrative level 3, that does not capture well variation in a dense city such as Ouagadougou. Therefore precautions shall be taken when focusing the analysis in urban zones.</p>
 <p><strong>Building footprints</strong> We assume that the building footprints data is accurate and that each building polygon corresponds to a building structure. However the date of the satellite imagery spans from 2009 to 2019 (see Figure <a href="#fig:hist-bf">10</a>). The estimated population counts may be inaccurate in areas where the imagery is old and buildings have recently been constructed. This issue was observed in the towns of Zorgho, Bâtié and Nanoro. But it is minimized by old satellite imagery being only used in remote area.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:hist-bf"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:hist-bf"></span>
 <img src="modelling-burkina-faso-population_files/figure-html5/hist-bf-1.png" alt="Satellite imagery date used for extracting building footprints by Ecopia.AI, and Maxar Technologies. (2019)" width="40%" />
 <p class="caption">
 Figure 10: Satellite imagery date used for extracting building footprints by Ecopia.AI, and Maxar Technologies. (2019)
@@ -1888,96 +1983,96 @@ Figure 10: Satellite imagery date used for extracting building footprints by Eco
 <p>WorldPop and Institut National de la Statistique et de la Démographie du Burkina Faso. 2021. Census-based gridded population estimates for Burkina Faso (2019), version 1.0. WorldPop, University of Southampton. <a href="doi:10.5258/SOTON/WP00687" class="uri">doi:10.5258/SOTON/WP00687</a>.</p>
 <h1 id="references"><strong>References</strong></h1>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-bondarenko2018wpgprfpms" class="csl-entry" role="doc-biblioentry">
-Bondarenko, Maksym, Jeremiah Nieves, Alessandro Sorichetta, Forrest R Stevens, Andrea E Gaughan, Andrew Tatem, and others. 2018. <span>“wpgpRFPMS: WorldPop Random Forests Population Modelling r Scripts, Version 0.1. 0.”</span>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-bondarenko2018wpgprfpms" class="csl-entry" role="listitem">
+Bondarenko, Maksym, Jeremiah Nieves, Alessandro Sorichetta, Forrest R Stevens, Andrea E Gaughan, Andrew Tatem, et al. 2018. <span>“wpgpRFPMS: WorldPop Random Forests Population Modelling r Scripts, Version 0.1. 0.”</span>
 </div>
-<div id="ref-marcel_buchhorn_2020_3939050" class="csl-entry" role="doc-biblioentry">
+<div id="ref-marcel_buchhorn_2020_3939050" class="csl-entry" role="listitem">
 Buchhorn, Marcel, Bruno Smets, Luc Bertels, Bert De Roo, Myroslava Lesiv, Nandin-Erdene Tsendbazar, Martin Herold, and Steffen Fritz. 2020. <span>“<span class="nocase">Copernicus Global Land Service: Land Cover 100m: collection 3: epoch 2019: Globe</span>.”</span> Zenodo. <a href="https://doi.org/10.5281/zenodo.3939050">https://doi.org/10.5281/zenodo.3939050</a>.
 </div>
-<div id="ref-carpenter2017stan" class="csl-entry" role="doc-biblioentry">
+<div id="ref-carpenter2017stan" class="csl-entry" role="listitem">
 Carpenter, Bob, Andrew Gelman, Matthew D Hoffman, Daniel Lee, Ben Goodrich, Michael Betancourt, Marcus Brubaker, Jiqiang Guo, Peter Li, and Allen Riddell. 2017. <span>“Stan: A Probabilistic Programming Language.”</span> <em>Journal of Statistical Software</em> 76 (1). <a href="https://doi.org/10.18637/jss.v076.i01">https://doi.org/10.18637/jss.v076.i01</a>.
 </div>
-<div id="ref-network_grid3_2020" class="csl-entry" role="doc-biblioentry">
-Center for International Earth Science Information Network, and Novel-T. 2020. <span>“<span>Grid3</span> <span>Burkina</span> <span>Faso</span> <span>Settlement</span> <span>Extents</span> <span>Version</span> 01, <span>Alpha</span>.”</span> <a href="https://doi.org/10.7916/d8-h47k-8637">https://doi.org/10.7916/d8-h47k-8637</a>.
+<div id="ref-network_grid3_2020" class="csl-entry" role="listitem">
+Center for International Earth Science Information Network, and Novel-T. 2020. <span>“<span>GRID3</span> <span>Burkina</span> <span>Faso</span> <span>Settlement</span> <span>Extents</span> <span>Version</span> 01, <span>Alpha</span>.”</span> <a href="https://doi.org/10.7916/d8-h47k-8637">https://doi.org/10.7916/d8-h47k-8637</a>.
 </div>
-<div id="ref-cutler2018" class="csl-entry" role="doc-biblioentry">
+<div id="ref-cutler2018" class="csl-entry" role="listitem">
 Cutler, Fortran original by Leo Breiman and Adele, and R. port by Andy Liaw and Matthew Wiener. 2018. <em>randomForest: Breiman and Cutler’s Random Forests for Classification and Regression</em>. <a href="https://CRAN.R-project.org/package=randomForest">https://CRAN.R-project.org/package=randomForest</a>.
 </div>
-<div id="ref-dowle2020" class="csl-entry" role="doc-biblioentry">
+<div id="ref-dowle2020" class="csl-entry" role="listitem">
 Dowle, Matt, Arun Srinivasan, Jan Gorecki, Michael Chirico, Pasha Stetsenko, Tom Short, Steve Lianoglou, et al. 2020. <em>Data.table: Extension of ’Data.frame’</em>. <a href="https://CRAN.R-project.org/package=data.table">https://CRAN.R-project.org/package=data.table</a>.
 </div>
-<div id="ref-ecopia.ai2019" class="csl-entry" role="doc-biblioentry">
+<div id="ref-ecopia.ai2019" class="csl-entry" role="listitem">
 Ecopia.AI, and Maxar Technologies. 2019. <em>Digitize Africa Data</em>.
 </div>
-<div id="ref-genuer2010variable" class="csl-entry" role="doc-biblioentry">
+<div id="ref-genuer2010variable" class="csl-entry" role="listitem">
 Genuer, Robin, Jean-Michel Poggi, and Christine Tuleau-Malot. 2010. <span>“Variable Selection Using Random Forests.”</span> <em>Pattern Recognition Letters</em> 31 (14): 2225–36.
 </div>
-<div id="ref-harris2020version" class="csl-entry" role="doc-biblioentry">
+<div id="ref-harris2020version" class="csl-entry" role="listitem">
 Harris, Ian, Timothy J Osborn, Phil Jones, and David Lister. 2020. <span>“Version 4 of the CRU TS Monthly High-Resolution Gridded Multivariate Climate Dataset.”</span> <em>Scientific Data</em> 7 (1): 1–18.
 </div>
-<div id="ref-hijmans2020" class="csl-entry" role="doc-biblioentry">
+<div id="ref-hijmans2020" class="csl-entry" role="listitem">
 Hijmans, Robert J., Jacob van Etten, Michael Sumner, Joe Cheng, Dan Baston, Andrew Bevan, Roger Bivand, et al. 2020. <em>Raster: Geographic Data Analysis and Modeling</em>. <a href="https://CRAN.R-project.org/package=raster">https://CRAN.R-project.org/package=raster</a>.
 </div>
-<div id="ref-institutgéographiqueduburkinafaso2015" class="csl-entry" role="doc-biblioentry">
+<div id="ref-institutgéographiqueduburkinafaso2015" class="csl-entry" role="listitem">
 Institut Géographique du Burkina Faso. 2015. <span>“Base Nationale de Données Topographiques.”</span>
 </div>
-<div id="ref-insd2019recensement" class="csl-entry" role="doc-biblioentry">
+<div id="ref-insd2019recensement" class="csl-entry" role="listitem">
 Institut National de la Statistique et de la Démographie. 2020. <span>“<span class="nocase">Cinquième Recensement Général de la Population et de l’Habitation du Burkina Faso - Résultats préliminaires</span>.”</span> INSD Ouagadougou, Burkina Faso.
 </div>
-<div id="ref-kuhn2020" class="csl-entry" role="doc-biblioentry">
+<div id="ref-kuhn2020" class="csl-entry" role="listitem">
 Kuhn, Max, Jed Wing, Steve Weston, Andre Williams, Chris Keefer, Allan Engelhardt, Tony Cooper, et al. 2020. <em>Caret: Classification and Regression Training</em>. <a href="https://CRAN.R-project.org/package=caret">https://CRAN.R-project.org/package=caret</a>.
 </div>
-<div id="ref-leasure2020national" class="csl-entry" role="doc-biblioentry">
+<div id="ref-leasure2020national" class="csl-entry" role="listitem">
 Leasure, Douglas R, Warren C Jochem, Eric M Weber, Vincent Seaman, and Andrew J Tatem. 2020. <span>“National Population Mapping from Sparse Survey Data: A Hierarchical Bayesian Modeling Framework to Account for Uncertainty.”</span> <em>Proceedings of the National Academy of Sciences</em>.
 </div>
-<div id="ref-liaw2002" class="csl-entry" role="doc-biblioentry">
+<div id="ref-liaw2002" class="csl-entry" role="listitem">
 Liaw, Andy, and Matthew Wiener. 2002. <span>“Classification and Regression by randomForest.”</span> <em>R News</em> 2 (3): 18–22. <a href="https://CRAN.R-project.org/doc/Rnews/">https://CRAN.R-project.org/doc/Rnews/</a>.
 </div>
-<div id="ref-lloyd2019global" class="csl-entry" role="doc-biblioentry">
+<div id="ref-lloyd2019global" class="csl-entry" role="listitem">
 Lloyd, Christopher T, Heather Chamberlain, David Kerr, Greg Yetman, Linda Pistolesi, Forrest R Stevens, Andrea E Gaughan, et al. 2019. <span>“Global Spatio-Temporally Harmonised Datasets for Producing High-Resolution Gridded Population Distribution Datasets.”</span> <em>Big Earth Data</em> 3 (2): 108–39. <a href="https://doi.org/10.1080/20964471.2019.1625151">https://doi.org/10.1080/20964471.2019.1625151</a>.
 </div>
-<div id="ref-pebesma2020" class="csl-entry" role="doc-biblioentry">
+<div id="ref-pebesma2020" class="csl-entry" role="listitem">
 Pebesma, Edzer, Roger Bivand, Etienne Racine, Michael Sumner, Ian Cook, Tim Keitt, Robin Lovelace, et al. 2020. <em>Sf: Simple Features for r</em>. <a href="https://CRAN.R-project.org/package=sf">https://CRAN.R-project.org/package=sf</a>.
 </div>
-<div id="ref-robnik2004improving" class="csl-entry" role="doc-biblioentry">
+<div id="ref-robnik2004improving" class="csl-entry" role="listitem">
 Robnik-Šikonja, Marko. 2004. <span>“Improving Random Forests.”</span> In <em>European Conference on Machine Learning</em>, 359–70. Springer.
 </div>
-<div id="ref-stan2020rstan" class="csl-entry" role="doc-biblioentry">
+<div id="ref-stan2020rstan" class="csl-entry" role="listitem">
 Stan Development Team. 2020. <span>“<span>RStan</span>: The <span>R</span> Interface to <span>Stan</span>.”</span> <a href="http://mc-stan.org/">http://mc-stan.org/</a>.
 </div>
-<div id="ref-stevens2015" class="csl-entry" role="doc-biblioentry">
+<div id="ref-stevens2015" class="csl-entry" role="listitem">
 Stevens, Forrest R., Andrea E. Gaughan, Catherine Linard, and Andrew J. Tatem. 2015a. <span>“Disaggregating Census Data for Population Mapping Using Random Forests with Remotely-Sensed and Ancillary Data.”</span> <em>PLOS ONE</em> 10 (2): e0107042. <a href="https://doi.org/10.1371/journal.pone.0107042">https://doi.org/10.1371/journal.pone.0107042</a>.
 </div>
-<div id="ref-stevens2015disaggregating" class="csl-entry" role="doc-biblioentry">
+<div id="ref-stevens2015disaggregating" class="csl-entry" role="listitem">
 Stevens, Forrest R, Andrea E Gaughan, Catherine Linard, and Andrew J Tatem. 2015b. <span>“Disaggregating Census Data for Population Mapping Using Random Forests with Remotely-Sensed and Ancillary Data.”</span> <em>PloS One</em> 10 (2). <a href="https://doi.org/10.1371/journal.pone.0107042">https://doi.org/10.1371/journal.pone.0107042</a>.
 </div>
-<div id="ref-tusting2019mapping" class="csl-entry" role="doc-biblioentry">
+<div id="ref-tusting2019mapping" class="csl-entry" role="listitem">
 Tusting, Lucy S, Donal Bisanzio, Graham Alabaster, Ewan Cameron, Richard Cibulskis, Michael Davies, Seth Flaxman, et al. 2019. <span>“Mapping Changes in Housing in Sub-Saharan Africa from 2000 to 2015.”</span> <em>Nature</em> 568 (7752): 391–94.
 </div>
-<div id="ref-wallig2020" class="csl-entry" role="doc-biblioentry">
+<div id="ref-wallig2020" class="csl-entry" role="listitem">
 Wallig, Michelle, Microsoft Corporation, Steve Weston, and Dan Tenenbaum. 2020. <em>doParallel: Foreach Parallel Adaptor for the ’Parallel’ Package</em>. <a href="https://CRAN.R-project.org/package=doParallel">https://CRAN.R-project.org/package=doParallel</a>.
 </div>
-<div id="ref-weiss2018global" class="csl-entry" role="doc-biblioentry">
+<div id="ref-weiss2018global" class="csl-entry" role="listitem">
 Weiss, D J, A Nelson, HS Gibson, W Temperley, S Peedell, A Lieber, M Hancher, E Poyart, S Belchior, N Fullman, and others. 2018b. <span>“A Global Map of Travel Time to Cities to Assess Inequalities in Accessibility in 2015.”</span> <em>Nature</em> 553 (7688): 333–36.
 </div>
-<div id="ref-weiss2018" class="csl-entry" role="doc-biblioentry">
+<div id="ref-weiss2018" class="csl-entry" role="listitem">
 Weiss, D J, A Nelson, HS Gibson, W Temperley, S Peedell, A Lieber, M Hancher, E Poyart, S Belchior, N Fullman, and others. 2018a. <span>“A Global Map of Travel Time to Cities to Assess Inequalities in Accessibility in 2015.”</span> <em>Nature</em> 553 (7688): 333336.
 </div>
-<div id="ref-wickham2020" class="csl-entry" role="doc-biblioentry">
+<div id="ref-wickham2020" class="csl-entry" role="listitem">
 Wickham, Hadley, Romain François, Lionel Henry, Kirill Müller, and RStudio. 2020. <em>Dplyr: A Grammar of Data Manipulation</em>. <a href="https://CRAN.R-project.org/package=dplyr">https://CRAN.R-project.org/package=dplyr</a>.
 </div>
-<div id="ref-worldpop2018global" class="csl-entry" role="doc-biblioentry">
-WorldPop Research Group, University of Southampton, Department of Geography and Geosciences, University of Louisville, Departement de Geographie, Universite de Namur, and Center for International Earth Science Information Network (CIESIN), Columbia University. 2018. <span>“Global High Resolution Population Denominators Project - Funded by the Bill and Melinda Gates Foundation (Opp1134076).”</span> <a href="https://doi.org/10.5258/SOTON/WP00645">https://doi.org/10.5258/SOTON/WP00645</a>.
+<div id="ref-worldpop2018global" class="csl-entry" role="listitem">
+WorldPop Research Group, University of Southampton, Department of Geography and Geosciences, University of Louisville, Departement de Geographie, Universite de Namur, and Center for International Earth Science Information Network (CIESIN), Columbia University. 2018. <span>“Global High Resolution Population Denominators Project - Funded by the Bill and Melinda Gates Foundation (OPP1134076).”</span> <a href="https://doi.org/10.5258/SOTON/WP00645">https://doi.org/10.5258/SOTON/WP00645</a>.
 </div>
-<div id="ref-worldpop2020" class="csl-entry" role="doc-biblioentry">
+<div id="ref-worldpop2020" class="csl-entry" role="listitem">
 WorldPop, and Institut National de la Statistique et de la Démographie du Burkina Faso. 2021. <span>“Census-Based Gridded Population Estimates for Burkina Faso (2019), Version 1.0.”</span> <em>WorldPop, University of Southampton</em>. <a href="https://doi.org/10.5258/SOTON/WP00687">https://doi.org/10.5258/SOTON/WP00687</a>.
 </div>
 </div>
-<section class="footnotes" role="doc-endnotes">
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1" role="doc-endnote"><p>See Burkina Faso 2019 in <a href="http://dx.doi.org/10.5258/SOTON/WP00645" class="uri">http://dx.doi.org/10.5258/SOTON/WP00645</a> for more details.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>See Burkina Faso 2019 in <a href="http://dx.doi.org/10.5258/SOTON/WP00645" class="uri">http://dx.doi.org/10.5258/SOTON/WP00645</a> for more details.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 <!--radix_placeholder_article_footer-->

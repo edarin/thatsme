@@ -12,6 +12,9 @@ output:
   distill::distill_article:
     self_contained: false
 preview: 'cover2.PNG'
+categories:
+  - academia
+  - tutorial
 ---
 
 Statistical population modelling is a powerful tool for producing gridded population estimates 

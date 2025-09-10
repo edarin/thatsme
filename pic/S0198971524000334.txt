@@ -1,0 +1,11 @@
+Heather R. Chamberlain, Edith Darin, Wole Ademola Adewole, Warren C. Jochem, Attila N. Lazar, Andrew J. Tatem,
+Building footprint data for countries in Africa: To what extent are existing data products comparable?,
+Computers, Environment and Urban Systems,
+Volume 110,
+2024,
+102104,
+ISSN 0198-9715,
+https://doi.org/10.1016/j.compenvurbsys.2024.102104.
+(https://www.sciencedirect.com/science/article/pii/S0198971524000334)
+Abstract: Growth and developments in computing power, machine-learning algorithms and satellite imagery spatiotemporal resolution have led to rapid developments in automated feature-extraction. These methods have been applied to create geospatial datasets of features such as roads, trees and building footprints, at a range of spatial scales, with national and multi-country datasets now available as open data from multiple sources. Building footprint data is particularly useful in a range of applications including mapping population distributions, planning resource distribution campaigns and in humanitarian response. In settings with well-developed geospatial data systems, such datasets may complement existing authoritative sources, but in data-scarce settings, they may be the only source of data. However, knowledge on the degree to which building footprint data products are comparable and can be used interchangeably, and the impact of selecting a particular dataset on subsequent analyses remains limited. For all countries in Africa, we review the available multi-country building footprint data products and analyse their similarities and differences in terms of building area and count metrics. We explore the variation between building footprint data products across a range of spatial scales, including sub-national administrative units and different settlement types. Our results show that the available building footprint data products are not interchangeable. There are clear differences in counts and total area of building footprints between the assessed data products, as well as considerable spatial heterogeneity in building footprint coverage and completeness.
+Keywords: Building footprints; Urban form; Built environment; Spatial; Settlement

@@ -1,0 +1,49 @@
+---
+title: "Ukraine NowPop: internal displacement in Ukraine"
+description: |
+  I am currently working as a population data scientist on the NowPop project, a large-scale population model for Ukraine, using social media and mobile phone data to nowcast population displacement since the full-scale invasion in February 2022.
+author:
+  - name: Edith Darin
+    url: {}
+date: 2024-05-02
+output:
+  distill::distill_article:
+    self_contained: false
+preview: 'dashboard.png'
+categories:
+  - academia
+  - overview
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+# Background 
+
+The Russian invasion of Ukraine resulted in the forced displacement of millions of Ukrainian residents, including nearly 8 million refugees and 6.5 million internally displaced persons. Plus, there are millions more who remained in place and are now vulnerable due to insecurity and losses of critical infrastructure and services. Up-to-date population figures are essential for assessing needs of populations inside Ukraine, however, pre-conflict official statistics are out-of-date due to large scale migrations, and survey-based primary data collection has not been able to fill this data gap. The Leverhulme Centre for Demographic Science has been supporting the international humanitarian response by providing daily sub-national population estimates for Ukraine disaggregated by 5-year age-sex groups that are produced using real-time counts of active Facebook users combined with baseline population estimates and daily counts of international border crossings (see Leasure et al. 2022; https://doi.org/10.31235/osf.io/6j9wq). 
+
+# Problem statement
+
+While previous approach continues to provide a critical source of up-to-date demographic data, there are a number of shortcomings. We cannot currently incorporate additional sources of population information that would likely improve the precision of demographic estimates, particularly in Donetsk and Luhansk Oblasts where Facebook is used a lower rate and where power outages interrupted the data stream of social media user counts. Other data sources would include social media platforms Instagram and Vkontakte as well as more traditional data like Ukrainian IDP registries and IOM’s General Population Survey. In addition, the current method cannot quantify uncertainty associated with demographic estimates which would be provided by a more rigorous statistical approach. Lastly, we lacked an effective data dissemination platform to provide easy access to our daily population estimates for immediate operational uses.      
+
+# Research streams
+
+## Bayesian Statistical Modelling
+
+We are transitioning our current rapid-response method into a more rigorous statistical framework that will allow us to combine multiple imperfect observations of population (e.g. various social media platforms, household surveys). This new statistical approach aims to better account for biases and data gaps to increase prediction accuracy and provide robust estimates of uncertainty. This is a critical next step to move from acute crisis response to sustained support for official statistics in Ukraine. The proposed methodology follows a Bayesian timeseries modelling framework to estimate daily estimates of population and internal migration rates at the Oblast level based on social media and other geospatial data. The time series approach provides increased precision by constraining likely population sizes today based on what the population sizes were yesterday, as well as by incorporating additional geospatial data (e.g. travel distances, conflict locations). This also quantifies weekly internal migration probabilities based on events on-the-ground that could inform forecasts of potential future displacement trends, although the proposed work will focus on nowcasting rather than forecasting. W
+
+
+
+## Digital Demography and Data Science. 
+
+The social media data that underly our approach require large-scale automated data collections running on a daily basis. Previous work was restricted to the Facebook platform, but we have extended this to include Instagram which is more popular among younger age groups. We have also gained access to Vodafone user database which contains monthly counts by age and sex of flows and stocks of mobile phone users at hromada level (administative level 3).
+
+This will reduce dependency on any single data source and help to fill critical data gaps, particularly at lower geographic scale. We will also incorporate various geospatial datasets that will include remotely-sensed buildings, road networks, and daily geolocated conflict events. 
+
+
+## Data Dissemination 
+
+We are developing an interactive web mapping application to provide instant access to our real-time demographic estimates to better support a broad range of stakeholders. This allows users to click sub-national areas on the map to retrieve current and historical population estimates for specific age-sex demographic groups along with robust measures of statistical estimation uncertainty. 
