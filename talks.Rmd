@@ -6,11 +6,11 @@ description: |
 
 # Talks
 
-**. UN Population Division Brown-bag Lunch Seminar, June 2025
+*Statistical Innovation for Population Estimation: Integrating Administrative Records, Geospatial Data, and Real-Time Streams* UN Population Division Brown-bag Lunch Seminar, June 2025
 
 *Bespoke Bayesian Population Models*.Space Time Analysis Bayes (STAB) Seminar, University of Washington, July 2021
 
-*Estimating population using advanced technologies*. UK Foreign Department Roundtable "Who counts", March 2021
+*Estimating population using advanced technologies*. UK Foreign Department Roundtable "Who Counts", March 2021
 
 *Openfisca Project*. Open Government Parnership Global Summit 2016, Paris City Hall, December, 2016. [Video](https://youtu.be/MlIL-WZ62AU?t=17320)
 

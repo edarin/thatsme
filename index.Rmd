@@ -8,8 +8,6 @@ image: "pic/shiele.jpg"
 links:
   - label: LinkedIn
     url: "https://www.linkedin.com/in/edith-darin-194ba212b/"
-  - label: Twitter
-    url: "https://twitter.com/DarinEdith"
   - label: GitHub
     url: "https://github.com/edarin/"
   - label: Email
@@ -20,9 +18,8 @@ theme: theme.css
 
 Since 2024 I’ve been working as a Population Data Scientist on the NowPop project in Oxford’s Demographic Science Unit, where I model internal displacement in Ukraine using social‑media and mobile‑phone data.
 
-In October 2022 I started a PhD at the Leverhulme Centre for Demographic Science, Department of Population Health, University of Oxford, focusing on **high‑resolution population estimates to support censuses in data‑limited settings**.
+As a doctoral student at the Leverhulme Centre for Demographic Science, University of Oxford, I am focusing on high‑resolution population estimates in data‑limited settings, using a combination of satellite imagery, traditional survey data and administrative records. I am studied two environments: population displacement in the Gaza strip, and population evolution in Colombia. I am affiliated with the Max Planck Institute for Demographic Research in Rostock, Germany, as part of the Population Health and Data Science (PHDS) doctoral academy.
 
-I hold an MSc in **applied GIS & remote sensing** from the University of Southampton (thesis: mapping deprivation in Kinshasa) and earlier degrees in **statistics** (ENSAE Paristech) and its **social‑science** applications (École Normale Supérieure de Cachan).
 
 My experience spans:
 
@@ -30,9 +27,26 @@ My experience spans:
 * *Humanitarian work* – with the UN World Food Programme, World Health Organisation, UN Fund for Population, UN High Commissioner for Refugees.  
 * *Government* – with the Open Data Taskforce (France) and various Stats Offices (Burkina Faso, Mali, Brazil, Colombia).  
 
-Across these roles I aim to combine a commitment to social justice and transparency with a practical interest in modelling complex data streams. In my own time, I’ve also helped develop a bike delivery cooperatives network as well as mutually owned housing‑cooperative business plans, gaining experience in finance and collaboration.
+ My work is published in *Population*, *Population, Space and Place*, *Nature Communications*, *International Journal of Humanitarian Action* and *PLOS ONE*, and I have presented at conferences including Population Association of America, International Population Conference and the Royal Geographical Society.
 
+ I have done some ponctual consulting for the Small Arms Survey program (Graduate Institute, Geneva) to develop automatised data pipelines and dashboards for weapon monitoring in Ukraine.
+ 
+ In my own time, I’ve also helped develop a bike delivery cooperatives network as well as mutually owned housing‑cooperative business plans, gaining experience in finance and collaboration.
 
+# News
+
+## 2026
+- **6th February**: Invite to give a lecture at the Interdisciplinary Institute for Societal Computing, Saarländ University, Germany.
+- **16th January**: Present my work on population estimation in humanitarian settings at the Population Health and Armed Conflict (PHAC) seminar series, University of Toronto, Canada.
+## 2025
+- **December**: Publish an article in *Big Data and Society* on the commodification of demographic data
+- **10th November**: Receive the Julia Mead Knox Memorial Prize for Research in Demography and Population Health, awared by the Leverhulme Centre for Demographic Science, University of Oxford.
+- **4th December**: Present my work on the commodification of demographic data at the PHDS Annual Academy of the Max Planck Institute for Demographic Research, Germany.
+- **29th November**: Present my recent work on population estimation at the 10èmes Rencontres Statistique, Université Bretagne Sud, France.
+- **24th November**: Elected as a member of the Royal Statistical Society Data Ethics and Governance Section Committee.
+- **7th November**: Presented an overview of my work at EEAMO (Equity and Access in Algorithms, Mechanisms, and Optimization) conference in Oxford, UK.
+- **9th October**: Participate to the Netmob 2025 conference in Paris, France.
+- **22th September**: Present my work on population estimation using administrative records at the EvoDemo conference in Oxford, UK.
 ```{r, eval=FALSE, include=FALSE}
 rmarkdown::render("index.Rmd")
 ```

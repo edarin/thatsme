@@ -60,7 +60,7 @@ knitr::include_graphics(here::here('./pic/article_population_en.jpg'))
 ```
 </aside>
 
-Boo G, **Darin E**, Leasure DR, Dooley CA, Chamberlain HR, Lázár AN, Tschirhart K, Sinai C, Hoff NA, Fuller T, Musene K. *High-resolution population estimation using household survey data and building footprints*. 2022. Nature communications. 2022 Mar 14;13(1):1-0. [PDF](https://doi.org/10.1038/s41467-022-29094-x)
+Boo G, **Darin E**, Leasure DR, Dooley CA, Chamberlain HR, Lázár AN, Tschirhart K, Sinai C, Hoff NA, Fuller T, Musene K. *High-resolution population estimation using household survey data and building footprints*. 2022. Nature Communications. 2022 Mar 14;13(1):1-0. [PDF](https://doi.org/10.1038/s41467-022-29094-x)
 
 <aside>
 ```{r, echo=F}
