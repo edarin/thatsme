@@ -40,13 +40,12 @@ GNU/Linux
 \textbf{Statistical Programming}
 R (+++)
 Python (++)
-<!-- \textbf{Dashboard \& API} -->
-<!-- Docker, Plumber, Flask, -->
-<!-- PostgreSQL, DuckDB, R Shiny, -->
-<!-- Git, Nginx -->
-<!-- \textbf{GIS \& Remote Sensing} -->
-<!-- QGIS, Google Earth Engine, GDAL, PostGIS -->
-
+\textbf{Dashboard \& API}
+Docker, Plumber, Flask,
+PostgreSQL, DuckDB, R Shiny,
+Git, Nginx
+\textbf{GIS \& Remote Sensing}
+QGIS, Google Earth Engine, GDAL, PostGIS
 ~
 \section{Languages}
 \textbf{French} native
@@ -61,7 +60,7 @@ Python (++)
 {2025 - \\ 2022}
 {DPhil in Demography}
 {University of Oxford, UK}
-{Topic:\textit{Estimating subnational population sizes in data-scarce contexts}. Affiliated with the Max Planck Institute for Demographic Research.}
+{Topic:\textit{Estimating subnational population sizes in data-scarce contexts}. Affiliated with the Max Planck Institute for Demographic Research and in collaboration with the Colombian Stats Office}
 \entry
 {2019 - \\ 2018}
 {MSc in Applied GIS and Remote Sensing}
@@ -71,11 +70,11 @@ Python (++)
 {2018 - \\ 2015}
 {MSc in Statistics and Economics}
 {\\Paris Graduate School of Economics, Statistics and Finance (ENSAE), France}{Semesters abroad at Humbold University and Galatasaray University.}
-\entry
-{2014 - \\ 2013}
-{Double Bachelor's Degree in Economics and Sociology}
-{\\École Normale Supérieure de Cachan, Université Paris-I-Panthéon-Sorbonne, France}
-{}
+% \entry
+% {2014 - \\ 2013}
+% {Double Bachelor's Degree in Economics and Sociology} 
+% {\\École Normale Supérieure de Cachan, Université Paris-I-Panthéon-Sorbonne, France}
+% {}
 \end{entrylist}
 \section{Working experiences}
 \begin{entrylist}
@@ -83,19 +82,18 @@ Python (++)
 {2026 - \\ 2024}
 {Population Data Scientist}
 {Demographic Unit, University of Oxford, UK}
-{Nowcast daily population forced displacement in war-struck Ukraine by age and sex.
-\textit{Methods developed:} Curate an automatised data pipeline queried from social media APIs. Innovate on geospatial covariates production.}
+{Nowcast forced displacement in war-struck Ukraine by age and sex. Funded by WHO. \textit{Methods developed:} Statistic modelling of flows of mobile phone subscribers. Automatised data pipeline. Deploy dashboard and API for dissemination}
 \entry
 {2024 - \\ 2018}
 {Research Fellow}
 {WorldPop, University of Southampton, UK}
 {\textit{Until 08/21 Specialist Research Technician}\\
-Building statistical models to provide up-to-date, spatially complete population count in data-scarce contexts. Predict and map population with high spatial resolution at the grid cell.   Lead modeller for filling population gaps in censuses impacted by insecurity (Burkina Faso and Mali). Lead trainer on gridded population estimation to national statistics offices. \\
+Building statistical models to provide up-to-date, spatially complete population count in data-scarce contexts. Predict and map population with high spatial resolution at the grid cell. Lead modeller for filling population gaps in censuses impacted by insecurity (Burkina Faso and Mali). Lead trainer on gridded population estimation to national statistics offices. Funded by the Gates foundation and UNFPA. Estimate high-resolution refugee population in Cameroon, funded by UNHCR \\
 \textit{Methods developed:} Hierarchical Bayesian modelling combining survey data with geospatial covariates. Random-forest models for producing high-resolution population estimates. Grid-based spatial sampling design for household surveys.
 }
 \entry{2017}{Data Scientist Intern}{mVAM, UN World Food Program, Italy}{ 
 Assessing food security from remote sensing and mobile data collection. Machine-learning based propensity score weighting in complex survey design. Support mission for Mali Country Office (Bamako).}
-\entry{2016}{Data Scientist Intern}{Etalab, Governmental Task Force for OpenData, France}{\emph{OpenFisca}: French tax and benefit system micro-simulation platform. Finalist of the Open Government Partnership Hackathon.}
+\entry{2016}{ Data Scientist Intern}{Etalab, Governmental Task Force for OpenData, France}{\emph{OpenFisca}: French tax and benefit system micro-simulation platform. Finalist of the Open Government Partnership Hackathon. }
 \end{entrylist}
 
 \section{Grants}
@@ -138,9 +136,9 @@ Assessing food security from remote sensing and mobile data collection. Machine-
 \begin{itemize}
 \item Oral: Statistical Innovation for Population Estimation: Integrating Administrative Records, Geospatial Data, and Real-Time Streams, \textbf{Darin E}, \textit{EEAMO Conference}, 2025.
 \item Poster: Estimating intercensal populations with incomplete administrative data: a state-space Leslie matrix approach, \textbf{Darin E}, \textit{EvoDemo}, 2025.
-\item Oral: Unraveling the Impact of the 2023 Conflict between Israel and Hamas on Short And Mid-Term Population Internal Displacements in the Middle East, \textbf{Darin E}, \textit{European Population Conference}, 2024.
-% \item Oral: Assessing Satellite Imagery Performance for Population Estimation in Data-Scarce Settings: A Modeling Perspective, \textbf{Darin E}, \textit{Population Association of America}, 2024.
-% \item Oral: Estimating population in data-scarce contexts: to which extent can we leverage satellite imagery, \textbf{Darin E}, \textit{British Society of Population Studies}, 2023.
+% \item Oral: Unraveling the Impact of the 2023 Conflict between Israel and Hamas on Short And Mid-Term Population Internal Displacements in the Middle East, \textbf{Darin E}, \textit{European Population Conference}, 2024. 
+% \item Oral: Assessing Satellite Imagery Performance for Population Estimation in Data-Scarce Settings: A Modeling Perspective, \textbf{Darin E}, \textit{Population Association of America}, 2024. 
+% \item Oral: Estimating population in data-scarce contexts: to which extent can we leverage satellite imagery, \textbf{Darin E}, \textit{British Society of Population Studies}, 2023. 
 % \item Oral: Counting people from space: an inquiry from a data practitioner perspective, \textbf{Darin E}, \textit{Data Justice Conference}, 2023. 
 % \item Oral: A bottom-up population modelling approach to complement the population and housing census, \textbf{Darin E}; Boo G; Tatem AJ, \textit{International Population Conference}, 2021. \href{https://www.researchgate.net/publication/357017300_A_bottom-up_population_modelling_approach_to_complement_the_population_and_housing_census}{\scriptsize\faIcon{external-link-alt}}
 % \item Poster: How Bayesian modelling could use the Big Tech competition in producing built-up maps, \textbf{Darin E}, \textit{Bayesian methods for the social sciences}, 2022.  \href{http://dx.doi.org/10.13140/RG.2.2.15592.55040}{\scriptsize\faIcon{external-link-alt}}
@@ -159,12 +157,10 @@ Assessing food security from remote sensing and mobile data collection. Machine-
 
 \section{Awards}
 \begin{itemize}
-\item Julia Mead Knox Memorial Prize for Research in Demography and Population Health, Leverhulme Centre for Demographic Science, University of Oxford (1000£), 2025
-\item Three-year scholarship from the Leverhulme Centre for Demographic Research (3x32,000), 2022
-\item Faculty Dean's Prize for Research, University of Southampton, 2021
-\item Vice-Chancellor Award for Research Impact, University of Southampton, 2018
-\item Scholarship Sarah Andrieux for Social and Economics Research (800€), 2017
-\item Four-year scholarship from the École Normale supérieure de Cachan (4x15,600€), 2015
+\item Julia Mead Knox Memorial Prize for Research in Demography, University of Oxford (1000£), 2025
+\item Three-year scholarship from the Leverhulme Centre for Demographic Research (3x32,000), 2022, Light Senior scholarship, St Catherine's college, 2024
+\item Vice-Chancellor Award for Research Impact (2018), Faculty Dean's Prize for Research (2021), University of Southampton
+\item Four-year scholarship from the École Normale supérieure de Cachan (4x15,600€), 2015, Scholarship Sarah Andrieux for Social and Economics Research (800€), 2017
 \end{itemize}
 \end{noside}
 ```

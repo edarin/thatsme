@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2025.11.21)  21 NOV 2025 18:48
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2025.11.21)  21 NOV 2025 19:11
  restricted system commands enabled.
 **cv.tex
 (./cv.tex
@@ -957,23 +957,70 @@ File: mt-LatinModernRoman.cfg 2021/02/21 v1.1 microtype config. file: Latin Mode
 ) (c:/Users/EdithD/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/mt-TU-empty.cfg
 File: mt-TU-empty.cfg 2021/06/22 v1.1 microtype config. file: fonts with nonstandard glyph set (RS)
 )
+Overfull \hbox (3.4pt too wide) in paragraph at lines 73--113
+[][][][]
+ []
 
-! LaTeX Error: There's no line here to end.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.105 
-    
+Underfull \hbox (badness 10000) in paragraph at lines 73--113
+
+ []
+
+
+Overfull \hbox (0.2847pt too wide) in alignment at lines 114--134
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--135
+
+ []
+
+
+Overfull \hbox (0.2847pt too wide) in alignment at lines 136--153
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--154
+
+ []
+
+
+Overfull \hbox (0.2847pt too wide) in alignment at lines 156--167
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--168
+
+ []
+
+[1
+
+{c:/Users/EdithD/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
+
+] (./cv.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-11-06>
+ ***********
+)
 
 Here is how much of LuaTeX's memory you used:
- 35092 strings out of 476081
+ 35127 strings out of 476081
  125086,1648299 words of node,token memory allocated
- 11853 words of node memory still in use:
-   128 hlist, 5 vlist, 7 rule, 36 disc, 48 local_par, 2 dir, 2 math, 392 glue, 69 kern, 60 penalty, 32 margin_kern, 547 glyph, 547 attribute, 66 glue_spec, 402 attribute_list, 2 temp, 1 if_stack, 2 write, 1 save_pos, 41 pdf_literal, 3 pdf_start_link, 3 pdf_end_link, 1 pdf_dest, 3 pdf_action, 41 pdf_colorstack nodes
-   avail lists: 1:1,2:1,3:1,4:4,5:1,7:8,8:1,10:4
- 56835 multiletter control sequences out of 65536+600000
- 59 fonts using 13794031 bytes
- 117i,6n,131p,998b,1088s stack positions out of 10000i,1000n,20000p,200000b,200000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 610 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 1 local_par, 4 glue, 5 kern, 1 penalty, 3 glyph, 19 attribute, 58 glue_spec, 14 attribute_list, 2 write nodes
+   avail lists: 1:2,2:1787,3:562,4:402,5:754,6:198,7:11979,8:1,9:919,10:21,11:895
+ 56863 multiletter control sequences out of 65536+600000
+ 63 fonts using 14363783 bytes
+ 117i,9n,131p,998b,1088s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/Users/EdithD/AppData/Roaming/TinyTeX/texmf-dist/fonts/opentype/public/fontawesome5/FontAwesome5Free-Solid-900.otf><c:/Users/EdithD/AppData/Roaming/TinyTeX/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf><c:/Users/EdithD/AppData/Roaming/TinyTeX/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf><./texgyreheros-bold.otf><c:/Users/EdithD/AppData/Roaming/TinyTeX/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf><./texgyreheros-regular.otf><./Lato-Light.ttf>
+Output written on cv.pdf (2 pages, 49120 bytes).
+
+PDF statistics: 86 PDF objects out of 1000 (max. 8388607)
+ 60 compressed objects within 1 object stream
+ 3 named destinations out of 1000 (max. 131072)
+ 16 words of extra memory for PDF output out of 10000 (max. 100000000)
+

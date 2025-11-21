@@ -38,6 +38,7 @@ My experience spans:
 ## 2026
 - **6th February**: Invite to give a lecture at the Interdisciplinary Institute for Societal Computing, Saarländ University, Germany.
 - **16th January**: Present my work on population estimation in humanitarian settings at the Population Health and Armed Conflict (PHAC) seminar series, University of Toronto, Canada.
+
 ## 2025
 - **December**: Publish an article in *Big Data and Society* on the commodification of demographic data
 - **10th November**: Receive the Julia Mead Knox Memorial Prize for Research in Demography and Population Health, awared by the Leverhulme Centre for Demographic Science, University of Oxford.
