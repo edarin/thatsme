@@ -8,6 +8,16 @@ description: |
 # Peer-reviewed publications
 
 ### 2025
+
+**Darin E** (2025) Demographic figures at risk in the digital era: Resisting commodification, reclaiming the common good. Big Data & Society 12(4).[PDF](https://doi.org/10.1177/20539517251403948)]
+
+<aside>
+```{r, echo=F}
+knitr::include_graphics(here::here('./pic/bds.jpg'))
+```
+</aside>
+
+
 Boo G, **Darin E**, Chamberlain HR, Hosner R, Akilimali PK, et al. (2025) Tackling public health data gaps through Bayesian high-resolution population estimation: A case study of Kasaï-Oriental, Democratic Republic of the Congo. PLOS Global Public Health 5(9): e0005072. [PDF](https://doi.org/10.1371/journal.pgph.0005072)
 
 <aside>
