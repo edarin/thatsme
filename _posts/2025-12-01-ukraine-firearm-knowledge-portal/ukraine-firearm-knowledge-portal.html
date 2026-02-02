@@ -89,376 +89,39 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>Meet Edith: Projects</title>
+  <title>Ukraine firearm knowledge portal</title>
+
+  <meta property="description" itemprop="description" content="I developed for the Small arms survey project a dashboard visualising data on arms seizure in Ukraine. It gives a fast, interactive view of how firearms are discussed on Ukrainian social media, with a map, charts, and a searchable table. It’s built to be maintainable: data processing happens inside DuckDB, the UI updates reactively, and administrators can refresh the whole dataset with a single button that launches pre‑configured GitHub workflows."/>
 
 
-
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2025-12-01"/>
+  <meta property="article:created" itemprop="dateCreated" content="2025-12-01"/>
+  <meta name="article:author" content="Edith Darin"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Meet Edith: Projects"/>
+  <meta property="og:title" content="Ukraine firearm knowledge portal"/>
   <meta property="og:type" content="article"/>
+  <meta property="og:description" content="I developed for the Small arms survey project a dashboard visualising data on arms seizure in Ukraine. It gives a fast, interactive view of how firearms are discussed on Ukrainian social media, with a map, charts, and a searchable table. It’s built to be maintainable: data processing happens inside DuckDB, the UI updates reactively, and administrators can refresh the whole dataset with a single button that launches pre‑configured GitHub workflows."/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="Meet Edith"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Meet Edith: Projects"/>
+  <meta property="twitter:title" content="Ukraine firearm knowledge portal"/>
+  <meta property="twitter:description" content="I developed for the Small arms survey project a dashboard visualising data on arms seizure in Ukraine. It gives a fast, interactive view of how firearms are discussed on Ukrainian social media, with a map, charts, and a searchable table. It’s built to be maintainable: data processing happens inside DuckDB, the UI updates reactively, and administrators can refresh the whole dataset with a single button that launches pre‑configured GitHub workflows."/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["Projects"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["posts"]}},"value":[{"type":"character","attributes":{},"value":["2025-12-23-demographic-figures-at-risk-in-the-digital-era","2025-12-01-ukraine-firearm-knowledge-portal","2025-08-15-bayesian-modeling-in-the-drc","2025-08-01-can-satellites-replace-censuses-what-we-learned-from-colombia","2025-08-12-nowpop-network","2025-08-12-ukraine-nowpop-project","2023-07-01-collaboration-with-the-colombia-statistics-office","2023-02-01-mapping-refugees-in-cameroon-with-high-resolution","2023-01-01-radical-routes","2021-11-15-statistical-population-modelling-for-census-support","2021-08-01-woprvision","2021-07-09-modelling-burkina-faso-population","2021-07-02-top-down-r-tutorial","2020-09-01-coopcycle"]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","preview","output","categories","editor_options"]}},"value":[{"type":"character","attributes":{},"value":["Ukraine firearm knowledge portal"]},{"type":"character","attributes":{},"value":["I developed for the Small arms survey project a dashboard visualising data on arms seizure in Ukraine. It gives a fast, interactive view of how firearms are discussed on Ukrainian social media, with a map, charts, and a searchable table. It’s built to be maintainable: data processing happens inside DuckDB, the UI updates reactively, and administrators can refresh the whole dataset with a single button that launches pre‑configured GitHub workflows. \n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Edith Darin"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["2025-12-01"]},{"type":"character","attributes":{},"value":["images/landing.png"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["academia","paper"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["markdown"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["wrap"]}},"value":[{"type":"integer","attributes":{},"value":[72]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
-  <!--radix_placeholder_navigation_in_header-->
-  <meta name="distill:offset" content=""/>
-
-  <script type="application/javascript">
-
-    window.headroom_prevent_pin = false;
-
-    window.document.addEventListener("DOMContentLoaded", function (event) {
-
-      // initialize headroom for banner
-      var header = $('header').get(0);
-      var headerHeight = header.offsetHeight;
-      var headroom = new Headroom(header, {
-        tolerance: 5,
-        onPin : function() {
-          if (window.headroom_prevent_pin) {
-            window.headroom_prevent_pin = false;
-            headroom.unpin();
-          }
-        }
-      });
-      headroom.init();
-      if(window.location.hash)
-        headroom.unpin();
-      $(header).addClass('headroom--transition');
-
-      // offset scroll location for banner on hash change
-      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
-      window.addEventListener("hashchange", function(event) {
-        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
-      });
-
-      // responsive menu
-      $('.distill-site-header').each(function(i, val) {
-        var topnav = $(this);
-        var toggle = topnav.find('.nav-toggle');
-        toggle.on('click', function() {
-          topnav.toggleClass('responsive');
-        });
-      });
-
-      // nav dropdowns
-      $('.nav-dropbtn').click(function(e) {
-        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
-        $(this).parent().siblings('.nav-dropdown')
-           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $("body").click(function(e){
-        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $(".nav-dropdown").click(function(e){
-        e.stopPropagation();
-      });
-    });
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["images/landing.png"]}
   </script>
-
-  <style type="text/css">
-
-  /* Theme (user-documented overrideables for nav appearance) */
-
-  .distill-site-nav {
-    color: rgba(255, 255, 255, 0.8);
-    background-color: #0F2E3D;
-    font-size: 15px;
-    font-weight: 300;
-  }
-
-  .distill-site-nav a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .distill-site-nav a:hover {
-    color: white;
-  }
-
-  @media print {
-    .distill-site-nav {
-      display: none;
-    }
-  }
-
-  .distill-site-header {
-
-  }
-
-  .distill-site-footer {
-
-  }
-
-
-  /* Site Header */
-
-  .distill-site-header {
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 3;
-  }
-
-  .distill-site-header .nav-left {
-    display: inline-block;
-    margin-left: 8px;
-  }
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header .nav-left {
-      margin-left: 0;
-    }
-  }
-
-
-  .distill-site-header .nav-right {
-    float: right;
-    margin-right: 8px;
-  }
-
-  .distill-site-header a,
-  .distill-site-header .title {
-    display: inline-block;
-    text-align: center;
-    padding: 14px 10px 14px 10px;
-  }
-
-  .distill-site-header .title {
-    font-size: 18px;
-    min-width: 150px;
-  }
-
-  .distill-site-header .logo {
-    padding: 0;
-  }
-
-  .distill-site-header .logo img {
-    display: none;
-    max-height: 20px;
-    width: auto;
-    margin-bottom: -4px;
-  }
-
-  .distill-site-header .nav-image img {
-    max-height: 18px;
-    width: auto;
-    display: inline-block;
-    margin-bottom: -3px;
-  }
-
-
-
-  @media screen and (min-width: 1000px) {
-    .distill-site-header .logo img {
-      display: inline-block;
-    }
-    .distill-site-header .nav-left {
-      margin-left: 20px;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 20px;
-    }
-    .distill-site-header .title {
-      padding-left: 12px;
-    }
-  }
-
-
-  .distill-site-header .nav-toggle {
-    display: none;
-  }
-
-  .nav-dropdown {
-    display: inline-block;
-    position: relative;
-  }
-
-  .nav-dropdown .nav-dropbtn {
-    border: none;
-    outline: none;
-    color: rgba(255, 255, 255, 0.8);
-    padding: 16px 10px;
-    background-color: transparent;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    margin: 0;
-    margin-top: 1px;
-    z-index: 2;
-  }
-
-  .nav-dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 200px;
-    border: 1px solid rgba(0,0,0,0.15);
-    border-radius: 4px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-    z-index: 1;
-    margin-top: 2px;
-    white-space: nowrap;
-    padding-top: 4px;
-    padding-bottom: 4px;
-  }
-
-  .nav-dropdown-content hr {
-    margin-top: 4px;
-    margin-bottom: 4px;
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-dropdown-active {
-    display: block;
-  }
-
-  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
-    color: black;
-    padding: 6px 24px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-
-  .nav-dropdown-content .nav-dropdown-header {
-    display: block;
-    padding: 5px 24px;
-    padding-bottom: 0;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: #999999;
-    white-space: nowrap;
-  }
-
-  .nav-dropdown:hover .nav-dropbtn {
-    color: white;
-  }
-
-  .nav-dropdown-content a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-
-  .nav-right .nav-dropdown-content {
-    margin-left: -45%;
-    right: 0;
-  }
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
-    .distill-site-header a.nav-toggle {
-      float: right;
-      display: block;
-    }
-    .distill-site-header .title {
-      margin-left: 0;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 0;
-    }
-    .distill-site-header {
-      overflow: hidden;
-    }
-    .nav-right .nav-dropdown-content {
-      margin-left: 0;
-    }
-  }
-
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header.responsive {position: relative; min-height: 500px; }
-    .distill-site-header.responsive a.nav-toggle {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .distill-site-header.responsive a,
-    .distill-site-header.responsive .nav-dropdown {
-      display: block;
-      text-align: left;
-    }
-    .distill-site-header.responsive .nav-left,
-    .distill-site-header.responsive .nav-right {
-      width: 100%;
-    }
-    .distill-site-header.responsive .nav-dropdown {float: none;}
-    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
-    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
-      display: block;
-      width: 100%;
-      text-align: left;
-    }
-  }
-
-  /* Site Footer */
-
-  .distill-site-footer {
-    width: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-    z-index: 3;
-    margin-top: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: center;
-  }
-
-  /* Headroom */
-
-  d-title {
-    padding-top: 6rem;
-  }
-
-  @media print {
-    d-title {
-      padding-top: 4rem;
-    }
-  }
-
-  .headroom {
-    z-index: 1000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-
-  .headroom--transition {
-    transition: all .4s ease-in-out;
-  }
-
-  .headroom--unpinned {
-    top: -100px;
-  }
-
-  .headroom--pinned {
-    top: 0;
-  }
-
-  /* adjust viewport for navbar height */
-  /* helps vertically center bootstrap (non-distill) content */
-  .min-vh-100 {
-    min-height: calc(100vh - 100px) !important;
-  }
-
-  </style>
-
-  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-  <link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet"/>
-  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
+  <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
 
@@ -1837,844 +1500,162 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   </script>
 
-  <style type="text/css">
-  /* base variables */
-
-  /* Edit the CSS properties in this file to create a custom
-     Distill theme. Only edit values in the right column
-     for each row; values shown are the CSS defaults.
-     To return any property to the default,
-     you may set its value to: unset
-     All rows must end with a semi-colon.                      */
-
-  /* Optional: embed custom fonts here with `@import`          */
-  /* This must remain at the top of this file.                 */
-
-
-
-  html {
-    /*-- Main font sizes --*/
-    --title-size:      50px;
-    --body-size:       1.06rem;
-    --code-size:       14px;
-    --aside-size:      12px;
-    --fig-cap-size:    13px;
-    /*-- Main font colors --*/
-    --title-color:     #000000;
-    --header-color:    rgba(0, 0, 0, 0.8);
-    --body-color:      rgba(0, 0, 0, 0.8);
-    --aside-color:     rgba(0, 0, 0, 0.6);
-    --fig-cap-color:   rgba(0, 0, 0, 0.6);
-    /*-- Specify custom fonts ~~~ must be imported above   --*/
-    --heading-font:    sans-serif;
-    --mono-font:       monospace;
-    --body-font:       sans-serif;
-    --navbar-font:     sans-serif;  /* websites + blogs only */
-  }
-
-  /*-- ARTICLE METADATA --*/
-  d-byline {
-    --heading-size:    0.6rem;
-    --heading-color:   rgba(0, 0, 0, 0.5);
-    --body-size:       0.8rem;
-    --body-color:      rgba(0, 0, 0, 0.8);
-  }
-
-  /*-- ARTICLE TABLE OF CONTENTS --*/
-  .d-contents {
-    --heading-size:    18px;
-    --contents-size:   13px;
-  }
-
-  /*-- ARTICLE APPENDIX --*/
-  d-appendix {
-    --heading-size:    15px;
-    --heading-color:   rgba(0, 0, 0, 0.65);
-    --text-size:       0.8em;
-    --text-color:      rgba(0, 0, 0, 0.5);
-  }
-
-  /*-- WEBSITE HEADER + FOOTER --*/
-  /* These properties only apply to Distill sites and blogs  */
-
-  .distill-site-header {
-    --title-size:       18px;
-    --text-color:       rgba(255, 255, 255, 0.8);
-    --text-size:        15px;
-    --hover-color:      white;
-    --bkgd-color:       #0F2E3D;
-  }
-
-  .distill-site-footer {
-    --text-color:       rgba(255, 255, 255, 0.8);
-    --text-size:        15px;
-    --hover-color:      white;
-    --bkgd-color:       #0F2E3D;
-  }
-
-  /*-- Additional custom styles --*/
-  /* Add any additional CSS rules below                      */
-  </style>
-  <style type="text/css">
-  /* base variables */
-
-  /* Edit the CSS properties in this file to create a custom
-     Distill theme. Only edit values in the right column
-     for each row; values shown are the CSS defaults.
-     To return any property to the default,
-     you may set its value to: unset
-     All rows must end with a semi-colon.                      */
-
-  /* Optional: embed custom fonts here with `@import`          */
-  /* This must remain at the top of this file.                 */
-
-
-
-  html {
-    /*-- Main font sizes --*/
-    --title-size:      50px;
-    --body-size:       1.06rem;
-    --code-size:       14px;
-    --aside-size:      12px;
-    --fig-cap-size:    13px;
-    /*-- Main font colors --*/
-    --title-color:     #592524;
-    --header-color:    rgba(89, 37, 36, 0.8);
-    --body-color:      rgba(0, 0, 0, 0.8);
-    --aside-color:     rgba(0, 0, 0, 0.6);
-    --fig-cap-color:   rgba(0, 0, 0, 0.6);
-    /*-- Specify custom fonts ~~~ must be imported above   --*/
-    --heading-font:    sans-serif;
-    --mono-font:       monospace;
-    --body-font:       sans-serif;
-    --navbar-font:     sans-serif;  /* websites + blogs only */
-  }
-
-  /*-- ARTICLE METADATA --*/
-  d-byline {
-    --heading-size:    0.6rem;
-    --heading-color:   rgba(0, 0, 0, 0.5);
-    --body-size:       0.8rem;
-    --body-color:      rgba(0, 0, 0, 0.8);
-  }
-
-  /*-- ARTICLE TABLE OF CONTENTS --*/
-  .d-contents {
-    --heading-size:    18px;
-    --contents-size:   13px;
-  }
-
-  /*-- ARTICLE APPENDIX --*/
-  d-appendix {
-    --heading-size:    15px;
-    --heading-color:   rgba(0, 0, 0, 0.65);
-    --text-size:       0.8em;
-    --text-color:      rgba(0, 0, 0, 0.5);
-  }
-
-  /*-- WEBSITE HEADER + FOOTER --*/
-  /* These properties only apply to Distill sites and blogs  */
-
-  .distill-site-header {
-    --title-size:       18px;
-    --text-color:       rgba(255, 255, 255, 0.8);
-    --text-size:        15px;
-    --hover-color:      white;
-    --bkgd-color:       #592524;
-    --link-color:       rgba(255, 255, 255, 0.8);
-  }
-
-  .distill-site-footer {
-    --text-color:       rgba(255, 255, 255, 0.8);
-    --text-size:        15px;
-    --hover-color:      white;
-    --bkgd-color:       #592524;
-  }
-
-  /*-- Additional custom styles --*/
-  /* Add any additional CSS rules below                      */
-
-  h1, h2, h3, h4, h5, h6 {
-    color: #592524;
-  }
-
-  a {
-    color: #913d3b;
-  }
-  a:hover {
-    color: #913d3b;
-  }</style>
-  <style type="text/css">
-  /* base style */
-
-  /* FONT FAMILIES */
-
-  :root {
-    --heading-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
-    --mono-default: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-    --body-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
-  }
-
-  body,
-  .posts-list .post-preview p,
-  .posts-list .description p {
-    font-family: var(--body-font), var(--body-default);
-  }
-
-  h1, h2, h3, h4, h5, h6,
-  .posts-list .post-preview h2,
-  .posts-list .description h2 {
-    font-family: var(--heading-font), var(--heading-default);
-  }
-
-  d-article div.sourceCode code,
-  d-article pre code {
-    font-family: var(--mono-font), var(--mono-default);
-  }
-
-
-  /*-- TITLE --*/
-  d-title h1,
-  .posts-list > h1 {
-    color: var(--title-color, black);
-  }
-
-  d-title h1 {
-    font-size: var(--title-size, 50px);
-  }
-
-  /*-- HEADERS --*/
-  d-article h1,
-  d-article h2,
-  d-article h3,
-  d-article h4,
-  d-article h5,
-  d-article h6 {
-    color: var(--header-color, rgba(0, 0, 0, 0.8));
-  }
-
-  /*-- BODY --*/
-  d-article > p,  /* only text inside of <p> tags */
-  d-article > ul, /* lists */
-  d-article > ol {
-    color: var(--body-color, rgba(0, 0, 0, 0.8));
-    font-size: var(--body-size, 1.06rem);
-  }
-
-
-  /*-- CODE --*/
-  d-article div.sourceCode code,
-  d-article pre code {
-    font-size: var(--code-size, 14px);
-  }
-
-  /*-- ASIDE --*/
-  d-article aside {
-    font-size: var(--aside-size, 12px);
-    color: var(--aside-color, rgba(0, 0, 0, 0.6));
-  }
-
-  /*-- FIGURE CAPTIONS --*/
-  figure .caption,
-  figure figcaption,
-  .figure .caption {
-    font-size: var(--fig-cap-size, 13px);
-    color: var(--fig-cap-color, rgba(0, 0, 0, 0.6));
-  }
-
-  /*-- METADATA --*/
-  d-byline h3 {
-    font-size: var(--heading-size, 0.6rem);
-    color: var(--heading-color, rgba(0, 0, 0, 0.5));
-  }
-
-  d-byline {
-    font-size: var(--body-size, 0.8rem);
-    color: var(--body-color, rgba(0, 0, 0, 0.8));
-  }
-
-  d-byline a,
-  d-article d-byline a {
-    color: var(--body-color, rgba(0, 0, 0, 0.8));
-  }
-
-  /*-- TABLE OF CONTENTS --*/
-  .d-contents nav h3 {
-    font-size: var(--heading-size, 18px);
-  }
-
-  .d-contents nav a {
-    font-size: var(--contents-size, 13px);
-  }
-
-  /*-- APPENDIX --*/
-  d-appendix h3 {
-    font-size: var(--heading-size, 15px);
-    color: var(--heading-color, rgba(0, 0, 0, 0.65));
-  }
-
-  d-appendix {
-    font-size: var(--text-size, 0.8em);
-    color: var(--text-color, rgba(0, 0, 0, 0.5));
-  }
-
-  d-appendix d-footnote-list a.footnote-backlink {
-    color: var(--text-color, rgba(0, 0, 0, 0.5));
-  }
-
-  /*-- WEBSITE HEADER + FOOTER --*/
-  .distill-site-header .title {
-    font-size: var(--title-size, 18px);
-    font-family: var(--navbar-font), var(--heading-default);
-  }
-
-  .distill-site-header a,
-  .nav-dropdown .nav-dropbtn {
-    font-family: var(--navbar-font), var(--heading-default);
-  }
-
-  .nav-dropdown .nav-dropbtn {
-    color: var(--text-color, rgba(255, 255, 255, 0.8));
-    font-size: var(--text-size, 15px);
-  }
-
-  .distill-site-header a:hover,
-  .nav-dropdown:hover .nav-dropbtn {
-    color: var(--hover-color, white);
-  }
-
-  .distill-site-header {
-    font-size: var(--text-size, 15px);
-    color: var(--text-color, rgba(255, 255, 255, 0.8));
-    background-color: var(--bkgd-color, #0F2E3D);
-  }
-
-  .distill-site-footer {
-    font-size: var(--text-size, 15px);
-    color: var(--text-color, rgba(255, 255, 255, 0.8));
-    background-color: var(--bkgd-color, #0F2E3D);
-  }
-
-  .distill-site-footer a:hover {
-    color: var(--hover-color, white);
-  }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
-  <script src="site_libs/popper-2.6.0/popper.min.js"></script>
-  <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
-  <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
-  <script src="site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
-  <script src="site_libs/anchor-4.2.2/anchor.min.js"></script>
-  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
-  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
-  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
+  <script src="ukraine-firearm-knowledge-portal_files/header-attrs-2.29/header-attrs.js"></script>
+  <script src="ukraine-firearm-knowledge-portal_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="ukraine-firearm-knowledge-portal_files/popper-2.6.0/popper.min.js"></script>
+  <link href="ukraine-firearm-knowledge-portal_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="ukraine-firearm-knowledge-portal_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="ukraine-firearm-knowledge-portal_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="ukraine-firearm-knowledge-portal_files/anchor-4.2.2/anchor.min.js"></script>
+  <script src="ukraine-firearm-knowledge-portal_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="ukraine-firearm-knowledge-portal_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="ukraine-firearm-knowledge-portal_files/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
   <!--/radix_placeholder_site_in_header-->
 
 
 </head>
 
-<body class="layout-listing">
+<body>
 
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Projects","authors":[]}
+{"title":"Ukraine firearm knowledge portal","description":"I developed for the Small arms survey project a dashboard visualising data on arms seizure in Ukraine. It gives a fast, interactive view of how firearms are discussed on Ukrainian social media, with a map, charts, and a searchable table. It’s built to be maintainable: data processing happens inside DuckDB, the UI updates reactively, and administrators can refresh the whole dataset with a single button that launches pre‑configured GitHub workflows.","authors":[{"author":"Edith Darin","authorURL":{},"affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2025-12-01T00:00:00.000+00:00","citationText":"Darin, 2025"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
 <!--radix_placeholder_navigation_before_body-->
-<header class="header header--fixed" role="banner">
-<nav class="distill-site-nav distill-site-header">
-<div class="nav-left">
-<a href="index.html" class="title">Meet Edith</a>
-<a href="portfolio.html">Projects</a>
-</div>
-<div class="nav-right">
-<a href="publications.html">Publications</a>
-<a href="talks.html">Talks</a>
-<a href="https://raw.githubusercontent.com/edarin/thatsme/main/cv/cv.pdf">Resume</a>
-<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
-</div>
-</nav>
-</header>
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
-<!--radix_placeholder_article_listing-->
-
-
-<script type="application/javascript">
-
-function init_posts_list() {
-
-  function load_image(img) {
-    var src = $(img).attr('data-src');
-    if (src) {
-      $(img).attr('src', src);
-      $(img).on("load", function() {
-        img.removeAttribute('data-src');
-      });
-    }
-  }
-
-  function set_posts_visible(posts, visible) {
-    if (visible) {
-
-      // show bottom border by default
-      $(posts).removeClass('post-preview-last');
-
-      // apply limits if need be
-      var max_posts = 25;
-      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
-      if (apply_limits && posts.length > max_posts) {
-        posts = $(posts).slice(0, max_posts);
-      } else {
-        $('.posts-more a').addClass('hidden');
-      }
-
-      // apply last style
-      $(posts.slice(-1)[0]).addClass('post-preview-last');
-
-      $(posts).removeClass('hidden');
-      $(posts).find('img[data-src]').each(function(i, img) {
-        load_image(img);
-      });
-    } else {
-      $(posts).addClass('hidden');
-    }
-  }
-
-  function apply_hash_filter() {
-
-    // clear active state
-    $('.categories .active').removeClass('active');
-
-    // mark all posts invisible to start
-    set_posts_visible($('.posts-list').children('a'), false);
-
-    // if we have a hash filter
-    if (window.location.hash && window.location.hash.startsWith("#category:")) {
-
-      // mark posts that match the category visible
-      var page_category = window.location.hash.replace(/^#category:/, "");
-      page_category = decodeURIComponent(page_category)
-      var posts = $('.post-metadata').map(function(idx, script) {
-        var metadata = $.parseJSON($(script).html());
-        var post = null;
-        $.each(metadata.categories, function(idx, category) {
-          category = category.replace(/ /g,"_");
-          if ((page_category || '').toLowerCase() === "articles" || category === page_category) {
-            post = $(script).parent().get();
-            return false;
-          }
-        });
-        return post;
-      });
-      set_posts_visible(posts, true);
-
-      // mark the hash active
-      $('.categories li>a[href="' + decodeURIComponent(window.location.hash) + '"]').addClass('active');
-
-      // update the list_caption
-      var list_caption = $('.posts-list-caption');
-      var caption = (page_category || '').toLowerCase() === "articles"
-        ? list_caption.attr('data-caption')
-        : ('Category: ' + page_category.replace(/_/g," "));
-      list_caption.text(caption);
-
-    } else {
-
-      // no hash filter, make all posts visible (subject to max display)
-      set_posts_visible($('.posts-list').children(), true);
-
-      // reset list caption
-      var list_caption = $('.posts-list-caption');
-      list_caption.text(list_caption.attr('data-caption'));
-
-
-    }
-  }
-
-  // more articles
-  function apply_post_limits(apply) {
-    if (apply) {
-      $('.posts-container').addClass('posts-apply-limit');
-      $('.posts-more a').removeClass('hidden');
-    } else {
-      $('.posts-container').removeClass('posts-apply-limit');
-      $('.posts-more a').addClass('hidden');
-    }
-  }
-
-  // click handling for tags
-  $('.dt-tag').click(function(ev) {
-    window.location.hash = '#category:' + $(this).text().replace(/ /g, "_");
-    return false;
-  })
-
-  // hash filter handling
-  apply_hash_filter();
-  $(window).on('hashchange',function() {
-    apply_post_limits(true);
-    apply_hash_filter();
-  });
-
-  // more articles link
-  $('.posts-more a').click(function(e) {
-    e.preventDefault();
-    apply_post_limits(false);
-    apply_hash_filter();
-    return false;
-  });
-
-}
-
-</script>
-
-
-
-<div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
-<div class="posts-list">
-<h1 class="posts-list-caption" data-caption="Projects">Projects</h1>
-<a href="posts/2025-12-23-demographic-figures-at-risk-in-the-digital-era/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["academia","paper"]}</script>
-<div class="metadata">
-<div class="publishedDate">Dec. 23, 2025</div>
-<div class="dt-authors">
-<div class="dt-author">Edith Darin</div>
-</div>
-</div>
-<div class="thumbnail">
-<img src="posts/2025-12-23-demographic-figures-at-risk-in-the-digital-era/images/preview.jpg"/>
-</div>
-<div class="description">
-<h2>Demographic figures at risk in the digital era: Resisting commodification, reclaiming the common good</h2>
-<div class="dt-tags">
-<div class="dt-tag">academia</div>
-<div class="dt-tag">paper</div>
-</div>
-<p>After eigh years working as a population researcher leveraging digital data for quantifiying population, I have set aside some time to think about the ethical and political consequence of the commodification of demographic data.</p>
-</div>
-</a>
-<a href="posts/2025-12-01-ukraine-firearm-knowledge-portal/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["academia","paper"]}</script>
-<div class="metadata">
-<div class="publishedDate">Dec. 1, 2025</div>
-<div class="dt-authors">
-<div class="dt-author">Edith Darin</div>
-</div>
-</div>
-<div class="thumbnail">
-<img src="posts/2025-12-01-ukraine-firearm-knowledge-portal/images/landing.png"/>
-</div>
-<div class="description">
-<h2>Ukraine firearm knowledge portal</h2>
-<div class="dt-tags">
-<div class="dt-tag">academia</div>
-<div class="dt-tag">paper</div>
-</div>
-<p>I developed for the Small arms survey project a dashboard visualising data on arms seizure in Ukraine. It gives a fast, interactive view of how firearms are discussed on Ukrainian social media, with a map, charts, and a searchable table. It’s built to be maintainable: data processing happens inside DuckDB, the UI updates reactively, and administrators can refresh the whole dataset with a single button that launches pre‑configured GitHub workflows.</p>
-</div>
-</a>
-<a href="posts/2025-08-15-bayesian-modeling-in-the-drc/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["academia","paper"]}</script>
-<div class="metadata">
-<div class="publishedDate">Aug. 15, 2025</div>
-<div class="dt-authors">
-<div class="dt-author">Edith Darin</div>
-</div>
-</div>
-<div class="thumbnail">
-<img src="posts/2025-08-15-bayesian-modeling-in-the-drc/images/clipboard-182869930.png"/>
-</div>
-<div class="description">
-<h2>Modelling population in Kasaï-Oriental, DRC</h2>
-<div class="dt-tags">
-<div class="dt-tag">academia</div>
-<div class="dt-tag">paper</div>
-</div>
-<p>We published a new study uses satellite data and Bayesian modeling and a novel building model component to estimate population in Kasaï‑Oriental, DRC, supporting better local health planning.</p>
-</div>
-</a>
-<a href="posts/2025-08-01-can-satellites-replace-censuses-what-we-learned-from-colombia/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["academia","paper"]}</script>
-<div class="metadata">
-<div class="publishedDate">Aug. 1, 2025</div>
-<div class="dt-authors">
-<div class="dt-author">Edith Darin</div>
-</div>
-</div>
-<div class="thumbnail">
-<img src="posts/2025-08-01-can-satellites-replace-censuses-what-we-learned-from-colombia/images/clipboard-303943579.png"/>
-</div>
-<div class="description">
-<h2>Can Satellites Replace Censuses? What We Learned from Colombia</h2>
-<div class="dt-tags">
-<div class="dt-tag">academia</div>
-<div class="dt-tag">paper</div>
-</div>
-<p>How accurate is satellite data for estimating population where censuses can't reach? We benchmark satellite-derived models in Colombia—and reveals when machine learning falls short and why Bayesian models matter.</p>
-</div>
-</a>
-<a href="posts/2025-08-12-nowpop-network/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["academia","engagement"]}</script>
-<div class="metadata">
-<div class="publishedDate">Feb. 1, 2025</div>
-<div class="dt-authors">
-<div class="dt-author">Edith Darin</div>
-</div>
-</div>
-<div class="thumbnail">
-<img src="posts/2025-08-12-nowpop-network/images/clipboard-478357526.png"/>
-</div>
-<div class="description">
-<h2>Population nowcasting network</h2>
-<div class="dt-tags">
-<div class="dt-tag">academia</div>
-<div class="dt-tag">engagement</div>
-</div>
-<p>We are building a collaboration between universities for advancing knowledge of nowcasting populations, mobility, and migration by combining Bayesian and other methodologies with digital trace and traditional data sources</p>
-</div>
-</a>
-<a href="posts/2025-08-12-ukraine-nowpop-project/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["academia","overview"]}</script>
-<div class="metadata">
-<div class="publishedDate">May 2, 2024</div>
-<div class="dt-authors">
-<div class="dt-author">Edith Darin</div>
-</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2025-08-12-ukraine-nowpop-project/dashboard.png"/>
-</div>
-<div class="description">
-<h2>Ukraine NowPop: internal displacement in Ukraine</h2>
-<div class="dt-tags">
-<div class="dt-tag">academia</div>
-<div class="dt-tag">overview</div>
-</div>
-<p>I am currently working as a population data scientist on the NowPop project, a large-scale population model for Ukraine, using social media and mobile phone data to nowcast population displacement since the full-scale invasion in February 2022.</p>
-</div>
-</a>
-<a href="posts/2023-07-01-collaboration-with-the-colombia-statistics-office/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["academia","engagement"]}</script>
-<div class="metadata">
-<div class="publishedDate">July 1, 2023</div>
-<div class="dt-authors">
-<div class="dt-author">Edith Darin</div>
-</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2023-07-01-collaboration-with-the-colombia-statistics-office/images/clipboard-2983698905.png"/>
-</div>
-<div class="description">
-<h2>Collaboration with the Colombia Statistics Office</h2>
-<div class="dt-tags">
-<div class="dt-tag">academia</div>
-<div class="dt-tag">engagement</div>
-</div>
-<p>The Leverhulme Centre for Demographic Science is partnering with Colombia’s Stats Office to rethink how population counts are produced between censuses. By combining Bayesian modelling, administrative records, and satellite data, the project is pioneering new methods to generate accurate annual population estimates.</p>
-</div>
-</a>
-<a href="posts/2023-02-01-mapping-refugees-in-cameroon-with-high-resolution/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["academia","engagement"]}</script>
-<div class="metadata">
-<div class="publishedDate">Feb. 1, 2023</div>
-<div class="dt-authors">
-<div class="dt-author">Edith Darin</div>
-</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2023-02-01-mapping-refugees-in-cameroon-with-high-resolution/images/clipboard-61555544.webp"/>
-</div>
-<div class="description">
-<h2>Mapping refugees in Cameroon with high-resolution</h2>
-<div class="dt-tags">
-<div class="dt-tag">academia</div>
-<div class="dt-tag">engagement</div>
-</div>
-<p>In collaboration with UN High Commissioner for refugees, we innovated the mapping of displaced populaions by unlocking the power of registration data using satellite imagery and advanced spatial modelling</p>
-</div>
-</a>
-<a href="posts/2023-01-01-radical-routes/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["cooperative"]}</script>
-<div class="metadata">
-<div class="publishedDate">Jan. 1, 2023</div>
-<div class="dt-authors">
-<div class="dt-author">Edith Darin</div>
-</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2023-01-01-radical-routes/images/clipboard-2824881826.jpeg"/>
-</div>
-<div class="description">
-<h2>Radical Routes</h2>
-<div class="dt-tags">
-<div class="dt-tag">cooperative</div>
-</div>
-<p>I am supporting the UK network of mutually-owned housing cooperatives called Radical Routes and more speficially the Finance Working Group.</p>
-</div>
-</a>
-<a href="posts/2021-11-15-statistical-population-modelling-for-census-support/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["academia","tutorial"]}</script>
-<div class="metadata">
-<div class="publishedDate">Nov. 15, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">Edith Darin</div>
-</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2021-11-15-statistical-population-modelling-for-census-support/cover2.PNG"/>
-</div>
-<div class="description">
-<h2>Statistical population modelling for census support</h2>
-<div class="dt-tags">
-<div class="dt-tag">academia</div>
-<div class="dt-tag">tutorial</div>
-</div>
-<p>I led a one-week workshop based on a series of hands-on tutorial to grasp the bases of the Bayesian approach for 
-population models. All the materials, including Stan code, written tutos and presentation are
-available online on a dedicated website. It was first delivered to the Brazilian Stats Office (IBGE).</p>
-</div>
-</a>
-<a href="posts/2021-08-01-woprvision/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["academia","dashboard"]}</script>
-<div class="metadata">
-<div class="publishedDate">June 10, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">Edith Darin</div>
-</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2021-08-01-woprvision/woprvision.PNG"/>
-</div>
-<div class="description">
-<h2>woprVision: a shiny app to visualise Bayesian predictions</h2>
-<div class="dt-tags">
-<div class="dt-tag">academia</div>
-<div class="dt-tag">dashboard</div>
-</div>
-<p>I helped develop woprVision, a multilingual interacive application to visualise and retrieve Bayesian population estimates. We use woprVision at WorldPop as part of our data release process to support (1) mean estimates spatial aggregation for people with limited GIS-skills (2) full distribution aggregation for coomputing correct credible intervals.</p>
-</div>
-</a>
-<a href="posts/2021-07-09-modelling-burkina-faso-population/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["academia","paper"]}</script>
-<div class="metadata">
-<div class="publishedDate">Sept. 20, 2020</div>
-<div class="dt-authors">
-<div class="dt-author">Edith Darin</div>
-</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2021-07-09-modelling-burkina-faso-population/./dat/resident_density_mean_admin3.png"/>
-</div>
-<div class="description">
-<h2>Hybrid census in Burkina Faso: Bottom-up population modelling</h2>
-<div class="dt-tags">
-<div class="dt-tag">academia</div>
-<div class="dt-tag">paper</div>
-</div>
-<p>I developped a Bayesian bottom-up population modelling to adress the challenge of the incomplete 2020 census in Burkina Faso. The model was combining GPS household location with remote sensing product in a Bayesian hierarchcical framework. The output is a hybrid gridded population that was endorsed by Burkina Faso Statistics Office.</p>
-</div>
-</a>
-<a href="posts/2021-07-02-top-down-r-tutorial/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["academia","tutorial"]}</script>
-<div class="metadata">
-<div class="publishedDate">Dec. 8, 2020</div>
-<div class="dt-authors">
-<div class="dt-author">Douglas R Leasure</div>
-<div class="dt-author">Edith Darin</div>
-<div class="dt-author">Andrew J tatem</div>
-</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2021-07-02-top-down-r-tutorial/./dat/schema.jpg"/>
-</div>
-<div class="description">
-<h2>Small area population estimates using random forest top-down disaggregation: An R tutorial</h2>
-<div class="dt-tags">
-<div class="dt-tag">academia</div>
-<div class="dt-tag">tutorial</div>
-</div>
-<p>I have co-authored an R tutorial on how to develop top-down population models, which consists in disaggregating administrative estimates to a finer spatial resolution. We  first shared this tutorial with the Brazilian Stats Office (IGBE).</p>
-</div>
-</a>
-<a href="posts/2020-09-01-coopcycle/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["cooperative"]}</script>
-<div class="metadata">
-<div class="publishedDate">Sept. 1, 2020</div>
-<div class="dt-authors">
-<div class="dt-author">Edith Darin</div>
-</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2020-09-01-coopcycle/coopcycle_logo.jpg"/>
-</div>
-<div class="description">
-<h2>CoopCycle: we socialize platform</h2>
-<div class="dt-tags">
-<div class="dt-tag">cooperative</div>
-</div>
-<p>Since 2017 I am a vice-president of the CoopCycle association  that fights for fair working rights in the bike delivery sector.</p>
-</div>
-</a>
-</div>
-<div class="posts-sidebar">
-<div class="sidebar-section categories">
-<h3>Categories</h3>
-<ul>
-<li>
-<a href="#category:articles">articles</a>
-<span class="category-count">(14)</span>
-</li>
-<li>
-<a href="#category:academia">academia</a>
-<span class="category-count">(12)</span>
-</li>
-<li>
-<a href="#category:cooperative">cooperative</a>
-<span class="category-count">(2)</span>
-</li>
-<li>
-<a href="#category:dashboard">dashboard</a>
-<span class="category-count">(1)</span>
-</li>
-<li>
-<a href="#category:engagement">engagement</a>
-<span class="category-count">(3)</span>
-</li>
-<li>
-<a href="#category:overview">overview</a>
-<span class="category-count">(1)</span>
-</li>
-<li>
-<a href="#category:paper">paper</a>
-<span class="category-count">(5)</span>
-</li>
-<li>
-<a href="#category:tutorial">tutorial</a>
-<span class="category-count">(2)</span>
-</li>
-</ul>
-</div>
-</div>
-<div class="posts-more">
-<a href="#">More articles &raquo;</a>
-</div>
-</div>
-<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
-<h1>Projects</h1>
+<h1>Ukraine firearm knowledge portal</h1>
 
 <!--radix_placeholder_categories-->
+<div class="dt-tags">
+<div class="dt-tag">academia</div>
+<div class="dt-tag">paper</div>
+</div>
 <!--/radix_placeholder_categories-->
-
+<p><p>I developed for the Small arms survey project a dashboard visualising data on arms seizure in Ukraine. It gives a fast, interactive view of how firearms are discussed on Ukrainian social media, with a map, charts, and a searchable table. It’s built to be maintainable: data processing happens inside DuckDB, the UI updates reactively, and administrators can refresh the whole dataset with a single button that launches pre‑configured GitHub workflows.</p></p>
 </div>
 
+<div class="d-byline">
+  Edith Darin true 
+  
+<br/>2025-12-01
+</div>
 
 <div class="d-article">
+<h1 id="ukraine-firearm-knowledge-portal">Ukraine Firearm Knowledge Portal</h1>
+<p>The <a href="https://ukraine-firearms-dashboard-viz.share.connect.posit.cloud/">Ukraine Firearm Knowledge
+Portal</a>
+is a web‑based dashboard that lets anyone explore information about
+firearms that appear in Ukrainian social‑media posts. It’s built with
+the R /Shiny framework and runs in the cloud, so you can reach it from
+any browser without installing software.</p>
+<p><img src="images/landing.png" /></p>
+<h2 id="what-you-see-when-you-open-the-dashboard.">What you see when you open the dashboard.</h2>
+<ul>
+<li><p>Map of Ukraine – Each region (oblast) shows the two most‑mentioned
+firearm items with coloured circles. Bigger circles mean the item is
+mentioned more often.</p></li>
+<li><p>Key numbers (metrics) – Quick stats such as the most recent posting
+date, total number of posts, and total mentions.</p></li>
+<li><p>Charts – Over‑time bar chart shows how many posts mention each item
+month by month. Category chart displays the total counts for each
+firearm type.</p></li>
+<li><p>Data table – A searchable, scrollable list of every post, with
+coloured “badge” labels, a thumbnail of the associated screenshot,
+and a link to the original source (Facebook, Telegram, etc.).</p></li>
+<li><p>Language switch – Buttons let you toggle all labels, legends and
+text between English and Ukrainian.</p></li>
+</ul>
+<p>All of these elements react instantly when you change the filters
+(items, regions, date range). There’s no “Apply” button; the dashboard
+updates automatically, with a short pause to avoid overwhelming the
+server.</p>
+<h2 id="how-the-data-get-there">How the data get there</h2>
+<ul>
+<li><p>Source material – Social‑media posts are collected in Google Drive
+as CSV files.</p></li>
+<li><p>Database – Those CSVs are loaded into a lightweight DuckDB database
+that lives on the server. DuckDB does the heavy lifting (splitting
+multi‑value fields, grouping by month, etc.) so the R code only
+pulls the exact slice you need.</p></li>
+<li><p>Screenshots – Static images of the original posts are stored on
+Cloudflare and referenced by predictable URLs
+(year‑month/post‑id.png).</p></li>
+</ul>
+<p>When the dashboard starts, it authenticates to Google Drive, opens the
+DuckDB file, builds a few helper views, and caches colour palettes and
+filter choices for speed.</p>
+<h2 id="who-can-log-in-and-what-they-can-do">Who can log in and what they can do</h2>
+<ul>
+<li><p>Regular users – Log in with an email address. Their email is checked
+against a users.csv file stored on Google Drive. Once logged in they
+can explore the dashboard.</p></li>
+<li><p>Admins – If the email matches the designated admin account
+(<a href="mailto:ukraine.firearms.dashboard@gmail.com" class="email">ukraine.firearms.dashboard@gmail.com</a>),
+an extra Update tab appears. From there admins can trigger automated
+pipelines that: Pull fresh text files from Google Drive, rebuild any
+derived resources, and commit them to the GitHub repository. Pull
+new Excel spreadsheets and screenshots, process them, and publish
+the updated images to Cloudflare.</p></li>
+</ul>
+<p>These pipelines run as GitHub Actions and take a few minutes; after they
+finish the dashboard picks up the new data on the next page reload.</p>
+<h2 id="where-everything-lives">Where everything lives</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>Where it’s hosted</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Shiny app</td>
+<td>Posit Connect Cloud (deployed from GitHub)</td>
+</tr>
+<tr class="even">
+<td>Dashboard code (open source)</td>
+<td><a href="https://github.com/ukraine-firearms-dashboard">Github</a></td>
+</tr>
+<tr class="odd">
+<td>Source CSV / Excel files, users.csv</td>
+<td>Google Drive (accessed via a service‑account token)</td>
+</tr>
+<tr class="even">
+<td>Static screenshots</td>
+<td>Cloudflare Workers CDN (URL pattern {YYYY‑MM}/{post_id}.png)</td>
+</tr>
+<tr class="odd">
+<td>Automation scripts &amp; CI/CD</td>
+<td>GitHub repositories + GitHub Actions</td>
+</tr>
+<tr class="even">
+<td>Secrets (tokens, passwords)</td>
+<td>Environment variables on the server and GitHub repo secrets</td>
+</tr>
+</tbody>
+</table>
+<h2 id="bottom-line">Bottom line</h2>
+<p>The portal gives a fast, interactive view of how firearms are discussed
+on Ukrainian social media, with a map, charts, and a searchable table.
+It’s built to be maintainable: data processing happens inside DuckDB,
+the UI updates reactively, and administrators can refresh the whole
+dataset with a single button that launches pre‑configured GitHub
+workflows. All of this is secured by email‑based login backed by a
+Google Drive user list, and the system is ready to be extended with more
+languages, authentication methods, or automated update schedules.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

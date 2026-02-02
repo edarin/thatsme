@@ -4,6 +4,7 @@ site: distill::distill_website
 listing:
   posts:
   - "2025-12-23-demographic-figures-at-risk-in-the-digital-era"
+  - "2025-12-01-ukraine-firearm-knowledge-portal"
   - "2025-08-15-bayesian-modeling-in-the-drc"
   - "2025-08-01-can-satellites-replace-censuses-what-we-learned-from-colombia"
   - "2025-08-12-nowpop-network"

@@ -16,9 +16,9 @@ listing: posts
 theme: theme.css
 ---
 
-Since 2024 I’ve been working as a Population Data Scientist on the NowPop project in Oxford’s Demographic Science Unit, where I model internal displacement in Ukraine using social‑media and mobile‑phone data.
+Since 2024 I’ve been working as a Population Data Scientist on the NowPop project in Oxford’s Demographic Science Unit, where I model **internal displacement in Ukraine using social‑media and mobile‑phone data**.
 
-As a doctoral student at the Leverhulme Centre for Demographic Science, University of Oxford, I am focusing on high‑resolution population estimates in data‑limited settings, using a combination of satellite imagery, traditional survey data and administrative records. I am studied two environments: population displacement in the Gaza strip, and population evolution in Colombia. I am affiliated with the Max Planck Institute for Demographic Research in Rostock, Germany, as part of the Population Health and Data Science (PHDS) doctoral academy.
+As a doctoral student at the Leverhulme Centre for Demographic Science, University of Oxford, I am focusing on **high‑resolution population estimates in data‑limited settings**, using a combination of satellite imagery, traditional survey data and administrative records. I have studied two environments: population displacement in the Gaza strip, and population evolution in Colombia. I am affiliated with the Max Planck Institute for Demographic Research in Rostock, Germany, as part of the Population Health and Data Science (PHDS) doctoral academy.
 
 
 My experience spans:
@@ -31,16 +31,20 @@ My experience spans:
 
  I have done some ponctual consulting for the Small Arms Survey program (Graduate Institute, Geneva) to develop automatised data pipelines and dashboards for weapon monitoring in Ukraine.
  
- In my own time, I’ve also helped develop a bike delivery cooperatives network as well as mutually owned housing‑cooperative business plans, gaining experience in finance and collaboration.
+ In my own time, I’ve helped develop a bike delivery cooperatives network as well as mutually owned housing‑cooperative business plans, gaining experience in finance and collaboration.
+ 
+
 
 # News
 
 ## 2026
-- **6th February**: Invite to give a lecture at the Interdisciplinary Institute for Societal Computing, Saarländ University, Germany.
+- **23d February**: Interview by Orsola Torrisi and Amy Hagopian on Ethical and Responsible Social Science Research in Armed Conflict Contexts.
+- **14th February**: Radical Routes Winter gathering
+- **6th February**: Invite to give a lecture at the Interdisciplinary Institute for Societal Computing, Saarland University, Germany.
 - **16th January**: Present my work on population estimation in humanitarian settings at the Population Health and Armed Conflict (PHAC) seminar series, University of Toronto, Canada.
 
 ## 2025
-- **December**: Publish an article in *Big Data and Society* on the commodification of demographic data
+- **23rd December**: Publish an article in *Big Data and Society* on the commodification of demographic data
 - **10th November**: Receive the Julia Mead Knox Memorial Prize for Research in Demography and Population Health, awared by the Leverhulme Centre for Demographic Science, University of Oxford.
 - **4th December**: Present my work on the commodification of demographic data at the PHDS Annual Academy of the Max Planck Institute for Demographic Research, Germany.
 - **29th November**: Present my recent work on population estimation at the 10èmes Rencontres Statistique, Université Bretagne Sud, France.
