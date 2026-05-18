@@ -27,7 +27,7 @@ My experience spans:
 * *Humanitarian work* – with the UN World Food Programme, World Health Organisation, UN Fund for Population, UN High Commissioner for Refugees.  
 * *Government* – with the Open Data Taskforce (France) and various Stats Offices (Burkina Faso, Mali, Brazil, Colombia).  
 
- My work is published in *Population*, *Population, Space and Place*, *Nature Communications*, *International Journal of Humanitarian Action* and *PLOS ONE*, and I have presented at conferences including Population Association of America, International Population Conference and the Royal Geographical Society.
+ My work is published in *Population*, *Population, Space and Place*, *Nature Communications*, *International Journal of Humanitarian Action*, *Big Data and Society*, *Population and Development Review*, and *PLOS ONE Global Health*, and I have presented at conferences including Population Association of America, International Population Conference, European Population Conference, and the Royal Geographical Society.
 
  I have done some ponctual consulting for the Small Arms Survey program (Graduate Institute, Geneva) to develop automatised data pipelines and dashboards for weapon monitoring in Ukraine.
  
@@ -38,6 +38,9 @@ My experience spans:
 # News
 
 ## 2026
+- **15th May**: Paper published in *Population and Development Review* on the population response to the Gaza war, using high-frequency digital data
+- **6th May**: Present at the AI for Good Oxford seminar on the use and misuse of high-frequency digital data to analyze forced displacement
+- **27th March**: Start building data infrastructures for the ERC-funded "Sexratio" project under the supervision of Dr Joshua Wilde at the University of Oxford, UK.
 - **23d February**: Interview by Orsola Torrisi and Amy Hagopian on Ethical and Responsible Social Science Research in Armed Conflict Contexts.
 - **14th February**: Radical Routes Winter gathering
 - **6th February**: Invite to give a lecture at the Interdisciplinary Institute for Societal Computing, Saarland University, Germany.

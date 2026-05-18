@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2026.2.2)  2 FEB 2026 18:36
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2026.2.2)  18 MAY 2026 17:04
  restricted system commands enabled.
 **cv.tex
 (./cv.tex
@@ -959,42 +959,42 @@ File: mt-LatinModernRoman.cfg 2021/02/21 v1.1 microtype config. file: Latin Mode
 ) (c:/Users/EdithD/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/mt-TU-empty.cfg
 File: mt-TU-empty.cfg 2021/06/22 v1.1 microtype config. file: fonts with nonstandard glyph set (RS)
 )
-Overfull \hbox (3.4pt too wide) in paragraph at lines 73--113
+Overfull \hbox (3.4pt too wide) in paragraph at lines 73--111
 [][][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--113
+Underfull \hbox (badness 10000) in paragraph at lines 73--111
 
  []
 
 
-Overfull \hbox (0.2847pt too wide) in alignment at lines 114--134
+Overfull \hbox (0.2847pt too wide) in alignment at lines 112--129
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--135
+Underfull \hbox (badness 10000) in paragraph at lines 112--130
 
  []
 
 
-Overfull \hbox (0.2847pt too wide) in alignment at lines 136--153
+Overfull \hbox (0.2847pt too wide) in alignment at lines 132--143
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--154
+Underfull \hbox (badness 10000) in paragraph at lines 132--144
 
  []
 
 
-Overfull \hbox (0.2847pt too wide) in alignment at lines 156--167
+Overfull \hbox (0.2847pt too wide) in alignment at lines 146--166
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--168
+Underfull \hbox (badness 10000) in paragraph at lines 146--167
 
  []
 
@@ -1014,15 +1014,15 @@ Here is how much of LuaTeX's memory you used:
  125086,1648299 words of node,token memory allocated
  610 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 1 local_par, 4 glue, 5 kern, 1 penalty, 3 glyph, 19 attribute, 58 glue_spec, 14 attribute_list, 2 write nodes
-   avail lists: 1:1,2:1787,3:562,4:402,5:753,6:198,7:11979,8:1,9:919,10:21,11:895
+   avail lists: 1:1,2:1768,3:556,4:414,5:777,6:192,7:11754,8:1,9:904,10:14,11:874
  56892 multiletter control sequences out of 65536+600000
  63 fonts using 14363903 bytes
  117i,9n,131p,998b,1088s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Users/EdithD/AppData/Roaming/TinyTeX/texmf-dist/fonts/opentype/public/fontawesome5/FontAwesome5Free-Solid-900.otf><c:/Users/EdithD/AppData/Roaming/TinyTeX/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf><c:/Users/EdithD/AppData/Roaming/TinyTeX/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf><./texgyreheros-bold.otf><c:/Users/EdithD/AppData/Roaming/TinyTeX/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf><./texgyreheros-regular.otf><./Lato-Light.ttf>
-Output written on cv.pdf (2 pages, 49281 bytes).
+Output written on cv.pdf (2 pages, 50017 bytes).
 
-PDF statistics: 87 PDF objects out of 1000 (max. 8388607)
- 61 compressed objects within 1 object stream
+PDF statistics: 89 PDF objects out of 1000 (max. 8388607)
+ 63 compressed objects within 1 object stream
  3 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

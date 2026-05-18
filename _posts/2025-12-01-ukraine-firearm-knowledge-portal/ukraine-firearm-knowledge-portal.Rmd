@@ -89,16 +89,16 @@ filter choices for speed.
 These pipelines run as GitHub Actions and take a few minutes; after they
 finish the dashboard picks up the new data on the next page reload.
 
-## Where everything lives 
+## Where everything lives
 
-| Component |  Where it’s hosted |
+| Component | Where it’s hosted |
 |----|----|
-|  Shiny app |  Posit Connect Cloud (deployed from GitHub) |
+| Shiny app | Posit Connect Cloud (deployed from GitHub) |
 | Dashboard code (open source) | [Github](https://github.com/ukraine-firearms-dashboard) |
 | Source CSV / Excel files, users.csv | Google Drive (accessed via a service‑account token) |
-|  Static screenshots |  Cloudflare Workers CDN (URL pattern {YYYY‑MM}/{post_id}.png) |
-| Automation scripts & CI/CD |  GitHub repositories + GitHub Actions |
-| Secrets (tokens, passwords) |  Environment variables on the server and GitHub repo secrets |
+| Static screenshots | Cloudflare Workers CDN (URL pattern {YYYY‑MM}/{post_id}.png) |
+| Automation scripts & CI/CD | GitHub repositories + GitHub Actions |
+| Secrets (tokens, passwords) | Environment variables on the server and GitHub repo secrets |
 
 ## Bottom line
 

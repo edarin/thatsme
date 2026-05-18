@@ -7,9 +7,26 @@ description: |
 
 # Peer-reviewed publications
 
+### 2026
+**Darin E**, Kashyap, R. and Leasure, D.R. (2026) Leveraging high‐frequency digital data to analyze forced displacement dynamics: A case study from the Gaza Strip. Population and Development Review 12(4). [PDF](https://doi.org/10.1111/padr.70064)
+
+<aside>
+```{r, echo=F}
+knitr::include_graphics(here::here('./pic/article_pdr.png'))
+```
+</aside>
+
+Qader S., **Darin E.**, Dicko A.H., Galal H., Park H., Jimenez R.M., Harfoot A., and Tatem A.J. (2026) Developing a customized, enumeration area-based sampling frame tailored to a specific population subgroup using geospatial methods. Journal of Survey Statistics and Methodology 14(1). [PDF](https://doi.org/10.1093/jssam/smaf027)
+
+<aside>
+```{r, echo=F}
+knitr::include_graphics(here::here('./pic/article_jssam.jpeg'))
+```
+</aside>
+
 ### 2025
 
-**Darin E** (2025) Demographic figures at risk in the digital era: Resisting commodification, reclaiming the common good. Big Data & Society 12(4).[PDF](https://doi.org/10.1177/20539517251403948)]
+**Darin E** (2025) Demographic figures at risk in the digital era: Resisting commodification, reclaiming the common good. Big Data & Society 12(4).[PDF](https://doi.org/10.1177/20539517251403948)
 
 <aside>
 ```{r, echo=F}

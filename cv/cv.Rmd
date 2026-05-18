@@ -41,9 +41,7 @@ GNU/Linux
 R (+++)
 Python (++)
 \textbf{Dashboard \& API}
-Docker, Plumber, Flask,
-PostgreSQL, DuckDB, R Shiny,
-Git, Nginx
+Docker, Flask, PostgreSQL, DuckDB, R Shiny, Git, Nginx
 \textbf{GIS \& Remote Sensing}
 QGIS, Google Earth Engine, GDAL, PostGIS
 ~
@@ -54,43 +52,21 @@ QGIS, Google Earth Engine, GDAL, PostGIS
 \textbf{Italian} intermediate
 ~
 \end{aside}
-\section{Education}
-\begin{entrylist}
-\entry
-{2026 - \\ 2022}
-{DPhil in Demography}
-{University of Oxford, UK}
-{Topic:\textit{Estimating subnational population sizes in data-scarce contexts}. Affiliated with the Max Planck Institute for Demographic Research and in collaboration with the Colombian Stats Office}
-\entry
-{2019 - \\ 2018}
-{MSc in Applied GIS and Remote Sensing}
-{University of Southampton, UK}
-{Dissertation featured in a peer-reviewed article.}
-\entry
-{2018 - \\ 2015}
-{MSc in Statistics and Economics}
-{\\Paris Graduate School of Economics, Statistics and Finance (ENSAE), France}{Semesters abroad at Humbold University and Galatasaray University.}
-% \entry
-% {2014 - \\ 2013}
-% {Double Bachelor's Degree in Economics and Sociology} 
-% {\\École Normale Supérieure de Cachan, Université Paris-I-Panthéon-Sorbonne, France}
-% {}
-\end{entrylist}
-\section{Working experiences}
+\section{Work}
 \begin{entrylist}
 \entry
 {2026 - \\ 2024}
 {Population Data Scientist}
 {Demographic Unit, University of Oxford, UK}
-{Nowcast forced displacement in war-struck Ukraine by age and sex. Funded by WHO. \textit{Methods developed:} Statistic modelling of flows of mobile phone subscribers. Automatised data pipeline. Deploy dashboard and API for dissemination}
+{-\textit{Sexratio project}: technical lead for data infrastructures linking survey data to daily environmental stressors (temperature, air pollution, conflict events). \textit{Methods developed:} Duckdb interface for Parquet files. PI: Dr Joshua Wilde\\
+-\textit{NowPop project}: Model monthly forced internal displacement in war-struckUkraine. \textit{Methods developed:} Statistic modelling of flows of mobile phone subscribers. Automated dockerised data pipeline. Deploy nginx dashboard and flask API for dissemination. Partner: WHO. PI: Dr Douglas Leasure}
 \entry
 {2024 - \\ 2018}
 {Research Fellow}
 {WorldPop, University of Southampton, UK}
 {\textit{Until 08/21 Specialist Research Technician}\\
-Building statistical models to provide up-to-date, spatially complete population count in data-scarce contexts. Predict and map population with high spatial resolution at the grid cell. Lead modeller for filling population gaps in censuses impacted by insecurity (Burkina Faso and Mali). Lead trainer on gridded population estimation to national statistics offices. Funded by the Gates foundation and UNFPA. Estimate high-resolution refugee population in Cameroon, funded by UNHCR \\
-\textit{Methods developed:} Hierarchical Bayesian modelling combining survey data with geospatial covariates. Random-forest models for producing high-resolution population estimates. Grid-based spatial sampling design for household surveys.
-}
+Lead modeller for filling population gaps in censuses impacted by insecurity (Burkina Faso, Mali, Demogractic Republic of Congo). Map  refugee population in Cameroon. Parterns: UNFPA, UNHCR, Gates foundation, CIESIN. \\
+\textit{Methods developed:} Hierarchical Bayesian modelling combining survey data with geospatial covariates. Random-forest models for producing high-resolution population estimates. Grid-based spatial sampling design for household surveys.}
 \entry{2017}{Data Scientist Intern}{mVAM, UN World Food Program, Italy}{ 
 Assessing food security from remote sensing and mobile data collection. Machine-learning based propensity score weighting in complex survey design. Support mission for Mali Country Office (Bamako).}
 \entry{2016}{ Data Scientist Intern}{Etalab, Governmental Task Force for OpenData, France}{\emph{OpenFisca}: French tax and benefit system micro-simulation platform. Finalist of the Open Government Partnership Hackathon. }
@@ -110,14 +86,38 @@ Assessing food security from remote sensing and mobile data collection. Machine-
 {Co-I for creating a population model with Brazil Statistics Office (IBGE).}
 \end{entrylist}
 
+\section{Education}
+\begin{entrylist}
+\entry
+{2026 - \\ 2022}
+{DPhil in Demography}
+{University of Oxford, UK}
+{Topic:\textit{Estimating subnational population sizes in data-scarce contexts}. Affiliated with the Max Planck Institute for Demographic Research and in collaboration with the Colombian Stats Office}
+\entry
+{2019 - \\ 2018}
+{MSc in Applied GIS and Remote Sensing}
+{University of Southampton, UK}
+{Dissertation featured in a peer-reviewed article.}
+\entry
+{2018 - \\ 2015}
+{MSc in Statistics and Economics}
+{ENSAE, France}{Semesters abroad at Humbold University and Galatasaray University.}
+% \entry
+% {2014 - \\ 2013}
+% {Double Bachelor's Degree in Economics and Sociology} 
+% {\\École Normale Supérieure de Cachan, Université Paris-I-Panthéon-Sorbonne, France}
+% {}
+\end{entrylist}
 \clearpage
 
 \begin{noside}
 \section{Academic outcomes}
 \textbf{Peer-reviewed papers}
 \begin{itemize}
-\item Demographic figures at risk in the digital era: Resisting commodification, reclaiming the common good.\textbf{Darin E}. \textit{Big Data \& Society} 12(4).\href{https://doi.org/10.1177/20539517251403948}{\scriptsize\faIcon{external-link-alt}}, 2025
-\item  How Accurate Are High Resolution Settlement Maps at Predicting Population Counts in Data Scarce Settings?, \textbf{Darin E.}, Kashyap, R. and Leasure, D.R.  \textit{Population, Space and Place}, 31: e70083. 2025 \href{https://doi.org/10.1002/psp.70083)}{\scriptsize\faIcon{external-link-alt}}
+\item Leveraging high‐frequency digital data to analyze forced displacement dynamics: A case study from the Gaza Strip.\textbf{Darin E}, Kashyap, R. and Leasure, D.R. \textit{Population and Development Review} 12(4), 2026.\href{https://doi.org/10.1111/padr.70064}{\scriptsize\faIcon{external-link-alt}}
+\item Developing a customized, enumeration area-based sampling frame tailored to a specific population subgroup using geospatial methods, Qader S., \textbf{Darin E.}, Dicko A.H., Galal H., Park H., Jimenez R.M., Harfoot A., and Tatem A.J. \textit{Journal of Survey Statistics and Methodology} 14(1), 2026. \href{https://doi.org/10.1093/jssam/smaf027}{\scriptsize\faIcon{external-link-alt}}
+\item Demographic figures at risk in the digital era: Resisting commodification, reclaiming the common good.\textbf{Darin E}. \textit{Big Data \& Society} 12(4), 2025.\href{https://doi.org/10.1177/20539517251403948}{\scriptsize\faIcon{external-link-alt}}
+\item  How accurate are high-resolution settlement maps at predicting population counts in data-scarce settings?, \textbf{Darin E.}, Kashyap, R. and Leasure, D.R.  \textit{Population, Space and Place}, 31: e70083, 2025. \href{https://doi.org/10.1002/psp.70083}{\scriptsize\faIcon{external-link-alt}}
 \item Tackling public health data gaps through Bayesian high-resolution population estimation: A case study of Kasaï-Oriental, Democratic Republic of the Congo, Boo G, \textbf{Darin E}, Chamberlain HR, Hosner R, Akilimali PK, et al. 2025 \textit{PLOS Global Public Health}, 5(9): e0005072. \href{https://doi.org/10.1371/journal.pgph.0005072}{\scriptsize\faIcon{external-link-alt}}
 \item Mapping refugee populations at high-resolution by unlocking humanitarian administrative data, \textbf{Darin, E.}; Dicko D. H.;  Galal H.; Jimenez R.M.; Park H.;  Tatem A.J.; Qader S., \textit{Journal of International Humanitarian Action}, 2024 \href{https://doi.org/10.1186/s41018-024-00157-6}{\scriptsize\faIcon{external-link-alt}}
 \item Building footprint data for countries in Africa: To what extent are existing data products comparable?, Chamberlain H. R.; \textbf{Darin, E.}; Adewole A. W.; Lazar A.; Tatem A.J., \textit{Computers, Environment and Urban Systems}, 2024, 102104, \href{https://doi.org/10.1016/j.compenvurbsys.2024.102104}{\scriptsize\faIcon{external-link-alt}}
@@ -145,9 +145,10 @@ Assessing food security from remote sensing and mobile data collection. Machine-
 % \item Poster: How Bayesian modelling could use the Big Tech competition in producing built-up maps, \textbf{Darin E}, \textit{Bayesian methods for the social sciences}, 2022.  \href{http://dx.doi.org/10.13140/RG.2.2.15592.55040}{\scriptsize\faIcon{external-link-alt}}
 % \item Poster: High-resolution population mapping and estimation in the western part of the Democratic Republic of Congo, \textbf{Darin E}; Boo G;  Leasure DL and Tatem AJ, \textit{GEOMED 2019}, 2019.  \href{https://www.researchgate.net/publication/335320708_High-resolution_population_mapping_and_estimation_in_the_western_part_of_the_Democratic_Republic_of_Congo?channel=doi&linkId=5d5e587f299bf1b97cfd0ba7&showFulltext=true}{\scriptsize\faIcon{external-link-alt}}
 %\end{itemize}
+
 \textbf{Teaching}
 \begin{itemize}
-\item Workshop: Gridded population modelling for Summer Institutes in Computational Social Science, Covenant, Nigeria 2022, Joseph Ki-Zerbo and Norbert Zongo University, Burkina Faso 2021, Data Science Nigeria Bootcamp 2019
+\item Workshop: Gridded population modelling for Summer Institutes in Computational Social Science, Covenant, Nigeria 2022, Joseph Ki-Zerbo and Norbert Zongo University, Burkina Faso 2021, Data Science Nigeria Bootcamp 2019. 
 
 \item  Tutorials: Statistical population modelling for census support; \textit{WorldPop, University of Southampton}, 2021, \href{https://wpgp.github.io/bottom-up-tutorial/}{\scriptsize\faIcon{external-link-alt}}. Small area population estimates using random forest top-down disaggregation: An R tutorial;   \textit{WorldPop, University of Southampton}, 2020. \href{https://htmlpreview.github.io/?https://github.com/wpgp/top-down-tutorial/blob/master/4_tutorial.html#Suggested_Citation}{\scriptsize\faIcon{external-link-alt}}.
 
