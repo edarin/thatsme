@@ -52,6 +52,7 @@ QGIS, Google Earth Engine, GDAL, PostGIS
 \textbf{Italian} intermediate
 ~
 \end{aside}
+
 \section{Work}
 \begin{entrylist}
 \entry
@@ -109,8 +110,9 @@ Assessing food security from remote sensing and mobile data collection. Machine-
 % {}
 \end{entrylist}
 \clearpage
-
+\newpage
 \begin{noside}
+
 \section{Academic outcomes}
 \textbf{Peer-reviewed papers}
 \begin{itemize}
@@ -133,7 +135,7 @@ Assessing food security from remote sensing and mobile data collection. Machine-
 \end{itemize}
 
 
-\textbf{Books chapter}
+\textbf{Book chapter}
 \begin{itemize}
 \item Demographic figures at risk in the digital era: Resisting commodification, reclaiming the common good \textbf{Darin, E.} in \textit{Digital Fairness and data protection in the age of artificial intelligence}, Lefebvre Giuffre. \href{https://shopdata.giuffre.it/media/estratti/ESTRATTO_024228064.pdf}{\scriptsize\faIcon{external-link-alt}}
 \end{itemize}
@@ -143,28 +145,16 @@ Assessing food security from remote sensing and mobile data collection. Machine-
 \item wopr: An R package to query the WorldPop Open Population Repository, version 1.0.1, Leasure DR; Bondarenko M; \textbf{Darin E}; Tatem AJ, \textit{WorldPop, University of Southampton}, 2020. Maintainer: \textbf{Darin E}. \href{https://apps.worldpop.org/woprVision/}{\scriptsize\faIcon{external-link-alt}}
 \end{itemize}
 
-\textbf{Committee position}
-\begin{itemize}
-\item I am a member of the Royal Statistical Society Data Ethics and Governance Section Committee
-\end[itemize]
+\textbf{Reviews} \\
+I have reviewed papers for \textit{Data and Policy}, \textit{Geoenvirnmental disasters}, \textit{Habitat international}, \textit{PLOS Global Health}, \textit{Royal Society OpenScience}, and \textit{Vienna Yearbook for Population Research}.
 
+\textbf{Committee position} \\
+I am a member of the Royal Statistical Society Data Ethics and Governance Section Committee
+\end{noside}
+\null\newpage
 
-<!-- \textbf{Teaching} -->
-<!-- \begin{itemize} -->
-<!-- \item Workshop: Gridded population modelling for Summer Institutes in Computational Social Science, Covenant, Nigeria 2022, Joseph Ki-Zerbo and Norbert Zongo University, Burkina Faso 2021, Data Science Nigeria Bootcamp 2019.  -->
-<!-- \item  Tutorials: Statistical population modelling for census support; \textit{WorldPop, University of Southampton}, 2021, \href{https://wpgp.github.io/bottom-up-tutorial/}{\scriptsize\faIcon{external-link-alt}}. Small area population estimates using random forest top-down disaggregation: An R tutorial;   \textit{WorldPop, University of Southampton}, 2020. \href{https://htmlpreview.github.io/?https://github.com/wpgp/top-down-tutorial/blob/master/4_tutorial.html#Suggested_Citation}{\scriptsize\faIcon{external-link-alt}}. -->
-<!-- \item R Foundations Course for different Nigerian national agencies, 2020. Population Modelling Webinar, \textit{GRID3 Webinar Series}, 2020. \href{https://www.youtube.com/watch?v=HMFM8HzLfH8}{\scriptsize\faIcon{external-link-alt}} -->
-<!-- \end{itemize} -->
-
-\section{Awards}
-\begin{itemize}
-\item Julia Mead Knox Memorial Prize for Research in Demography, University of Oxford (1000£), 2025
-\item Three-year scholarship from the Leverhulme Centre for Demographic Research (3x32,000), 2022, Light Senior scholarship, St Catherine's college, 2024
-\item Vice-Chancellor Award for Research Impact (2018), Faculty Dean's Prize for Research (2021), University of Southampton
-\item Four-year scholarship from the École Normale supérieure de Cachan (4x15,600€), 2015, Scholarship Sarah Andrieux for Social and Economics Research (800€), 2017
-\end{itemize}
-
-\section{Recent conferences}
+\begin{noside}
+\textbf{Recent conferences}
 \begin{itemize}
 \item Oral: Statistical Innovation for Population Estimation: Integrating Administrative Records, Geospatial Data, and Real-Time Streams, \textbf{Darin E}, \textit{EEAMO Conference}, 2025.
 \item Poster: Estimating intercensal populations with incomplete administrative data: a state-space Leslie matrix approach, \textbf{Darin E}, \textit{EvoDemo}, 2025.
@@ -172,10 +162,25 @@ Assessing food security from remote sensing and mobile data collection. Machine-
  \item Oral: Assessing Satellite Imagery Performance for Population Estimation in Data-Scarce Settings: A Modeling Perspective, \textbf{Darin E}, \textit{Population Association of America}, 2024. 
  \item Oral: Estimating population in data-scarce contexts: to which extent can we leverage satellite imagery, \textbf{Darin E}, \textit{British Society of Population Studies}, 2023. 
  \item Oral: Counting people from space: an inquiry from a data practitioner perspective, \textbf{Darin E}, \textit{Data Justice Conference}, 2023. 
- \item Oral: A bottom-up population modelling approach to complement the population and housing census, \textbf{Darin E}; Boo G; Tatem AJ, \textit{International Population Conference}, 2021. \href{https://www.researchgate.net/publication/357017300_A_bottom-up_population_modelling_approach_to_complement_the_population_and_housing_census}{\scriptsize\faIcon{external-link-alt}}
- \item Poster: How Bayesian modelling could use the Big Tech competition in producing built-up maps, \textbf{Darin E}, \textit{Bayesian methods for the social sciences}, 2022.  \href{http://dx.doi.org/10.13140/RG.2.2.15592.55040}{\scriptsize\faIcon{external-link-alt}}
+ %\item Oral: A bottom-up population modelling approach to complement the population and housing census, \textbf{Darin E}; Boo G; Tatem AJ, \textit{International Population Conference}, 2021. \href{https://www.researchgate.net/publication/357017300_A_bottom-up_population_modelling_approach_to_complement_the_population_and_housing_census}{\scriptsize\faIcon{external-link-alt}}
+% \item Poster: How Bayesian modelling could use the Big Tech competition in producing built-up maps, \textbf{Darin E}, \textit{Bayesian methods for the social sciences}, 2022.  \href{http://dx.doi.org/10.13140/RG.2.2.15592.55040}{\scriptsize\faIcon{external-link-alt}}
 % \item Poster: High-resolution population mapping and estimation in the western part of the Democratic Republic of Congo, \textbf{Darin E}; Boo G;  Leasure DL and Tatem AJ, \textit{GEOMED 2019}, 2019.  \href{https://www.researchgate.net/publication/335320708_High-resolution_population_mapping_and_estimation_in_the_western_part_of_the_Democratic_Republic_of_Congo?channel=doi&linkId=5d5e587f299bf1b97cfd0ba7&showFulltext=true}{\scriptsize\faIcon{external-link-alt}}
 %\end{itemize}
+\end{itemize}
+
+\section{Teaching}
+\begin{itemize}
+\item Workshop: Gridded population modelling for Summer Institutes in Computational Social Science, Covenant, Nigeria 2022, Joseph Ki-Zerbo and Norbert Zongo University, Burkina Faso 2021, Data Science Nigeria Bootcamp 2019.
+\item  Tutorials: Statistical population modelling for census support; \textit{WorldPop, University of Southampton}, 2021, \href{https://wpgp.github.io/bottom-up-tutorial/}{\scriptsize\faIcon{external-link-alt}}. Small area population estimates using random forest top-down disaggregation: An R tutorial;   \textit{WorldPop, University of Southampton}, 2020. \href{https://htmlpreview.github.io/?https://github.com/wpgp/top-down-tutorial/blob/master/4_tutorial.html#Suggested_Citation}{\scriptsize\faIcon{external-link-alt}}.
+\item R Foundations Course for different Nigerian national agencies, 2020. Population Modelling Webinar, \textit{GRID3 Webinar Series}, 2020. \href{https://www.youtube.com/watch?v=HMFM8HzLfH8}{\scriptsize\faIcon{external-link-alt}}
+\end{itemize}
+
+\section{Awards}
+\begin{itemize}
+\item Julia Mead Knox Memorial Prize for Research in Demography, University of Oxford (1000£), 2025
+\item Three-year scholarship from the Leverhulme Centre for Demographic Research (3x32,000), 2022, Light Senior scholarship, St Catherine's college, 2024
+\item Vice-Chancellor Award for Research Impact (2018), Faculty Dean's Prize for Research (2021), University of Southampton
+\item Four-year scholarship from the École Normale supérieure de Cachan (4x15,600€), 2015, Scholarship Sarah Andrieux for Social and Economics Research (800€), 2017
 \end{itemize}
 \end{noside}
 ```
